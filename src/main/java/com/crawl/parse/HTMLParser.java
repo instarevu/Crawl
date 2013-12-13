@@ -1,9 +1,15 @@
 package com.crawl.parse;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.File;
+
 public class HTMLParser {
 
-    public static void main(String[] args){
-        		// http://www.amazon.com/Transcend-Class-Flash-Memory-TS32GSDHC10E/dp/B003VNKNF0/ref=pd_cp_p_2
+    public static void main(String[] args) throws Exception{
+        // http://www.amazon.com/Transcend-Class-Flash-Memory-TS32GSDHC10E/dp/B003VNKNF0/ref=pd_cp_p_2
 		File input = new File("/Users/sathiya/Desktop/B003VNKNF0.html");
 		org.jsoup.nodes.Document doc = Jsoup.parse(input, "UTF-8", "http://www.amazon.com/");
 
