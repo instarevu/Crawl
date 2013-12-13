@@ -1,4 +1,4 @@
-package com.crawl.parse;
+package com.ir.crawl.parse;
 
 
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;
@@ -16,6 +16,7 @@ public class Controller {
         int numberOfCrawlers = 1;
 
         CrawlConfig config = new CrawlConfig();
+        config.setMaxPagesToFetch(1);
         config.setCrawlStorageFolder(CRAWL_STORAGE_FOLDER);
 
         PageFetcher pageFetcher = new PageFetcher(config);

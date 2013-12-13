@@ -1,4 +1,4 @@
-package com.crawl.parse;
+package com.ir.crawl.parse;
 
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
@@ -21,11 +21,7 @@ public class Crawler extends WebCrawler {
         return !FILTERS.matcher(href).matches() && href.startsWith("http://www.drugstore.com/");
     }
 
-    /**
-     * This function is called when a page is fetched and ready
-     * to be processed by your program.
-     */
-    @Override
+
     public void visit(Page page) {
         String url = page.getWebURL().getURL();
         System.out.println("URL: " + url);
@@ -41,4 +37,7 @@ public class Crawler extends WebCrawler {
             System.out.println("Number of outgoing links: " + links.size());
         }
     }
+
+
+
 }
