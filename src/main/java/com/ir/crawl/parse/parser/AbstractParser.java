@@ -24,14 +24,17 @@ public abstract class AbstractParser {
         Map<String, String> responseMap = new HashMap<String, String>();
 
         for(ParseQuery query : productQueries){
-            String value = "";
-            Elements elements = doc.select(query.firstLevelQuery);
-            if(query.attributeQuery != null){
-                value = elements.attr(query.attributeQuery);
-            } else {
-                value = elements.text();
+            if(responseMap.get(query.key) == null){
+                String value = null;
+                Elements elements = doc.select(query.firstLevelQuery);
+                if(query.attributeQuery != null){
+                    value = elements.attr(query.attributeQuery);
+                } else {
+                    value = elements.text();
+                }
+                if(!(value == null || value.equalsIgnoreCase("")))
+                    responseMap.put(query.key, value);
             }
-            responseMap.put(query.key, value);
         }
         return responseMap;
     }

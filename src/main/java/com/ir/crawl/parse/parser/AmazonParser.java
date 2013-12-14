@@ -18,13 +18,9 @@ public class AmazonParser extends AbstractParser {
             new ParseQuery("Price Offered", "span[id=priceblock_ourprice]"),
             new ParseQuery("Price Listed", "td[class*=a-text-strike]"),
             new ParseQuery("Brand", "a[id=brand]"),
+            new ParseQuery("Brand", "div[id=mbc]", "data-brand"),
             new ParseQuery("ASIN", "input[id=ASIN]", "value"),
             new ParseQuery("Image", "img[id=landingImage]", "src"));
-    }
-
-
-    public static void main(String[] args) throws Exception {
-
     }
 
 }
