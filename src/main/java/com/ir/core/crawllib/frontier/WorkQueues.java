@@ -3,11 +3,14 @@ package com.ir.core.crawllib.frontier;
 import com.sleepycat.je.*;
 import com.ir.core.crawllib.url.WebURL;
 import com.ir.core.crawllib.util.Util;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class WorkQueues {
+
+    protected static final Logger logger = Logger.getLogger(WorkQueues.class.getName());
 
 	protected Database urlsDB = null;
 	protected Environment env;

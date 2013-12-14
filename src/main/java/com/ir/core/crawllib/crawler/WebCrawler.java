@@ -231,10 +231,7 @@ public class WebCrawler implements Runnable {
 	 * @param page
 	 *            the page object that is just fetched and parsed.
 	 */
-	public void visit(Page page) {
-		// Do nothing by default
-		// Sub-classed can override this to add their custom functionality
-	}
+	public void visit(Page page){}
 
 	private void processPage(WebURL curURL) {
 		if (curURL == null) {
