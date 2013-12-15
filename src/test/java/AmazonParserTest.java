@@ -3,99 +3,60 @@ import com.google.common.io.Files;
 import com.ir.crawl.parse.DataElement;
 import com.ir.crawl.parse.field.AmazonFields;
 import com.ir.crawl.parse.parser.AmazonParser;
-import org.junit.BeforeClass;
+import com.ir.util.StringUtil;
+import org.apache.commons.collections.MapUtils;
 import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import util.LogUtil;
 
 import java.io.File;
-import java.lang.reflect.Field;
+import java.io.IOException;
 import java.util.Map;
 
-@Test
+@Test(suiteName = "Amazon", description = "Test for Amazon Product Pages")
 public class AmazonParserTest {
-
-    private static final String TEST_RESOURCES_DIR = "src/test/resources/";
-
-    private static String  COMPUTER = null , ELECTRONIC = null, CLOTHING = null, BABY = null, HEALTH = null, KITCHEN = null;
 
     private static final AmazonParser PARSER = new AmazonParser();
 
-    @BeforeClass
-    public void setUp() throws Exception {
-        COMPUTER = Files.toString(new File(TEST_RESOURCES_DIR+"amazon/Dell-Inspiron.html"), Charsets.UTF_8);
-        ELECTRONIC = Files.toString(new File(TEST_RESOURCES_DIR+"amazon/Duracell-Procell.html"), Charsets.UTF_8);
-        CLOTHING = Files.toString(new File(TEST_RESOURCES_DIR+"amazon/Levi-Mens-505.html"), Charsets.UTF_8);
-        HEALTH = Files.toString(new File(TEST_RESOURCES_DIR+"amazon/Tide-Pods.html"), Charsets.UTF_8);
-        BABY = Files.toString(new File(TEST_RESOURCES_DIR+"amazon/Pampers-Sensitive-Wipes.html"), Charsets.UTF_8);
-        KITCHEN = Files.toString(new File(TEST_RESOURCES_DIR+"amazon/Keurig-K65.html"), Charsets.UTF_8);
+    private static final String TEST_DATA_LOCATION =  (AmazonParserTest.class.getProtectionDomain().getCodeSource().getLocation()
+                                                        + "amazon/data/").replaceAll("file:", "");
 
-    }
+    @DataProvider(name = "amazonData")
+    public Object[][] amazonTestProducts() throws IOException {
+        Reporter.log("FILE LOCATION: " + TEST_DATA_LOCATION);
+        File file = new File(TEST_DATA_LOCATION);
+        File[] files = file.listFiles();
 
-    @Test(groups = { "ProductDetails" })
-    public void testComputerItem() {
-        boolean passed = testParseProduct(COMPUTER);
-        if(!passed){
-            Assert.fail("Failed to parse computer item.");
+        Object[][] data = new Object[files.length][2];
+        for(int i=0; i<files.length; i++){
+            data[i][0]=files[i].getName();
+            data[i][1]=files[i].getName();
         }
+
+        return data;
     }
 
-    @Test(groups = { "ProductDetails" })
-    public void testElectronicItem() {
-        boolean passed = testParseProduct(ELECTRONIC);
-        if(!passed){
-            Assert.fail("Failed to parse electronic item.");
-        }
-    }
-
-    @Test(groups = { "ProductDetails" })
-    public void testClothingItem() {
-        boolean passed = testParseProduct(CLOTHING);
-        if(!passed){
-            Assert.fail("Failed to parse clothing item.");
-        }
-    }
-
-    @Test(groups = { "ProductDetails" })
-    public void testBabyItem() {
-        boolean passed = testParseProduct(BABY);
-        if(!passed){
-            Assert.fail("Failed to parse baby item.");
-        }
-    }
-
-    @Test(groups = { "ProductDetails" })
-    public void testHealthItem() {
-        boolean passed = testParseProduct(HEALTH);
-        if(!passed){
-            Assert.fail("Failed to parse health item.");
-        }
-    }
-
-    @Test(groups = { "ProductDetails" })
-    public void testKitchenItem() {
-        boolean passed = testParseProduct(KITCHEN);
-        if(!passed){
-            Assert.fail("Failed to parse kitchen item.");
-        }
-    }
-
-    public boolean testParseProduct(String htmlData){
-        Map<String, String> responseMap = PARSER.parseProductAttributes(htmlData);
+    @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
+    public void testProduct(String name, String fileName) throws IOException {
+        String data = Files.toString(new File(TEST_DATA_LOCATION+fileName), Charsets.UTF_8);
+        Map<String, String> response = PARSER.parseProductAttributes(data);
+        Reporter.log(StringUtil.prettifyMapForDebug(response));
 
         for(DataElement dataElement : PARSER.getDataElements()){
-            System.out.println("KEY: " + dataElement.getField() + " VAL: " + responseMap.get(dataElement.getField()));
             if(dataElement.isRequired()){
-                if(responseMap.get(dataElement.getField()) == null){
-                    return false;
+                if(response.get(dataElement.getField()) == null){
+                    Assert.fail("Failed to parse " + name + " item.");
                 }
             }
         }
-
-        if(responseMap.get(AmazonFields.VARIANT_SPECS) != null){
-            if(responseMap.get(AmazonFields.VARIANT_IDS) == null)
-                return false;
+        if(response.get(AmazonFields.VARIANT_SPECS) != null){
+            if(response.get(AmazonFields.VARIANT_IDS) == null)
+                Assert.fail("Failed: Variant not captured for " + name + " item.");
         }
-
-        return true;
+        LogUtil.afterTestMarker();;
     }
+
 }
