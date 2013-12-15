@@ -5,9 +5,11 @@ import com.ir.core.crawllib.crawler.Page;
 import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
+import com.ir.crawl.parse.parser.AmazonParser;
 import org.apache.log4j.Logger;
 
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 public class Crawler extends WebCrawler {
@@ -29,6 +31,8 @@ public class Crawler extends WebCrawler {
         return shouldVisit;
     }
 
+    private static final AmazonParser amazonParser = new AmazonParser();
+
     @Override
     public void visit(Page page) {
         String url = page.getWebURL().getURL();
@@ -36,13 +40,12 @@ public class Crawler extends WebCrawler {
 
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
-            String text = htmlParseData.getText();
-            String html = htmlParseData.getHtml();
+            String htmlData = htmlParseData.getHtml();
             List<WebURL> links = htmlParseData.getOutgoingUrls();
-            //AmazonParser.parseHTML(html);
+            Map<String, String> dataMap = amazonParser.parseProductAttributes(htmlData);
 
-            System.out.println("Text length: " + text.length());
-            System.out.println("Html length: " + html.length());
+            System.out.println("MAP: " + dataMap);
+            System.out.println("Html length: " + htmlData.length());
             System.out.println("Number of outgoing links: " + links.size());
         }
     }
