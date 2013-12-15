@@ -1,11 +1,14 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
+import com.ir.crawl.parse.DataElement;
+import com.ir.crawl.parse.field.AmazonFields;
 import com.ir.crawl.parse.parser.AmazonParser;
 import org.junit.BeforeClass;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.util.Map;
 
 @Test
@@ -14,6 +17,8 @@ public class AmazonParserTest {
     private static final String TEST_RESOURCES_DIR = "src/test/resources/";
 
     private static String  COMPUTER = null , ELECTRONIC = null, CLOTHING = null, BABY = null, HEALTH = null, KITCHEN = null;
+
+    private static final AmazonParser PARSER = new AmazonParser();
 
     @BeforeClass
     public void setUp() throws Exception {
@@ -75,15 +80,22 @@ public class AmazonParserTest {
     }
 
     public boolean testParseProduct(String htmlData){
+        Map<String, String> responseMap = PARSER.parseProductAttributes(htmlData);
 
-        Map<String, String> responseMap = new AmazonParser().parseProductAttributes(htmlData);
-        System.out.println(responseMap);
-        for(Map.Entry<String, String> e : responseMap.entrySet()){
-            if(e.getValue() == null || e.getValue().equalsIgnoreCase("")){
-                System.out.println("KEY: " + e.getKey() + " VAL: " + e.getValue());
-                return false;
+        for(DataElement dataElement : PARSER.getDataElements()){
+            System.out.println("KEY: " + dataElement.getField() + " VAL: " + responseMap.get(dataElement.getField()));
+            if(dataElement.isRequired()){
+                if(responseMap.get(dataElement.getField()) == null){
+                    return false;
+                }
             }
         }
+
+        if(responseMap.get(AmazonFields.VARIANT_SPECS) != null){
+            if(responseMap.get(AmazonFields.VARIANT_IDS) == null)
+                return false;
+        }
+
         return true;
     }
 }

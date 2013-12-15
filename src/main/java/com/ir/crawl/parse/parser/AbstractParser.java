@@ -39,4 +39,8 @@ public abstract class AbstractParser {
 
     abstract String finalizeValue(String field, String extractedValue);
 
+    public List<DataElement> getDataElements(){
+        return dataElements;
+    }
+
 }
