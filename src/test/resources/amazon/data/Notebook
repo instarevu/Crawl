@@ -608,7 +608,7 @@ window.$Nav && $Nav.declare('config.ajaxProximity', [141,7,60,150]);
 
 </script>
 
-<!-- navp-yl5djTkbxVz2SVzmirG2oahsL/7TRH03/+KLLIAiv+XGWJbNIfmK/NAf9np9MypvAfTvPEiRs08= rid-0Y3K0F4JF5ZR4SP28J48 (Sun Dec 15 10:26:29 2013) -->
+<!-- navp-oI/yFZMcVJ9ctPw5PVhXwoCEY0LAIiKjKuCatJTrwXhGNwU3iugjnTt2jnnvvGDqe+3RTR7ejKA= rid-0377EZVT8VTMZ88KZQZ0 (Sun Dec 15 21:52:37 2013) -->
 
   
 
@@ -821,7 +821,7 @@ window.$Nav && $Nav.declare('config.subnavFlyoutUrl',
 window.$Nav && $Nav.declare('config.readyOnATF', false);
 
 window.$Nav && $Nav.declare('config.dynamicMenuArgs',
-  {"rid":"0Y3K0F4JF5ZR4SP28J48","isPrime":0,"primeMenuWidth":310});
+  {"rid":"0377EZVT8VTMZ88KZQZ0","isPrime":0,"primeMenuWidth":310});
 
 window.$Nav && $Nav.declare('config.signOutText',
   null);
@@ -1199,7 +1199,7 @@ window.$Nav && $Nav.declare('config.pantryCart',false);
     <form method="post" id="addToCart" action="/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance" class="a-content">
         <input type="hidden" id="session-id" name="session-id" value="000-0000000-0000000"> 
         <input type="hidden" id="ASIN" name="ASIN" value="B00F4MEK6E"> 
-        <input type="hidden" id="offerListingID" name="offerListingID" value="FFu2YDNELoOMcN1A6zMRQQybqGylV3qe6FWlNdZlF7MpemWVur%2FJ6mXwhDh2IWsyin9iXRpewcaggNgdf18%2B0zQxw4XJCaajDQ1dleUor%2BACzTTeqqBLEg%3D%3D"> 
+        <input type="hidden" id="offerListingID" name="offerListingID" value="Lahk%2FrnmaCXcWaaaaCJjk%2FVy8CwXKII5u6jo8ROxdHawCxRQOXxYHsJGNnMFT8EKsfk8d6s8wGSt9fuNneWuKsDVzWfHNVlDkfkvaF8u5mEDXG3EYXswOA%3D%3D"> 
         <input type="hidden" id="isMerchantExclusive" name="isMerchantExclusive" value="0"> 
         <input type="hidden" id="merchantID" name="merchantID" value="ATVPDKIKX0DER"> 
         <input type="hidden" id="isAddon" name="isAddon" value="0">
@@ -1448,12 +1448,12 @@ window.$Nav && $Nav.declare('config.pantryCart',false);
             <input type="hidden" name="quantity.1" value="1">
             <input type="hidden" name="asin.1" value="B007KB5U20">
 
-              <label for="mbb-offeringID-1" data-a-input-name="offeringID.1" class="a-checkbox"><input id="mbb-offeringID-1" type="checkbox" name="offeringID.1" value="ITVbUUmjWwSHKDaF%2B%2BPRLIhI1L%2BcViA1gI25NjG1HGK%2FaoO7LXQuCERPdVoo8ZYfQUo%2Fx1s91%2FWe11jg89z1q4CBnDlHPcrkaiGyDcAntgbHNJriOFEKbpYpwWb1fj%2FwVeOlX8U9%2Fj1%2FMVjD0QoqoQ%3D%3D"><span class="a-checkbox-label">
+              <label for="mbb-offeringID-1" data-a-input-name="offeringID.1" class="a-checkbox"><input id="mbb-offeringID-1" type="checkbox" name="offeringID.1" value="NqhTUcE78PFyGH%2FUvLvAjF%2BOBQV0ZgfAyFwKWx3%2B2a7OD5QoA95hP8YbaCUC0eKCAzuk4zmDtV3%2Fl%2FN1Uh3RErsJGPf%2BFsBrMQAKSh11vGHxgbqfk81KVb7V6VU%2FEII1SeDWk63czIOa%2FSVwajUwWw%3D%3D"><span class="a-checkbox-label">
                 Include 
                 <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;name&quot;:&quot;mbbPopover1&quot;,&quot;width&quot;:&quot;750&quot;,&quot;url&quot;:&quot;/gp/abb/mbb-pop.html?ca=B007KB5U20&amp;me=AF3DJOY0ZHFVY&amp;refTag=si_dp_po&amp;i=1&quot;,&quot;header&quot;:&quot;Protect your purchase&quot;}">
                   <a id="mbbPopoverLink" class="a-link-normal" href="/Canopy-2-Year-Laptop-Accidental-Protection/dp/B007KB5U20/ref=pd_abb_B00F4MEK6E_B007KB5U20_1">2-Year Drops &amp; Spills Warranty</a>
                 </span>
-                for <span class="a-color-price offer-price a-text-normal">$68.70</span>
+                for <span class="a-color-price offer-price a-text-normal">$65.95</span>
               </span></label>
 
             </div>
@@ -1958,7 +1958,7 @@ P.when("accordionBuyBoxJS").execute(function(buyBoxJS){
                             <li data-me="A3CY2NDZLLFNRJ" class="a-spacing-small mbcLi1"><span class="a-list-item">
                                 
                                 
-                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_1?ie=UTF8&amp;nodeID=541966&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=k0xtmVZJ6yD3A8D%252BVfwTOG628RFVz8EMC%252BSS7iqn3g4pxuceH55w3QIXREM28%252FyOq6GJIt6sO61x4f8814yNp4opzcBDFDEVErogm5Lb0Cm4%252BidnW4iocn41dDMNtXGrzHmgfymCxyELYofEE%252BsWYg%253D%253D&amp;storeID=pc&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
+                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_1?ie=UTF8&amp;nodeID=541966&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=i6zjUdUYhsx72RkZf0fR4fhPs9yshdGq0jMIIb8Vmbc70SlbPA%252BbnG3PdkQclCM69rPqEx9QLY7QuLm8UiR1IJbelxrv97II20CGio0JgZ2adHSwn6cBDZhLiTRIvuobhUccvt7IcwbJ%252BsOh9r8KQQ%253D%253D&amp;storeID=pc&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
                                 
                                 
                                 <div class="a-section a-spacing-none">
@@ -1980,15 +1980,15 @@ P.when("accordionBuyBoxJS").execute(function(buyBoxJS){
                         
                             
                         
-                        <span class="a-declarative" data-action="a-popover" data-a-popover="{&quot;position&quot;:&quot;triggerLeft&quot;,&quot;cache&quot;:&quot;true&quot;,&quot;name&quot;:&quot;H&amp;D LLP&quot;,&quot;width&quot;:&quot;280&quot;,&quot;scrollable&quot;:&quot;false&quot;,&quot;closeButton&quot;:&quot;false&quot;,&quot;header&quot;:&quot;&quot;,&quot;url&quot;:&quot;/gp/product/du/mbc-seller-information.html/ref=dp_mbc_info_1?c=new&amp;a=B00F4MEK6E&amp;me=A3T0K4YV6GT185&amp;brand=Dell&amp;productGroupID=pc_display_on_website&amp;isUDP=1&quot;}">
-                            <li data-me="A3T0K4YV6GT185" class="a-spacing-small mbcLi2"><span class="a-list-item">
+                        <span class="a-declarative" data-action="a-popover" data-a-popover="{&quot;position&quot;:&quot;triggerLeft&quot;,&quot;cache&quot;:&quot;true&quot;,&quot;name&quot;:&quot;Dream Deal&quot;,&quot;width&quot;:&quot;280&quot;,&quot;scrollable&quot;:&quot;false&quot;,&quot;closeButton&quot;:&quot;false&quot;,&quot;header&quot;:&quot;&quot;,&quot;url&quot;:&quot;/gp/product/du/mbc-seller-information.html/ref=dp_mbc_info_1?c=new&amp;a=B00F4MEK6E&amp;me=A3JW7EG6TEDLT3&amp;brand=Dell&amp;productGroupID=pc_display_on_website&amp;isUDP=1&quot;}">
+                            <li data-me="A3JW7EG6TEDLT3" class="a-spacing-small mbcLi2"><span class="a-list-item">
                                 
                                 
-                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_2?ie=UTF8&amp;nodeID=541966&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=gD7YcGZhy4p%252Bw4MnSrjMFNk4ys%252FijaaWijlDxikQQoYc6BhigWpFrZmbMLWxfFvcreiKpII0610uOT%252Bqyn1tx4jk3P79Qq6PrKQC4N3SKIwMRx4yxeunKqHJ%252BdtWitmHMI%252BBMHdYUB3kTHHrNOZvDg%253D%253D&amp;storeID=pc&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
+                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_2?ie=UTF8&amp;nodeID=541966&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=U%252BNOcuSSunbpuUTS74%252B9ae0PdIxhDxDy%252B3yBfa78%252BFn2xiNJjTfE9hbD6tL3LhXMVDY0SYgF7uZUIDJayXYNNYaYIBn8CZueFFTc1RMcyWXZtv%252FSTCZWBnBYA8jJXD4Hbz3hxtyM8UNeZ6X2VCWyUw%253D%253D&amp;storeID=pc&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
                                 
                                 
                                 <div class="a-section a-spacing-none">
-                                    <span class="a-size-small mbcMerchantName">H&amp;D LLP</span>
+                                    <span class="a-size-small mbcMerchantName">Dream Deal</span>
                                 </div>
                                 <div class="a-row">
                                     
@@ -2006,21 +2006,21 @@ P.when("accordionBuyBoxJS").execute(function(buyBoxJS){
                         
                             
                         
-                        <span class="a-declarative" data-action="a-popover" data-a-popover="{&quot;position&quot;:&quot;triggerLeft&quot;,&quot;cache&quot;:&quot;true&quot;,&quot;name&quot;:&quot;AlwaysP Tech&quot;,&quot;width&quot;:&quot;280&quot;,&quot;scrollable&quot;:&quot;false&quot;,&quot;closeButton&quot;:&quot;false&quot;,&quot;header&quot;:&quot;&quot;,&quot;url&quot;:&quot;/gp/product/du/mbc-seller-information.html/ref=dp_mbc_info_2?c=new&amp;a=B00F4MEK6E&amp;me=AK0EYYZGWADAO&amp;brand=Dell&amp;productGroupID=pc_display_on_website&amp;isUDP=1&quot;}">
-                            <li data-me="AK0EYYZGWADAO" class="a-spacing-small mbcLi3"><span class="a-list-item">
+                        <span class="a-declarative" data-action="a-popover" data-a-popover="{&quot;position&quot;:&quot;triggerLeft&quot;,&quot;cache&quot;:&quot;true&quot;,&quot;name&quot;:&quot;H&amp;D LLP&quot;,&quot;width&quot;:&quot;280&quot;,&quot;scrollable&quot;:&quot;false&quot;,&quot;closeButton&quot;:&quot;false&quot;,&quot;header&quot;:&quot;&quot;,&quot;url&quot;:&quot;/gp/product/du/mbc-seller-information.html/ref=dp_mbc_info_2?c=new&amp;a=B00F4MEK6E&amp;me=A3T0K4YV6GT185&amp;brand=Dell&amp;productGroupID=pc_display_on_website&amp;isUDP=1&quot;}">
+                            <li data-me="A3T0K4YV6GT185" class="a-spacing-small mbcLi3"><span class="a-list-item">
                                 
                                 
-                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_3?ie=UTF8&amp;nodeID=541966&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=MFK1fRw7MbIUMVP6qLVCcoKuLmoKl%252FOiUimmiP2v31rzsBEswn0IZgshRHEg98B5tmpQ%252FVjjbfquWOxmGaFNmUvjjR3hOJ1SbuJfe4N6KkrdbAkgSe3y5eieyQcFFJAzfFDbiirqn7YLXeGk2PIGbg%253D%253D&amp;storeID=pc&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
+                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_3?ie=UTF8&amp;nodeID=541966&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=zM9DRrNio7Y3Li0Y6UoNmz2yMCmnxPtnufAFyXSMKAgW73EkhBb5GMLVpL8FyXcWRPxfTpv2vw2oU2zOYMXH%252B3fsXStjS9xVUQ2AWq26ZbJlu6Z7LC0ShCx2cqAlORCW0uw7j2U8seyXUIn0GFIW1Q%253D%253D&amp;storeID=pc&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
                                 
                                 
                                 <div class="a-section a-spacing-none">
-                                    <span class="a-size-small mbcMerchantName">AlwaysP Tech</span>
+                                    <span class="a-size-small mbcMerchantName">H&amp;D LLP</span>
                                 </div>
                                 <div class="a-row">
                                     
                                       
                                       
-                                        <span class="a-size-small a-color-price">$365.11</span>
+                                        <span class="a-size-small a-color-price">$364.99</span>
                                         <span class="a-size-mini a-color-secondary">+&nbsp;$7.87&nbsp;shipping</span>
                                         
                                       
@@ -2084,13 +2084,13 @@ P.when('A','jQuery').execute(function(A,$)  {
 
 
 
-<div id="tell-a-friend" data-close="Close" data-dest="/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_vrFRsb0304FZ4P84?ie=UTF8&amp;redirectLocation=dp%2FB00F4MEK6E%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_vrFRsb0304FZ4P84&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00F4MEK6E&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E" data-title="Share this item via Email" class="a-section a-text-center">
+<div id="tell-a-friend" data-close="Close" data-dest="/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_LuPRsb07EV8TZ8ZZ?ie=UTF8&amp;redirectLocation=dp%2FB00F4MEK6E%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_LuPRsb07EV8TZ8ZZ&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00F4MEK6E&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E" data-title="Share this item via Email" class="a-section a-text-center">
     
    
     
-    <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;cache&quot;:&quot;false&quot;,&quot;width&quot;:&quot;480&quot;,&quot;name&quot;:&quot;swf&quot;,&quot;url&quot;:&quot;/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_vrFRsb0304FZ4P84?ie=UTF8&amp;redirectLocation=dp%2FB00F4MEK6E%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_vrFRsb0304FZ4P84&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00F4MEK6E&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E&amp;isDPX=1&quot;,&quot;header&quot;:&quot;Share this item via Email&quot;}">
-      <a id="swfText" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_vrFRsb0304FZ4P84?ie=UTF8&amp;itemInfo=B00F4MEK6E&amp;placementID=dp_vrFRsb0304FZ4P84&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E">Share</a><span class="a-letter-space"></span>
-      <a id="swfImage" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_vrFRsb0304FZ4P84?ie=UTF8&amp;itemInfo=B00F4MEK6E&amp;placementID=dp_vrFRsb0304FZ4P84&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E"><i class="a-icon a-icon-share-email"></i></a><span class="a-letter-space"></span>
+    <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;cache&quot;:&quot;false&quot;,&quot;width&quot;:&quot;480&quot;,&quot;name&quot;:&quot;swf&quot;,&quot;url&quot;:&quot;/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_LuPRsb07EV8TZ8ZZ?ie=UTF8&amp;redirectLocation=dp%2FB00F4MEK6E%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_LuPRsb07EV8TZ8ZZ&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00F4MEK6E&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E&amp;isDPX=1&quot;,&quot;header&quot;:&quot;Share this item via Email&quot;}">
+      <a id="swfText" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_LuPRsb07EV8TZ8ZZ?ie=UTF8&amp;itemInfo=B00F4MEK6E&amp;placementID=dp_LuPRsb07EV8TZ8ZZ&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E">Share</a><span class="a-letter-space"></span>
+      <a id="swfImage" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_LuPRsb07EV8TZ8ZZ?ie=UTF8&amp;itemInfo=B00F4MEK6E&amp;placementID=dp_LuPRsb07EV8TZ8ZZ&amp;parentASIN=B00F4MEK6E&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00F4MEK6E&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00F4MEK6E%252Fref%253D&amp;contentURI=%2Fdp%2FB00F4MEK6E"><i class="a-icon a-icon-share-email"></i></a><span class="a-letter-space"></span>
     </span>
    
     
@@ -2100,21 +2100,21 @@ P.when('A','jQuery').execute(function(A,$)  {
         
             
             
-            <a data-height="400" class="a-link-normal" title="Share on Facebook" href="/gp/redirect.html/ref=cm_sw_cl_fa_dp_vrFRsb0304FZ4P84?_encoding=UTF8&amp;location=http%3A%2F%2Fwww.facebook.com%2Fshare.php%3Fu%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_fa_dp_vrFRsb0304FZ4P84&amp;token=6BD0FB927CC51E76FF446584B1040F70EA7E88E1"><i class="a-icon a-icon-share-facebook"></i></a><span class="a-letter-space"></span>
+            <a data-height="400" class="a-link-normal" title="Share on Facebook" href="/gp/redirect.html/ref=cm_sw_cl_fa_dp_LuPRsb07EV8TZ8ZZ?_encoding=UTF8&amp;location=http%3A%2F%2Fwww.facebook.com%2Fshare.php%3Fu%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_fa_dp_LuPRsb07EV8TZ8ZZ&amp;token=6BD0FB927CC51E76FF446584B1040F70EA7E88E1"><i class="a-icon a-icon-share-facebook"></i></a><span class="a-letter-space"></span>
         
     
         
         
             
             
-            <a data-height="400" class="a-link-normal" title="Share on Twitter" href="/gp/redirect.html/ref=cm_sw_cl_tw_dp_vrFRsb0304FZ4P84?_encoding=UTF8&amp;location=http%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Foriginal_referer%3Dhttp%25253A%25252F%25252Fwww.amazon.com%25252Fgp%25252Fproduct%25252FB00F4MEK6E%25252Fref%25253Dcm_sw_r_tw_dp_vrFRsb0304FZ4P84%26text%3DDell%2520Inspiron%252015%2520i15RV-953BLK%252015.6-Inch%2520Laptop%2520(Black)%2520Dell%26related%3Damazondeals%252Camazonmp3%26url%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_tw_dp_vrFRsb0304FZ4P84%26via%3Damazon&amp;token=7A1A4AE8F6CE0BD277D8295E58702D283F329C0F"><i class="a-icon a-icon-share-twitter"></i></a><span class="a-letter-space"></span>
+            <a data-height="400" class="a-link-normal" title="Share on Twitter" href="/gp/redirect.html/ref=cm_sw_cl_tw_dp_LuPRsb07EV8TZ8ZZ?_encoding=UTF8&amp;location=http%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Foriginal_referer%3Dhttp%25253A%25252F%25252Fwww.amazon.com%25252Fgp%25252Fproduct%25252FB00F4MEK6E%25252Fref%25253Dcm_sw_r_tw_dp_LuPRsb07EV8TZ8ZZ%26text%3DDell%2520Inspiron%252015%2520i15RV-953BLK%252015.6-Inch%2520Laptop%2520(Black)%2520Dell%26related%3Damazondeals%252Camazonmp3%26url%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_tw_dp_LuPRsb07EV8TZ8ZZ%26via%3Damazon&amp;token=7A1A4AE8F6CE0BD277D8295E58702D283F329C0F"><i class="a-icon a-icon-share-twitter"></i></a><span class="a-letter-space"></span>
         
     
         
         
             
             
-            <a data-height="570" class="a-link-normal" title="Pin it on Pinterest" href="/gp/redirect.html/ref=cm_sw_cl_pi_dp_vrFRsb0304FZ4P84?_encoding=UTF8&amp;location=http%3A%2F%2Fpinterest.com%2Fpin%2Fcreate%2Fbutton%3Furl%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_pi_dp_vrFRsb0304FZ4P84%26title%3DDell%2520Inspiron%252015%2520i15RV-953BLK%252015.6-Inch%2520Laptop%2520(Black)%2520Dell%26description%3DDell%2520Inspiron%252015%2520i15RV-953BLK%252015.6-Inch%2520Laptop%2520(Black)%2520Dell%252Chttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_pi_dp_vrFRsb0304FZ4P84%26media%3Dhttp%253A%252F%252Fecx.images-amazon.com%252Fimages%252FI%252F41Hi9DIctiL.jpg&amp;token=9F58B366258E1A8B5259E9BEF3482E02341F42D3"><i class="a-icon a-icon-share-pinterest"></i></a><span class="a-letter-space"></span>
+            <a data-height="570" class="a-link-normal" title="Pin it on Pinterest" href="/gp/redirect.html/ref=cm_sw_cl_pi_dp_LuPRsb07EV8TZ8ZZ?_encoding=UTF8&amp;location=http%3A%2F%2Fpinterest.com%2Fpin%2Fcreate%2Fbutton%3Furl%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_pi_dp_LuPRsb07EV8TZ8ZZ%26title%3DDell%2520Inspiron%252015%2520i15RV-953BLK%252015.6-Inch%2520Laptop%2520(Black)%2520Dell%26description%3DDell%2520Inspiron%252015%2520i15RV-953BLK%252015.6-Inch%2520Laptop%2520(Black)%2520Dell%252Chttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00F4MEK6E%252Fref%253Dcm_sw_r_pi_dp_LuPRsb07EV8TZ8ZZ%26media%3Dhttp%253A%252F%252Fecx.images-amazon.com%252Fimages%252FI%252F41Hi9DIctiL.jpg&amp;token=9F58B366258E1A8B5259E9BEF3482E02341F42D3"><i class="a-icon a-icon-share-pinterest"></i></a><span class="a-letter-space"></span>
         
     
 </div>
@@ -2175,7 +2175,7 @@ P.when("A","jQuery").execute(function(A,$) {
 
 
 
-    <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;name&quot;:&quot;servicesInterstitial&quot;,&quot;url&quot;:&quot;/gp/si/aui-si-pop.html?ie=UTF8&amp;ri=0Y3K0F4JF5ZR4SP28J48&amp;si=0&quot;,&quot;header&quot;:&quot;Protect Your Purchase&quot;}" id="servicesInterstitial"></span>
+    <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;name&quot;:&quot;servicesInterstitial&quot;,&quot;url&quot;:&quot;/gp/si/aui-si-pop.html?ie=UTF8&amp;ri=0377EZVT8VTMZ88KZQZ0&amp;si=0&quot;,&quot;header&quot;:&quot;Protect Your Purchase&quot;}" id="servicesInterstitial"></span>
     <script type="a-state" data-a-state="{&quot;key&quot;:&quot;PSDServicesInterstitial&quot;}">{"showInstall":"false","refTag":"pd_si_147_"}</script>
 
 <script type='text/javascript'>
@@ -2952,7 +2952,7 @@ P.when('A').register("ImageBlockATF", function(A){
             
         
 
-        <a href="/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" >30 customer reviews</a>
+        <a href="/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" >31 customer reviews</a>
 
 
     
@@ -3407,122 +3407,6 @@ amznJQ.available("popover", function() {
 		
 			
 			
-			  <div id="ftMessage" class="buying">
-    <b>Want it Tuesday, Dec. 17?</b>&nbsp;Order within <b><span id="ftCountdown" class="a-color-success a-color-available ftCountdownClass"></span></b>&nbsp;and choose <b>One-Day Shipping</b> at checkout.
-    
-        <a href='/gp/help/customer/display.html/ref=ftinfo_dp_?ie=UTF8&nodeId=3510241&pop-up=1' target='AmazonHelp' onclick="return amz_js_PopWin('/gp/help/customer/display.html/ref=ftinfo_dp_?ie=UTF8&nodeId=3510241&pop-up=1','AmazonHelp','width=550,height=600,resizable=1,scrollbars=1,toolbar=1,status=1');">Details</a>
-    
-
-    
-    <input type="hidden" name="promise-type" value="1-click" />
-    <input type="hidden" name="promise-item.B00F4MEK6E" value="1387339200" />
-    <input type="hidden" name="promise-cutoff-time.B00F4MEK6E" value="1387226700" />
-    <input type="hidden" name="promise-promised-shipoption.B00F4MEK6E" value="next" />
-</div>
-
-    
-<script type="text/javascript">
-FT_HourString = "hr";
-FT_HoursString = "hrs";
-FT_MinuteString = "min";
-FT_MinutesString = "mins";
-
-function getElementsByClassNameCustom(className) {
-    var selectedElements = [];
-    if (document.getElementsByClassName) {
-        selectedElements = document.getElementsByClassName(className);
-    } else if (document.querySelectorAll) {
-        selectedElements = document.querySelectorAll("." + className);
-    }
-    return selectedElements;
-}
-
-var FT_CurrentDisplayMin;
-var clientServerTimeDrift;
-var firstTimeUpdate = true;
-
-var countdownElements = getElementsByClassNameCustom("ftCountdownClass");
-if (countdownElements.length < 1) {
-	countdownElements.push(document.getElementById("ftCountdown"));
-}
-
-function getTimeRemainingString( hours, minutes )
-{
-  var hourString   =  ( hours == 1 ? FT_HourString : FT_HoursString );
-  var minuteString =  ( minutes  == 1 ? FT_MinuteString : FT_MinutesString );
-  if (hours == 0) {
-    return minutes + " " + minuteString;
-  }
-  if (minutes == 0) {
-    return hours + " " + hourString;
-  }
-  return hours + " " + hourString + " " + minutes + " " + minuteString;
-}
-function FT_displayCountdown(forceUpdate)
-{
-  var FT_remainSeconds = FT_givenSeconds - FT_actualSeconds;
-  if (FT_remainSeconds < 1) {
-    document.getElementById("ftMessage").style.display = "none";
-  }
-  var FT_secondsPerDay = 24 * 60 * 60;
-  var FT_daysLong = FT_remainSeconds / FT_secondsPerDay;
-  var FT_days = Math.floor(FT_daysLong);
-  var FT_hoursLong = (FT_daysLong - FT_days) * 24;
-  var FT_hours = Math.floor(FT_hoursLong);
-  var FT_minsLong = (FT_hoursLong - FT_hours) * 60;
-  var FT_mins = Math.floor(FT_minsLong);
-  var FT_secsLong = (FT_minsLong - FT_mins) * 60;
-  var FT_secs = Math.floor(FT_secsLong);
-  if (FT_days > 0) {
-    FT_hours = (FT_days * 24) + FT_hours;
-  }
-  setTimeout("FT_getTime()", 1000);
-  var ftCountdown = getTimeRemainingString( FT_hours, FT_mins );
-  if (countdownElements.length) {
-    if (FT_CurrentDisplayMin != FT_mins || forceUpdate || firstTimeUpdate) {
-      var i = 0, countdownElement;
-      while (countdownElement = countdownElements[i++]) {
-        countdownElement.innerHTML = ftCountdown;
-      }
-      FT_CurrentDisplayMin = FT_mins;
-      firstTimeUpdate = false;
-    }
-  }
-}
-
-function FT_getCountdown(secondsLeft)
-{
-  var FT_currentTime = new Date();
-  var FT_currentHours = FT_currentTime.getHours();
-  var FT_currentMins = FT_currentTime.getMinutes();
-  var FT_currentSecs = FT_currentTime.getSeconds();
-  FT_givenSeconds = FT_currentHours * 3600 + FT_currentMins * 60 + FT_currentSecs;
-  FT_givenSeconds += secondsLeft;
-  FT_getTime();
-}
-function FT_getTime()
-{
-  var FT_newCurrentTime = new Date();
-  var FT_actualHours = FT_newCurrentTime.getHours();
-  var FT_actualMins = FT_newCurrentTime.getMinutes();
-  var FT_actualSecs = FT_newCurrentTime.getSeconds();
-  FT_actualSeconds = FT_actualHours * 3600 + FT_actualMins * 60 + FT_actualSecs;
-  FT_displayCountdown();
-}
-</script>
-
-    <script type="text/javascript">
-     FT_getCountdown(94711);
-    </script>
-
-<style type="text/css">
-#ftMessage b, #ftMessage strong{color:rgb(51, 51, 51);}
-#ftMessage #ftCountdown, #ftMessage b a:link{font-weight:bold!important;}
-#ftMessage span.rddTitle{color:#009900;font-weight:bold;}
-</style>
-
-
-			
 		
 	
 </div>
@@ -3969,11 +3853,11 @@ function FT_getTime()
 
     <div class="a-section a-spacing-small">
         
-            <span class="olp-padding-right"><a href="/gp/offer-listing/B00F4MEK6E/ref=dp_olp_new?ie=UTF8&amp;condition=new">69&nbsp;new</a>&nbsp;from&nbsp;<span class='a-color-price'>$340.00</span></span>
+            <span class="olp-padding-right"><a href="/gp/offer-listing/B00F4MEK6E/ref=dp_olp_new?ie=UTF8&amp;condition=new">73&nbsp;new</a>&nbsp;from&nbsp;<span class='a-color-price'>$349.99</span></span>
         
 
         
-            <span class="olp-padding-right"><a href="/gp/offer-listing/B00F4MEK6E/ref=dp_olp_used?ie=UTF8&amp;condition=used">3&nbsp;used</a>&nbsp;from&nbsp;<span class='a-color-price'>$319.00</span></span>
+            <span class="olp-padding-right"><a href="/gp/offer-listing/B00F4MEK6E/ref=dp_olp_used?ie=UTF8&amp;condition=used">3&nbsp;used</a>&nbsp;from&nbsp;<span class='a-color-price'>$339.95</span></span>
         
 
         
@@ -4146,12 +4030,12 @@ function FT_getTime()
         <hr class="a-spacing-medium a-divider-normal">
     
     <div class="qpImage">
-<a href="/b/ref=amb_link_396835442_1?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0Y3K0F4JF5ZR4SP28J48&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E"><img src="http://g-ecx.images-amazon.com/images/G/01/computer/75/LT_HQP_Hero_C32013._SL75_V368535029_.jpg" width="75" align="left" alt="Top Holiday Deals in Laptops & Tablets" height="75" border="0" />
+<a href="/b/ref=amb_link_396835442_1?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0377EZVT8VTMZ88KZQZ0&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E"><img src="http://g-ecx.images-amazon.com/images/G/01/computer/75/LT_HQP_Hero_C32013._SL75_V368535029_.jpg" width="75" align="left" alt="Top Holiday Deals in Laptops & Tablets" height="75" border="0" />
 </a>
 </div>
 <span class="qpHeadline">Top Holiday Deals in Laptops &amp; Tablets</span><br>
-Check out our top holiday deals on <a href="/b/ref=amb_link_396835442_3?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0Y3K0F4JF5ZR4SP28J48&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">laptops</a>, <a href="/b/ref=amb_link_396835442_4?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0Y3K0F4JF5ZR4SP28J48&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">Chromebooks</a>, <a href="/b/ref=amb_link_396835442_5?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0Y3K0F4JF5ZR4SP28J48&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">Ultrabooks</a>, <a href="/b/ref=amb_link_396835442_6?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0Y3K0F4JF5ZR4SP28J48&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">tablets</a>, and more.   
-<a href="/b/ref=amb_link_396835442_7?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0Y3K0F4JF5ZR4SP28J48&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">Shop now</a>
+Check out our top holiday deals on <a href="/b/ref=amb_link_396835442_3?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0377EZVT8VTMZ88KZQZ0&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">laptops</a>, <a href="/b/ref=amb_link_396835442_4?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0377EZVT8VTMZ88KZQZ0&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">Chromebooks</a>, <a href="/b/ref=amb_link_396835442_5?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0377EZVT8VTMZ88KZQZ0&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">Ultrabooks</a>, <a href="/b/ref=amb_link_396835442_6?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0377EZVT8VTMZ88KZQZ0&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">tablets</a>, and more.   
+<a href="/b/ref=amb_link_396835442_7?ie=UTF8&node=7586088011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0377EZVT8VTMZ88KZQZ0&pf_rd_t=201&pf_rd_p=1686046222&pf_rd_i=B00F4MEK6E">Shop now</a>
 
     
     <div style="clear:left"></div>
@@ -4415,7 +4299,7 @@ Check out our top holiday deals on <a href="/b/ref=amb_link_396835442_3?ie=UTF8&
         <ul id="fbt_item_details" tabindex="-1">              
             <li class="fbt_item">
                 <label>
-                    <input name="offeringID.1" value="wVQgS%2FenYTgMfgWGYdydHHYN9MbKrZuZ07e4menYGfuV78WqzlBU9wSTw8gBiZEm3nfh5kSiInm%2B0d4snXmh5wbcHwaLpxdG2lzJxIhTz5ThPRSAkMubWQ%3D%3D" type="checkbox" id="fbt_x_check" style="display: none;" class="check" checked="checked">
+                    <input name="offeringID.1" value="AKnIwlbei%2FIn%2FHlyvbpEQ5sstfZpHfGQIkU7tRGTnylgd1%2FDQXhrZ6MurvFPZ1ABvvBjOIhThMdyTZHU6c3Ck22jwcBIaaVbe98XUiQDlzkBTiMwJG4rlw%3D%3D" type="checkbox" id="fbt_x_check" style="display: none;" class="check" checked="checked">
                     <span id="fbt_x_title"><strong>This item: </strong>
 
 
@@ -4427,7 +4311,7 @@ Dell Inspiron 15 i15RV-953BLK 15.6-Inch Laptop (Black)
             </li>
 
             <li class="fbt_item">
-                <input name="offeringID.2" value="laZ%2BVzJdX4vQnYSEqxMWGtCOPBlP2BBO9Ro1P759SFIyvBFpUgROK6P1Xp0WD7SPUxzVErriwiiiM6qx5omdZteMLBdvaJ3K18Yg%2BaiwA2AKYAl%2FC1%2Fmpw%3D%3D" type=checkbox id="fbt_y_check" style="display: none;" class="check" checked="checked" title="
+                <input name="offeringID.2" value="q5l8gV88ybn%2FnrNhbon6e%2FMagmwLVYFWmi1u%2BNO%2BrvOLnqqdpIk%2BBnSENzA3XPdjPoQYpGrrfly4o4JP%2BP6tUipGAHPTtzn43Yl%2B8iXrP6ckEJg3SqMVdA%3D%3D" type=checkbox id="fbt_y_check" style="display: none;" class="check" checked="checked" title="
 
 
 Case Logic VNA-216 16-Inch Laptop Attache (Black)">
@@ -4449,7 +4333,7 @@ Case Logic VNA-216 16-Inch Laptop Attache (Black)">
     
 </div>
 
-<div id="fbt_item_data" style="display:none;">{"currencyCode":"USD","itemData":[{"priceBreaksMAP":null,"buyingPrice":349.99,"ASIN":"B00F4MEK6E","isPreorder":0},{"priceBreaksMAP":null,"buyingPrice":18.98,"ASIN":"B002J9HBIO","isPreorder":0}],"shippingId":"B00F4MEK6E::wVQgS%2FenYTgMfgWGYdydHHYN9MbKrZuZ07e4menYGfuV78WqzlBU9wSTw8gBiZEm3nfh5kSiInm%2B0d4snXmh5wbcHwaLpxdG2lzJxIhTz5ThPRSAkMubWQ%3D%3D,B002J9HBIO::laZ%2BVzJdX4vQnYSEqxMWGtCOPBlP2BBO9Ro1P759SFIyvBFpUgROK6P1Xp0WD7SPUxzVErriwiiiM6qx5omdZteMLBdvaJ3K18Yg%2BaiwA2AKYAl%2FC1%2Fmpw%3D%3D","sprites":{"addToWishlist":["wl_one","wl_two","wl_three"],"addToCart":["s_addToCart","s_addBothToCart","s_add3ToCart"],"preorder":["s_preorderThis","s_preorderBoth","s_preorderAll3"]},"shippingDetails":{"xy":"same"},"tags":["x","y","z"],"strings":{"addToWishlist":["add to wishlist","Add both to Wish List","Add all three to Wish List"],"addToCart":["Add to Cart","Add both to Cart","Add all three to Cart"],"showDetailsDefault":"Show availability and shipping details","shippingError":"An error occurred, please try again","hideDetailsDefault":"Hide availability and shipping details","priceLabel":["Price:","Price for both:","Price for all three:"],"preorder":["Pre-order this item","Pre-order both items","Pre-order all three items"]}}</div>
+<div id="fbt_item_data" style="display:none;">{"currencyCode":"USD","itemData":[{"priceBreaksMAP":null,"buyingPrice":349.99,"ASIN":"B00F4MEK6E","isPreorder":0},{"priceBreaksMAP":null,"buyingPrice":18.98,"ASIN":"B002J9HBIO","isPreorder":0}],"shippingId":"B00F4MEK6E::AKnIwlbei%2FIn%2FHlyvbpEQ5sstfZpHfGQIkU7tRGTnylgd1%2FDQXhrZ6MurvFPZ1ABvvBjOIhThMdyTZHU6c3Ck22jwcBIaaVbe98XUiQDlzkBTiMwJG4rlw%3D%3D,B002J9HBIO::q5l8gV88ybn%2FnrNhbon6e%2FMagmwLVYFWmi1u%2BNO%2BrvOLnqqdpIk%2BBnSENzA3XPdjPoQYpGrrfly4o4JP%2BP6tUipGAHPTtzn43Yl%2B8iXrP6ckEJg3SqMVdA%3D%3D","sprites":{"addToWishlist":["wl_one","wl_two","wl_three"],"addToCart":["s_addToCart","s_addBothToCart","s_add3ToCart"],"preorder":["s_preorderThis","s_preorderBoth","s_preorderAll3"]},"shippingDetails":{"xy":"same"},"tags":["x","y","z"],"strings":{"addToWishlist":["add to wishlist","Add both to Wish List","Add all three to Wish List"],"addToCart":["Add to Cart","Add both to Cart","Add all three to Cart"],"showDetailsDefault":"Show availability and shipping details","shippingError":"An error occurred, please try again","hideDetailsDefault":"Hide availability and shipping details","priceLabel":["Price:","Price for both:","Price for all three:"],"preorder":["Pre-order this item","Pre-order both items","Pre-order all three items"]}}</div>
 
 
 
@@ -4855,7 +4739,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
         <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B007Y91QY4"><a href="http://www.amazon.com/SquareTrade-Computer-Accident-Protection-250-300/product-reviews/B007Y91QY4"><span class="auiTestSprite s_star_4_5 " title="4.4 out of 5 stars" ><span>4.4 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/SquareTrade-Computer-Accident-Protection-250-300/product-reviews/B007Y91QY4">951</a>)</span></span>
     </div>
     <div class="pricetext">
-        <span class="price" style="margin-right:5px">$52.12</span>
+        <span class="price" style="margin-right:5px">$54.79</span>
     </div>
   </div>
 </li>
@@ -4905,7 +4789,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
         <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00CPIF4G0"><a href="http://www.amazon.com/VivoBook-X200CA-DB01T-11-6-Inch-Touchscreen-Laptop/product-reviews/B00CPIF4G0"><span class="auiTestSprite s_star_3_5 " title="3.6 out of 5 stars" ><span>3.6 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/VivoBook-X200CA-DB01T-11-6-Inch-Touchscreen-Laptop/product-reviews/B00CPIF4G0">50</a>)</span></span>
     </div>
     <div class="pricetext">
-        <span class="price" style="margin-right:5px">$289.28</span><i class="a-icon a-icon-prime a-icon-small"><span class="a-icon-alt">Prime</span></i>
+        <span class="price" style="margin-right:5px">$274.76</span>
     </div>
   </div>
 </li>
@@ -5008,7 +4892,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
     <div class="rating-price">
-        <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00CRGJKT2"><a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2"><span class="auiTestSprite s_star_4_0 " title="4.0 out of 5 stars" ><span>4.0 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2">31</a>)</span></span>
+        <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00CRGJKT2"><a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2"><span class="auiTestSprite s_star_4_0 " title="4.0 out of 5 stars" ><span>4.0 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2">32</a>)</span></span>
     </div>
     <div class="pricetext">
         <span class="price" style="margin-right:5px">$479.99</span><i class="a-icon a-icon-prime a-icon-small"><span class="a-icon-alt">Prime</span></i>
@@ -5061,7 +4945,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
         <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00E3EALS0"><a href="http://www.amazon.com/SquareTrade-Computer-Accident-Protection-300-350/product-reviews/B00E3EALS0"><span class="auiTestSprite s_star_4_5 " title="4.4 out of 5 stars" ><span>4.4 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/SquareTrade-Computer-Accident-Protection-300-350/product-reviews/B00E3EALS0">951</a>)</span></span>
     </div>
     <div class="pricetext">
-        <span class="price" style="margin-right:5px">$68.71</span>
+        <span class="price" style="margin-right:5px">$65.96</span>
     </div>
   </div>
 </li>
@@ -5088,7 +4972,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
-<div style="display:none;" class="p13n-session"  data-marketplaceId="ATVPDKIKX0DER" data-mkt="US" data-pageId="B00F4MEK6E" data-requestId="0Y3K0F4JF5ZR4SP28J48" data-session="000-0000000-0000000"></div>
+<div style="display:none;" class="p13n-session"  data-marketplaceId="ATVPDKIKX0DER" data-mkt="US" data-pageId="B00F4MEK6E" data-requestId="0377EZVT8VTMZ88KZQZ0" data-session="000-0000000-0000000"></div>
 
 
 
@@ -5137,8 +5021,8 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 <div id="buy_used_and_save_message">
 	<b>Buy Used and Save:</b>
-	Buy a Used "Dell Inspiron 15 i15RV-953BLK 15.6-Inch Laptop (Bl...” from Amazon Warehouse Deals and save 20% off the $399.99 list price. Product is eligible for Amazon's 30-day returns policy and Prime or FREE Shipping.
-	<a href="/gp/offer-listing/?ie=UTF8&ASIN=B00F4MEK6E&condition=used&me=A2L77EE7U53NWQ&ref=dp-buas"> See all Used offers from Amazon Warehouse Deals.</a>
+	Buy a Used "Dell Inspiron 15 i15RV-953BLK 15.6-Inch Laptop (Bl..." and save 15% off the $399.99 list price. Buy with confidence as the condition of this item and its timely delivery are guaranteed under the "Amazon A-to-z Guarantee".
+	<a href="/gp/offer-listing/?ie=UTF8&ASIN=B00F4MEK6E&condition=used&me=&ref=dp-buas-used">See all Used offers.</a>
 </div>
 </li><li><div class="amabot_widget"><b>Six-Month Financing:</b> 
 
@@ -5419,25 +5303,25 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 </script>
 <span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary acr-popover" name="B00F4MEK6E" ref="psdc1_r0_B00F4MEK6E_B00F4MEK6E_cm_cr_acr_pop_" >
              <a style="cursor:pointer;text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" name="reviewHistoPop_B00F4MEK6E__star__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" ><span class="swSprite s_star_4_0 " title="4.1 out of 5 stars" ><span>4.1 out of 5 stars</span></span>&nbsp;</a>&nbsp;<span class="histogramButton"
-          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" name="reviewHistoPop_B00F4MEK6E__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" >30</a>)</span></span></span></td><td><span class="rating-stars"><span class="amtcmp crAvgStars">
+          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" name="reviewHistoPop_B00F4MEK6E__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E" >31</a>)</span></span></span></td><td><span class="rating-stars"><span class="amtcmp crAvgStars">
 <span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary acr-popover" name="B00F4MEKTQ" ref="psdc1_r1_B00F4MEK6E_B00F4MEKTQ_cm_cr_acr_pop_" >
              <a style="cursor:pointer;text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RVT-3762BLK-15-6-Inch-Touchscreen/product-reviews/B00F4MEKTQ" name="reviewHistoPop_B00F4MEKTQ__star__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" ><span class="swSprite s_star_4_0 " title="4.1 out of 5 stars" ><span>4.1 out of 5 stars</span></span>&nbsp;</a>&nbsp;<span class="histogramButton"
-          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RVT-3762BLK-15-6-Inch-Touchscreen/product-reviews/B00F4MEKTQ" name="reviewHistoPop_B00F4MEKTQ__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RVT-3762BLK-15-6-Inch-Touchscreen/product-reviews/B00F4MEKTQ" >8</a>)</span></span></span></td><td><span class="rating-stars"><span class="amtcmp crAvgStars">
+          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RVT-3762BLK-15-6-Inch-Touchscreen/product-reviews/B00F4MEKTQ" name="reviewHistoPop_B00F4MEKTQ__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RVT-3762BLK-15-6-Inch-Touchscreen/product-reviews/B00F4MEKTQ" >9</a>)</span></span></span></td><td><span class="rating-stars"><span class="amtcmp crAvgStars">
 <span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary acr-popover" name="B00D9KP70G" ref="psdc1_r2_B00F4MEK6E_B00D9KP70G_cm_cr_acr_pop_" >
              <a style="cursor:pointer;text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-6143BLK-15-6-Inch-Touchscreen/product-reviews/B00D9KP70G" name="reviewHistoPop_B00D9KP70G__star__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" ><span class="swSprite s_star_4_0 " title="4.2 out of 5 stars" ><span>4.2 out of 5 stars</span></span>&nbsp;</a>&nbsp;<span class="histogramButton"
           style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-6143BLK-15-6-Inch-Touchscreen/product-reviews/B00D9KP70G" name="reviewHistoPop_B00D9KP70G__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6143BLK-15-6-Inch-Touchscreen/product-reviews/B00D9KP70G" >49</a>)</span></span></span></td><td><span class="rating-stars"><span class="amtcmp crAvgStars">
 <span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary acr-popover" name="B00CRGJKT2" ref="psdc1_r3_B00F4MEK6E_B00CRGJKT2_cm_cr_acr_pop_" >
              <a style="cursor:pointer;text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2" name="reviewHistoPop_B00CRGJKT2__star__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" ><span class="swSprite s_star_4_0 " title="4.0 out of 5 stars" ><span>4.0 out of 5 stars</span></span>&nbsp;</a>&nbsp;<span class="histogramButton"
-          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2" name="reviewHistoPop_B00CRGJKT2__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2" >31</a>)</span></span></span></td>
+          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2" name="reviewHistoPop_B00CRGJKT2__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2" >32</a>)</span></span></span></td>
 </tr>
 <tr class='amtcmp'><th>Price</th>
- <td class="amtcthis"><span class='price'>$349.99</span></td><td><span class='price'>$499.99</span></td><td><span class='price'>$423.94</span></td><td><span class='price'>$479.99</span></td>
+ <td class="amtcthis"><span class='price'>$349.99</span></td><td><span class='price'>$459.49</span></td><td><span class='price'>$428.98</span></td><td><span class='price'>$479.99</span></td>
 </tr>
 <tr class='amtcmp'><th>Shipping</th>
- <td class="amtcthis">FREE Shipping</td><td><span class='price'>$8.49</span></td><td><span class='price'>$8.49</span></td><td>FREE Shipping</td>
+ <td class="amtcthis">FREE Shipping</td><td><span class='price'>$6.99</span></td><td><span class='price'>$8.49</span></td><td>FREE Shipping</td>
 </tr>
 <tr class='amtcmp'><th>Sold By</th>
- <td class="amtcthis">Amazon.com</td><td><a href="/gp/help/seller/at-a-glance.html?ie=UTF8&amp;seller=A3JS2199GQLB8L">Amazing Holiday Deals</a></td><td><a href="/gp/help/seller/at-a-glance.html?ie=UTF8&amp;seller=A30AXZIY0UVRCJ">Delubbi Inc.</a></td><td>Amazon.com</td>
+ <td class="amtcthis">Amazon.com</td><td><a href="/gp/help/seller/at-a-glance.html?ie=UTF8&amp;seller=A3T6IBPTENA48B">1Generalstore</a></td><td><a href="/gp/help/seller/at-a-glance.html?ie=UTF8&amp;seller=A3MGNSBUENG2TP">Pro-Lenses</a></td><td>Amazon.com</td>
 </tr>
 
 
@@ -5480,7 +5364,7 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 <td>Intel HD Graphics 4000  </td>
 
 <tr class="amtcbtm"><th>&nbsp</th>
- <td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=ldLANL%252FYycFkcfdZCsqlyUWRVz6p7EmlZ5KQ6cHINlj358WjO51Z5lGe5NczDZryNN%252BICWXJBzouJ9zB1LqVGHOpV5D9i0GJaVHC1w97O4fJu231FbPdhQ%253D%253D&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td><td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=ps5Jwdj4nUEV%252FfuAO5C2uFjYT%252BVOhIIZsQ%252BIoA5RSKmR8EyLvCCTvLv0qPa1TtLQz8tcCvph48qIRzKE0ZLQJkNYG1AMo44I9AOnajGNDBStXpEQly7wedPf5odMe0bGzvlZq51M3VPC408kef1IMBSeNOQhNne%252F&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td><td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=mvpQQweCeQmj2%252B9cC8HAVCIS3GBVdbfPTHyFz2AzrqbhB7chvXtnxD24%252FAejI%252BE83u4M9FHbCcjLXnZYryxRnGF6JJ0Vzgg6cJSbtnA%252FX%252FWOySm%252Fz90vTss6FMbREtTOBkMrr9bGzqNKeE9vZl5O8g%253D%253D&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td><td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=2%252F4dgVZFnmh%252B%252FKHYpMT3ijSxf9fFdpNa%252B6ukyuH1TLgDesLn96pR2ErZVR0%252FAK4viBu%252FGCbnQtx%252Fjh1Q%252BxMzCm2fCInatVx51wQC%252FAMU2uQWvGuJqCmPdQ%253D%253D&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td>
+ <td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=TEbqACIFPSRUrlQUQHWtGrAxnr%252FO%252Bj4Rw42s5xjsmGmsG4Y036ZLuSB%252FqGPn4IWqEdMOdCTCqXNZMfAA65EDOUOqZ2IoNLa9LedvkzJkUAySrlfzm7b4Uw%253D%253D&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td><td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=9hS%252FWiFTCpqPeiFW2UrtjwQI571uwSjVpQW6U6PdHshYIrfeHi18C%252FAkAMroyEEIB%252BMhIPVjcw6QpBXakXgVSjWgx07Wikzo1ZheNqEbLrLfnfZuTmSMm2t91wjOqJy6UY6x1qLHALU3Y49vFPJGsMI1DmhBhElW&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td><td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=1IiDp33e9Cvg%252FdhiYUMrQcL7cDxedhmpzxIsu2NaChiyCtMpwGa6yv2ph9OgXIjxKtirIMaajY99cCQmXRIw1wdlFwR8Qi%252Buorrh7mynPFoTB5qy%252Fdl9l659Y2wpFwF8MhcioNcdeaGPFx9rgULhVg%253D%253D&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td><td class="amtcmp"><a class="swSprite s_add2CartSm " href="/gp/item-dispatch?ie=UTF8&itemCount=1&nodeID=541966&offeringID.1=BLELya2XbSVmc9rRqFak%252FvCbuTNWc4OoEqaXjw6GAPFWWwxfWsSz%252FFkJEnPmbk9SOSlI1MlRvWmWJMlzhq26Bmn1jqjSfpiNUzxXdhpUfdtXsTJuDZw%252FPQ%253D%253D&session-id=000-0000000-0000000&signInToHUC=&storeID=pc&submit.addToCart=addToCart" ><span>Add to Cart</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -5528,8 +5412,6 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 
 
 
-
-    
 
 
     
@@ -5760,7 +5642,7 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 
 
 
-#34 in Computers & Accessories (<a href="http://www.amazon.com/gp/bestsellers/pc">See top 100</a>)
+#28 in Computers & Accessories (<a href="http://www.amazon.com/gp/bestsellers/pc">See top 100</a>)
   
 
 
@@ -5788,7 +5670,7 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 
 <ul class="zg_hrsr">
     <li class="zg_hrsr_item">
-    <span class="zg_hrsr_rank">#4</span> 
+    <span class="zg_hrsr_rank">#3</span> 
     <span class="zg_hrsr_ladder">in&nbsp;<a href="http://www.amazon.com/gp/bestsellers/pc">Computers & Accessories</a> &gt; <a href="http://www.amazon.com/gp/bestsellers/pc/565108">Notebooks</a></span>
     </li>
 </ul>
@@ -5873,68 +5755,6 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 			<div id="lwcfContainer" style="padding-top:0.5em"></div><div id="gfixFeaturesContainer" style="padding-top:0.5em">Would you like to <b><a href="https://www.amazon.com/gp/gfix/welcome.html?ie=UTF8&ASIN=B00F4MEK6E&merchantID=ATVPDKIKX0DER&storeID=pc">update product info</a></b> or <b><a href="https://www.amazon.com/gp/gfix/imageCorrection.html?ie=UTF8&ASIN=B00F4MEK6E&merchantID=ATVPDKIKX0DER&storeID=pc">give feedback on images</a></b>?</div></div>
 </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-
-.c2c-inline-sprite {
-    display: -moz-inline-box;
-    display: inline-block;
-    margin: 0;padding: 0; 
-    position: relative;
-    overflow: hidden;
-    vertical-align: middle;
-    background: url(http://g-ecx.images-amazon.com/images/G/01/electronics/click2call/click2call-sprite._V156431432_.png) no-repeat;
-}
-.c2c-inline-sprite span {
-    position:absolute;
-    top:-9999px;
-}
-
-.dp-call-me-button {
-    width:52px;
-    height:22px;
-    background-position:0px -57px; 
-}
-
-#dp-c2c-phone-icon {
-  background-image:url(http://g-ecx.images-amazon.com/images/G/01/electronics/click2call/sprite-click2call._V134653340_.png);
-  background-repeat:no-repeat;
-  background-position: 0px 0px;
-  width:36px;
-  height:35px;
-  float:left;
-  margin-right:0.5em;
-}   
-#detailpage-click2call-table {
-  padding: 5px 0;
-}   
-</style>  <div class="section" id="need-help-deciding">
-    <div class="secHeader">Need Help Buying a Computer?</div>
-    <div class="content pdClearfix"><a id="dp-c2c-phone-icon" href="javascript:void( amznC2CPopup('e3308f2a-ea64-42ee-8510-52c448d30915'))" class="c2c-phone-icon"></a>  
-<div style="padding-top: 9px;">Get advice and order by phone. <a href="javascript:void( amznC2CPopup('e3308f2a-ea64-42ee-8510-52c448d30915'))" id="detailpage-click2call-callmebuttonlink">Call me now.</a></div>
-</div>
-  </div>
 
 
 
@@ -6247,7 +6067,7 @@ amznJQ.available('jQuery', function() {
                     <span class="cpAsinTitle">Dell Inspiron 15 i15RV-6144BLK 15.6-Inch Touchscreen Laptop (Black Matte with Textured Finish)</span> </a>
 
     <br>
-    <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00CRGJKT2"><a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2"><span class="swSprite s_star_4_0 " title="4.0 out of 5 stars" ><span>4.0 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2">31</a>)</span></span><br>
+    <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00CRGJKT2"><a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2"><span class="swSprite s_star_4_0 " title="4.0 out of 5 stars" ><span>4.0 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6144BLK-15-6-Inch-Touchscreen/product-reviews/B00CRGJKT2">32</a>)</span></span><br>
   <div class="price">$479.99</div>
   </div>
 </li>
@@ -6282,8 +6102,8 @@ amznJQ.available('jQuery', function() {
                     <span class="cpAsinTitle">Toshiba Satellite C55-A5300 15.6" Laptop PC</span> </a>
 
     <br>
-    <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00G1NC0Y4"><a href="http://www.amazon.com/Toshiba-Satellite-C55-A5300-15-6-Laptop/product-reviews/B00G1NC0Y4"><span class="swSprite s_star_4_0 " title="3.9 out of 5 stars" ><span>3.9 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Toshiba-Satellite-C55-A5300-15-6-Laptop/product-reviews/B00G1NC0Y4">45</a>)</span></span><br>
-  <div class="price">$364.99</div>
+    <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00G1NC0Y4"><a href="http://www.amazon.com/Toshiba-Satellite-C55-A5300-15-6-Laptop/product-reviews/B00G1NC0Y4"><span class="swSprite s_star_4_0 " title="3.9 out of 5 stars" ><span>3.9 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Toshiba-Satellite-C55-A5300-15-6-Laptop/product-reviews/B00G1NC0Y4">46</a>)</span></span><br>
+  <div class="price">$359.85</div>
   </div>
 </li>
 <div class="vtp-clear"> </div>
@@ -6353,7 +6173,7 @@ amznJQ.available('jQuery', function() {
 
     <br>
     <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B00D9KP70G"><a href="http://www.amazon.com/Dell-Inspiron-i15RV-6143BLK-15-6-Inch-Touchscreen/product-reviews/B00D9KP70G"><span class="swSprite s_star_4_0 " title="4.2 out of 5 stars" ><span>4.2 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Dell-Inspiron-i15RV-6143BLK-15-6-Inch-Touchscreen/product-reviews/B00D9KP70G">49</a>)</span></span><br>
-  <div class="price">$423.94</div>
+  <div class="price">$428.98</div>
   </div>
 </li>
 <div class="vtp-clear"> </div>
@@ -6614,6 +6434,129 @@ amznJQ.available('jQuery', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
@@ -6658,7 +6601,7 @@ amznJQ.available('jQuery', function() {
 <div id="summaryStars" class="a-row">  
   <a class="a-link-normal a-text-normal" title="4.1 out of 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
     <i class="a-icon a-icon-star-medium a-star-medium-4"></i>
-    (30)
+    (31)
   </a>  
 </div>
 <div id="avgRating" class="a-row a-spacing-small a-color-secondary"> 
@@ -6719,10 +6662,10 @@ amznJQ.available('jQuery', function() {
   <tr class="a-histogram-row">
   
     <td class="a-nowrap">
-      <a class="a-link-normal" title="53% of reviews have 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">5 star</a><span class="a-letter-space"></span>      
+      <a class="a-link-normal" title="52% of reviews have 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">5 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="53% of reviews have 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 53.3333333333333%;"></div></div></a>
+      <a class="a-link-normal" title="52% of reviews have 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 51.6129032258064%;"></div></div></a>
     </td>
     <td class="a-nowrap">
       <span class="a-letter-space"></span><span>16</span>
@@ -6731,13 +6674,13 @@ amznJQ.available('jQuery', function() {
   <tr class="a-histogram-row">
   
     <td class="a-nowrap">
-      <a class="a-link-normal" title="30% of reviews have 4 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">4 star</a><span class="a-letter-space"></span>      
+      <a class="a-link-normal" title="32% of reviews have 4 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">4 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="30% of reviews have 4 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 30%;"></div></div></a>
+      <a class="a-link-normal" title="32% of reviews have 4 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 32.258064516129%;"></div></div></a>
     </td>
     <td class="a-nowrap">
-      <span class="a-letter-space"></span><span>9</span>
+      <span class="a-letter-space"></span><span>10</span>
     </td>
   </tr>
   <tr class="a-histogram-row">
@@ -6746,7 +6689,7 @@ amznJQ.available('jQuery', function() {
       <a class="a-link-normal" title="3% of reviews have 3 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">3 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="3% of reviews have 3 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 3.33333333333333%;"></div></div></a>
+      <a class="a-link-normal" title="3% of reviews have 3 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 3.2258064516129%;"></div></div></a>
     </td>
     <td class="a-nowrap">
       <span class="a-letter-space"></span><span>1</span>
@@ -6770,7 +6713,7 @@ amznJQ.available('jQuery', function() {
       <a class="a-link-normal" title="13% of reviews have 1 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">1 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="13% of reviews have 1 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 13.3333333333333%;"></div></div></a>
+      <a class="a-link-normal" title="13% of reviews have 1 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><div class="a-meter"><div class="a-meter-bar" style="width: 12.9032258064516%;"></div></div></a>
     </td>
     <td class="a-nowrap">
       <span class="a-letter-space"></span><span>4</span>
@@ -6787,7 +6730,7 @@ amznJQ.available('jQuery', function() {
 
 
 
-      <a class="a-link-emphasis a-text-normal a-nowrap" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">See all 30 customer reviews</a> 
+      <a class="a-link-emphasis a-text-normal a-nowrap" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">See all 31 customer reviews</a> 
     
     
     </div> 
@@ -6892,7 +6835,7 @@ amznJQ.available('jQuery', function() {
 
 
 
-<div id="rev-dpReviewsMostHelpfulAUI-R2X4VYPYPBCJDI" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">187 of 198 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/R2X4VYPYPBCJDI"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R2X4VYPYPBCJDI"><span class="a-size-base a-text-bold">Not bad at all, But...</span></a></div><span class="a-color-secondary">
+<div id="rev-dpReviewsMostHelpfulAUI-R2X4VYPYPBCJDI" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">189 of 200 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/R2X4VYPYPBCJDI"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R2X4VYPYPBCJDI"><span class="a-size-base a-text-bold">Not bad at all, But...</span></a></div><span class="a-color-secondary">
 
 
 
@@ -6994,7 +6937,7 @@ amznJQ.available('jQuery', function() {
 
 
 
-<div id="rev-dpReviewsMostHelpfulAUI-R3N3YO69PLJ6X0" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">74 of 79 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/R3N3YO69PLJ6X0"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R3N3YO69PLJ6X0"><span class="a-size-base a-text-bold">Great buy</span></a></div><span class="a-color-secondary">
+<div id="rev-dpReviewsMostHelpfulAUI-R3N3YO69PLJ6X0" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">76 of 81 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/R3N3YO69PLJ6X0"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R3N3YO69PLJ6X0"><span class="a-size-base a-text-bold">Great buy</span></a></div><span class="a-color-secondary">
 
 
 
@@ -7191,7 +7134,7 @@ amznJQ.available('jQuery', function() {
 
 
 
-<div id="rev-dpReviewsMostHelpfulAUI-R6ANNS0Y1JCGX" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">36 of 41 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/R6ANNS0Y1JCGX"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R6ANNS0Y1JCGX"><span class="a-size-base a-text-bold">loved it!</span></a></div><span class="a-color-secondary">
+<div id="rev-dpReviewsMostHelpfulAUI-R6ANNS0Y1JCGX" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">37 of 42 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/R6ANNS0Y1JCGX"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R6ANNS0Y1JCGX"><span class="a-size-base a-text-bold">loved it!</span></a></div><span class="a-color-secondary">
 
 
 
@@ -7265,107 +7208,6 @@ amznJQ.available('jQuery', function() {
       Thank you for your feedback.
       <span class="a-color-base a-hidden cr-vote-inapp">
         If this review is inappropriate, <a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R6ANNS0Y1JCGX/Inappropriate/1?ie=UTF8&target=&token=54A66B35EEDCFC542E19453EFB90319B2A98DE34&voteAnchorName=R6ANNS0Y1JCGX.2115.Inappropriate.Reviews&voteSessionID=000-0000000-0000000" class="noTextDecoration" style="color: #039;" >please let us know.</a>
-      </span>
-    </div></div></div>
-
-
-
-  <div class="a-box a-alert-inline a-alert-inline-error a-hidden cr-vote-error"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
-    Sorry, we failed to record your vote. Please try again
-  </div></div></div>
-  <div class="a-box a-alert-inline a-alert-inline-error a-hidden cr-vote-submit-error"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
-    Sorry, we failed to submit your comment. Please try again
-  </div></div></div>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<div id="rev-dpReviewsMostHelpfulAUI-R3TS26DBV6R2MO" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">26 of 30 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="3.0 out of 5 stars" href="http://www.amazon.com/review/R3TS26DBV6R2MO"><i class="a-icon a-icon-star a-star-3"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R3TS26DBV6R2MO"><span class="a-size-base a-text-bold">You get what you paid for...</span></a></div><span class="a-color-secondary">
-
-
-
-
-
-
-  <span class="a-size-normal">
-    <span class="a-color-secondary">
-      By
-    </span>
-    <a href="/gp/pdp/profile/A3QS3S0GAQ41IF" class="noTextDecoration">c.m.o</a>
-  </span>
- on November 20, 2013</span></div><div id="revData-dpReviewsMostHelpfulAUI-R3TS26DBV6R2MO" class="a-row a-spacing-small"><span class="a-size-mini a-color-state a-text-bold">
-    Amazon Verified Purchase
-  </span>
-
-
-
-
-
-<div class="a-section">
-  Two days after receiving this computer it would not turn on. I removed the battery (it was already in the laptop when it arrived) and put it back in. After that it did turn on, so I ran a full test to see if their where any problems. At this point I had not download any programs to this laptop. I wait about one week before downloading Microsoft Office. I really needed a computer and this was the third one that I had gotten in a two week period. I did not sent it back and it has been working great most of the time. It still have start up problems sometimes but as long as it last for the next 4 months it will be okay. This computer was under 400 dollars and I did not expect it to be fast or do a lot of thing. The speakers or amazing compared to my last laptop and over all this laptop is very user friendly.
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-<a class="a-link-normal comment-link" title="3" href="http://www.amazon.com/review/R3TS26DBV6R2MO">3 Comments</a>
-<i class="a-icon a-icon-text-separator"></i>
-
-
-
-
-
-
-
-<a id="R3TS26DBV6R2MO.2115.Helpful.Reviews"></a>
-    <span id="cr-vote-R3TS26DBV6R2MO">
-    <span class="cr-vote-buttons">
-        Was this review helpful to you?
-      <span class="a-declarative" data-action="cr-vote" data-cr-vote="{&quot;rootComponentId&quot;:&quot;#cr-vote-R3TS26DBV6R2MO&quot;,&quot;reviewId&quot;:&quot;R3TS26DBV6R2MO&quot;}" style="display: inline">
-
-        <span class="a-button a-button-beside-text a-button-small yesButton votingButtonReviews"><span class="a-button-inner"><a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R3TS26DBV6R2MO/Helpful/1?ie=UTF8&target=aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Byb2R1Y3QvQjAwRjRNRUs2RQ&token=493BA2DABB2CE1BFB89836F7AD440AFE632F1BA1&voteAnchorName=R3TS26DBV6R2MO.2115.Helpful.Reviews&voteSessionID=000-0000000-0000000" title="Yes" class="a-button-text a-text-center">
-          Yes 
-        </a></span></span>
-        <span class="a-button a-button-beside-text a-button-small noButton votingButtonReviews"><span class="a-button-inner"><a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R3TS26DBV6R2MO/Helpful/-1?ie=UTF8&target=aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Byb2R1Y3QvQjAwRjRNRUs2RQ&token=764ACE9B3ECC8BF38F77B56B33C85CDFE4B2EC1C&voteAnchorName=R3TS26DBV6R2MO.2115.Helpful.Reviews&voteSessionID=000-0000000-0000000" title="No" class="a-button-text a-text-center">
-          No
-        </a></span></span>
-      </span>
-    </span>
-
-    
-
-
-
-
-
-
-  <span class="a-hidden cr-vote-feedback">
-    Sending feedback...
-  </span>
-
-    <div class="a-box a-alert-inline a-alert-inline-success a-hidden cr-vote-success"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
-      Thank you for your feedback.
-      <span class="a-color-base a-hidden cr-vote-inapp">
-        If this review is inappropriate, <a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R3TS26DBV6R2MO/Inappropriate/1?ie=UTF8&target=&token=6C36627EB13F861CAD31C6960BE888BAAB3726F2&voteAnchorName=R3TS26DBV6R2MO.2115.Inappropriate.Reviews&voteSessionID=000-0000000-0000000" class="noTextDecoration" style="color: #039;" >please let us know.</a>
       </span>
     </div></div></div>
 
@@ -7493,6 +7335,203 @@ amznJQ.available('jQuery', function() {
 
 
 
+
+<div id="rev-dpReviewsMostHelpfulAUI-RA3S3FS6SS3OP" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">31 of 37 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="5.0 out of 5 stars" href="http://www.amazon.com/review/RA3S3FS6SS3OP"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/RA3S3FS6SS3OP"><span class="a-size-base a-text-bold">Very good laptop</span></a></div><span class="a-color-secondary">
+
+
+
+
+
+
+  <span class="a-size-normal">
+    <span class="a-color-secondary">
+      By
+    </span>
+    <a href="/gp/pdp/profile/A1GVE2UQO1C8BE" class="noTextDecoration">Alejandro</a>
+  </span>
+ on October 24, 2013</span></div><div id="revData-dpReviewsMostHelpfulAUI-RA3S3FS6SS3OP" class="a-row a-spacing-small"><span class="a-size-mini a-color-state a-text-bold">
+    Amazon Verified Purchase
+  </span>
+
+
+
+
+
+<div class="a-section">
+  This laptop is all what I need. I don't use to run heavy software so because of that I think that with its dual core and 4 GB of RAM it's perfect for most of users. Also looking in the web I found that Processor performance is very similar to Core i3 processor in most of the situations. I'm very happy because it's a very good laptop at an excellent price.
+</div>
+
+</div>
+
+
+
+
+<a class="a-link-normal comment-link" title="1" href="http://www.amazon.com/review/RA3S3FS6SS3OP">1 Comment</a>
+<i class="a-icon a-icon-text-separator"></i>
+
+
+
+
+
+
+
+<a id="RA3S3FS6SS3OP.2115.Helpful.Reviews"></a>
+    <span id="cr-vote-RA3S3FS6SS3OP">
+    <span class="cr-vote-buttons">
+        Was this review helpful to you?
+      <span class="a-declarative" data-action="cr-vote" data-cr-vote="{&quot;rootComponentId&quot;:&quot;#cr-vote-RA3S3FS6SS3OP&quot;,&quot;reviewId&quot;:&quot;RA3S3FS6SS3OP&quot;}" style="display: inline">
+
+        <span class="a-button a-button-beside-text a-button-small yesButton votingButtonReviews"><span class="a-button-inner"><a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/RA3S3FS6SS3OP/Helpful/1?ie=UTF8&target=aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Byb2R1Y3QvQjAwRjRNRUs2RQ&token=D3C7270E580458807E102AF9A7F45EBCA626ADE2&voteAnchorName=RA3S3FS6SS3OP.2115.Helpful.Reviews&voteSessionID=000-0000000-0000000" title="Yes" class="a-button-text a-text-center">
+          Yes 
+        </a></span></span>
+        <span class="a-button a-button-beside-text a-button-small noButton votingButtonReviews"><span class="a-button-inner"><a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/RA3S3FS6SS3OP/Helpful/-1?ie=UTF8&target=aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Byb2R1Y3QvQjAwRjRNRUs2RQ&token=9F5061862FF74E31137CBD9AF98C64013A689537&voteAnchorName=RA3S3FS6SS3OP.2115.Helpful.Reviews&voteSessionID=000-0000000-0000000" title="No" class="a-button-text a-text-center">
+          No
+        </a></span></span>
+      </span>
+    </span>
+
+    
+
+
+
+
+
+
+  <span class="a-hidden cr-vote-feedback">
+    Sending feedback...
+  </span>
+
+    <div class="a-box a-alert-inline a-alert-inline-success a-hidden cr-vote-success"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
+      Thank you for your feedback.
+      <span class="a-color-base a-hidden cr-vote-inapp">
+        If this review is inappropriate, <a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/RA3S3FS6SS3OP/Inappropriate/1?ie=UTF8&target=&token=40F796343BF88B95CD5BCA2595485F1EE4432650&voteAnchorName=RA3S3FS6SS3OP.2115.Inappropriate.Reviews&voteSessionID=000-0000000-0000000" class="noTextDecoration" style="color: #039;" >please let us know.</a>
+      </span>
+    </div></div></div>
+
+
+
+  <div class="a-box a-alert-inline a-alert-inline-error a-hidden cr-vote-error"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
+    Sorry, we failed to record your vote. Please try again
+  </div></div></div>
+  <div class="a-box a-alert-inline a-alert-inline-error a-hidden cr-vote-submit-error"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
+    Sorry, we failed to submit your comment. Please try again
+  </div></div></div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="rev-dpReviewsMostHelpfulAUI-R3TS26DBV6R2MO" class="a-section"><div class="a-row a-spacing-micro"><span class="a-size-small a-color-secondary">27 of 32 people found the following review helpful</span><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal a-color-base" title="3.0 out of 5 stars" href="http://www.amazon.com/review/R3TS26DBV6R2MO"><i class="a-icon a-icon-star a-star-3"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" href="http://www.amazon.com/review/R3TS26DBV6R2MO"><span class="a-size-base a-text-bold">You get what you paid for...</span></a></div><span class="a-color-secondary">
+
+
+
+
+
+
+  <span class="a-size-normal">
+    <span class="a-color-secondary">
+      By
+    </span>
+    <a href="/gp/pdp/profile/A3QS3S0GAQ41IF" class="noTextDecoration">c.m.o</a>
+  </span>
+ on November 20, 2013</span></div><div id="revData-dpReviewsMostHelpfulAUI-R3TS26DBV6R2MO" class="a-row a-spacing-small"><span class="a-size-mini a-color-state a-text-bold">
+    Amazon Verified Purchase
+  </span>
+
+
+
+
+
+<div class="a-section">
+  Two days after receiving this computer it would not turn on. I removed the battery (it was already in the laptop when it arrived) and put it back in. After that it did turn on, so I ran a full test to see if their where any problems. At this point I had not download any programs to this laptop. I wait about one week before downloading Microsoft Office. I really needed a computer and this was the third one that I had gotten in a two week period. I did not sent it back and it has been working great most of the time. It still have start up problems sometimes but as long as it last for the next 4 months it will be okay. This computer was under 400 dollars and I did not expect it to be fast or do a lot of thing. The speakers or amazing compared to my last laptop and over all this laptop is very user friendly.
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<a class="a-link-normal comment-link" title="3" href="http://www.amazon.com/review/R3TS26DBV6R2MO">3 Comments</a>
+<i class="a-icon a-icon-text-separator"></i>
+
+
+
+
+
+
+
+<a id="R3TS26DBV6R2MO.2115.Helpful.Reviews"></a>
+    <span id="cr-vote-R3TS26DBV6R2MO">
+    <span class="cr-vote-buttons">
+        Was this review helpful to you?
+      <span class="a-declarative" data-action="cr-vote" data-cr-vote="{&quot;rootComponentId&quot;:&quot;#cr-vote-R3TS26DBV6R2MO&quot;,&quot;reviewId&quot;:&quot;R3TS26DBV6R2MO&quot;}" style="display: inline">
+
+        <span class="a-button a-button-beside-text a-button-small yesButton votingButtonReviews"><span class="a-button-inner"><a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R3TS26DBV6R2MO/Helpful/1?ie=UTF8&target=aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Byb2R1Y3QvQjAwRjRNRUs2RQ&token=493BA2DABB2CE1BFB89836F7AD440AFE632F1BA1&voteAnchorName=R3TS26DBV6R2MO.2115.Helpful.Reviews&voteSessionID=000-0000000-0000000" title="Yes" class="a-button-text a-text-center">
+          Yes 
+        </a></span></span>
+        <span class="a-button a-button-beside-text a-button-small noButton votingButtonReviews"><span class="a-button-inner"><a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R3TS26DBV6R2MO/Helpful/-1?ie=UTF8&target=aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Byb2R1Y3QvQjAwRjRNRUs2RQ&token=764ACE9B3ECC8BF38F77B56B33C85CDFE4B2EC1C&voteAnchorName=R3TS26DBV6R2MO.2115.Helpful.Reviews&voteSessionID=000-0000000-0000000" title="No" class="a-button-text a-text-center">
+          No
+        </a></span></span>
+      </span>
+    </span>
+
+    
+
+
+
+
+
+
+  <span class="a-hidden cr-vote-feedback">
+    Sending feedback...
+  </span>
+
+    <div class="a-box a-alert-inline a-alert-inline-success a-hidden cr-vote-success"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
+      Thank you for your feedback.
+      <span class="a-color-base a-hidden cr-vote-inapp">
+        If this review is inappropriate, <a href="http://www.amazon.com/gp/voting/cast/Reviews/2115/R3TS26DBV6R2MO/Inappropriate/1?ie=UTF8&target=&token=6C36627EB13F861CAD31C6960BE888BAAB3726F2&voteAnchorName=R3TS26DBV6R2MO.2115.Inappropriate.Reviews&voteSessionID=000-0000000-0000000" class="noTextDecoration" style="color: #039;" >please let us know.</a>
+      </span>
+    </div></div></div>
+
+
+
+  <div class="a-box a-alert-inline a-alert-inline-error a-hidden cr-vote-error"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
+    Sorry, we failed to record your vote. Please try again
+  </div></div></div>
+  <div class="a-box a-alert-inline a-alert-inline-error a-hidden cr-vote-submit-error"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
+    Sorry, we failed to submit your comment. Please try again
+  </div></div></div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -7510,7 +7549,7 @@ amznJQ.available('jQuery', function() {
 
   <div class="a-row a-spacing-large">
     <a class="a-link-emphasis a-text-bold" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
-      See all 30 customer reviews (newest first)
+      See all 31 customer reviews (newest first)
     </a>
   </div>
     <span class="a-button a-button-width-normal"><span class="a-button-inner"><a href="http://www.amazon.com/review/create-review" title="Write a customer review" class="a-button-text">
@@ -7528,7 +7567,7 @@ amznJQ.available('jQuery', function() {
 
     <div id="revMRLContainer" class="a-column a-span4 a-span-last">
       <div id="ADPlaceholder" class="a-section">
-        <script type='text/javascript'>var paCusRevAllURL = "http://product-ads-portal.amazon.com/gp/synd/?asin=B00F4MEK6E&pAsin=&gl=147&sq=&sa=&se=&noo=&pt=Detail&spt=Glance&sn=customer-reviews-top&pRID=0Y3K0F4JF5ZR4SP28J48&ts=1387131989&h=4531D473B80690FAE04C390E5A35B590F583BA29";</script>
+        <script type='text/javascript'>var paCusRevAllURL = "http://product-ads-portal.amazon.com/gp/synd/?asin=B00F4MEK6E&pAsin=&gl=147&sq=&sa=&se=&noo=&pt=Detail&spt=Glance&sn=customer-reviews-top&pRID=0377EZVT8VTMZ88KZQZ0&ts=1387173157&h=484526AD8158F7A934A7D9A2BFFA0B936F33FC33";</script>
       </div>
       
 
@@ -7567,7 +7606,7 @@ amznJQ.available('jQuery', function() {
       <div class="a-fixed-right-grid"><div class="a-fixed-right-grid-inner" style="padding-right:100px">
   
       <div class="a-fixed-right-grid-col a-col-right" style="width:100px;margin-right:-100px;float:left;">
-          <a href="/gp/customer-media/upload/B00F4MEK6E?ie=UTF8&rnd=1387131989" class="a-touch-link a-box a-color-base add-product-image"><div class="a-box-inner"><i class="a-icon a-icon-touch-link"></i>Add a product image</div></a>
+          <a href="/gp/customer-media/upload/B00F4MEK6E?ie=UTF8&rnd=1387173157" class="a-touch-link a-box a-color-base add-product-image"><div class="a-box-inner"><i class="a-icon a-icon-touch-link"></i>Add a product image</div></a>
       </div>
     </div></div>
   </div>
@@ -7586,6 +7625,29 @@ amznJQ.available('jQuery', function() {
   
 
 
+<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by howmac" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><span class="a-size-base a-text-bold">christmas gift</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by howmac" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
+
+
+
+  <p class="a-last">
+    <span class="a-color-base">
+      My wife loved the gift. It is a good holiday gift.<br>Overall good.<br>Don't understand why there is a word limit on comments
+    </span> 
+    
+  </p> 
+
+
+
+
+
+
+
+
+
+<span class="a-size-small a-color-success">
+  Published 4 hours ago by howmac
+</span>
+</a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by C. Quan" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><span class="a-size-base a-text-bold">Overall a nice machine.</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by C. Quan" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
 
 
@@ -7661,7 +7723,7 @@ amznJQ.available('jQuery', function() {
 
 
 <span class="a-size-small a-color-secondary">
-  Published 4 days ago by Mercedes Garcia Otegui
+  Published 5 days ago by Mercedes Garcia Otegui
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by C. M. Smith" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><span class="a-size-base a-text-bold">Dell laptop</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by C. M. Smith" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
@@ -7759,7 +7821,7 @@ amznJQ.available('jQuery', function() {
 
 
 <span class="a-size-small a-color-secondary">
-  Published 12 days ago by Carol Moore
+  Published 13 days ago by Carol Moore
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="1.0 out of 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><i class="a-icon a-icon-star a-star-1"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Margaret W Fisher" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><span class="a-size-base a-text-bold">NO!  Don't do it!</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Margaret W Fisher" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
@@ -7805,33 +7867,7 @@ amznJQ.available('jQuery', function() {
 
 
 <span class="a-size-small a-color-secondary">
-  Published 17 days ago by MARGARET THOMAS
-</span>
-</a></div>
-<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by James C. Storm" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E"><span class="a-size-base a-text-bold">I will get help from friends hopefully.</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by James C. Storm" href="http://www.amazon.com/Dell-Inspiron-i15RV-953BLK-15-6-Inch-Laptop/product-reviews/B00F4MEK6E">
-
-
-
-  <p class="a-last">
-    <span class="a-color-base">
-      I can't understand why, when using power cord, the screen is not nearly as bright as when I am operating on the battery mode.
-    </span> 
-    
-    <span class="a-text-underline">
-      <span class="a-letter-space"></span>Read more
-    </span> 
-  </p> 
-
-
-
-
-
-
-
-
-
-<span class="a-size-small a-color-secondary">
-  Published 17 days ago by James C. Storm
+  Published 18 days ago by MARGARET THOMAS
 </span>
 </a></div>
 
@@ -8342,7 +8378,7 @@ amznJQ.onReady("jQuery", function(){
     <div id="nav_subcats">
       <div id="nav_subcats_0" data-nav-promo-id="instant-video" data-nav-wt='25625' class="nav_browse_subcat"><ul class="nav_browse_ul nav_browse_cat_ul"><li class="nav_pop_li nav_browse_cat_head">Unlimited Instant Videos</li><li class="nav_first nav_taglined nav_subcat_link nav_pop_li"><a href="/Prime-Instant-Video/b?ie=UTF8&amp;node=2676882011" class="nav_a nav_item">Prime Instant Video</a><div class="nav_tag">Unlimited streaming of movies and TV shows</div></li><li class="nav_subcat_link nav_pop_li"><a href="/gp/video/primesignup?ie=UTF8&amp;redirectQueryParams=bm9kZT0yNjE1MjYwMDEx&amp;redirectURL=L2Iv" class="nav_a nav_item">Learn More About Amazon Prime</a></li><li class="nav_taglined nav_subcat_link nav_pop_li nav_divider_before"><a href="/Instant-Video/b?ie=UTF8&amp;node=2858778011" class="nav_a nav_item">Amazon Instant Video Store</a><div class="nav_tag">Rent or buy hit movies and TV shows<br />to stream or download</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/video/library" class="nav_a nav_item">Your Video Library</a><div class="nav_tag">Your purchases and rentals</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000663511" class="nav_a nav_item">Watch Anywhere</a><div class="nav_tag">Tablets, game consoles, TVs and more</div></li></ul></div>
 <div id="nav_subcats_1" data-nav-promo-id="mp3"  class="nav_browse_subcat"><ul class="nav_browse_ul nav_browse_cat_ul"><li class="nav_pop_li nav_browse_cat_head">MP3s & Cloud Player</li><li class="nav_first nav_subcat_link nav_pop_li"><a href="/MP3-Music-Download/b?ie=UTF8&amp;node=163856011" class="nav_a nav_item">MP3 Store</a></li><li class="nav_subcat_link nav_pop_li"><a href="/Best-Sellers-MP3-Downloads/zgbs/dmusic" class="nav_a nav_item">Best Sellers</a></li><li class="nav_subcat_link nav_pop_li"><a href="/New-Future-Releases-MP3-Downloads/b?ie=UTF8&amp;node=307026011" class="nav_a nav_item">New Releases</a></li><li class="nav_subcat_link nav_pop_li"><a href="/MP3-Deals/b?ie=UTF8&amp;node=678551011" class="nav_a nav_item">Deals</a></li><li class="nav_taglined nav_subcat_link nav_pop_li nav_divider_before"><a href="/gp/feature.html?ie=UTF8&amp;docId=1001316131" class="nav_a nav_item">Play your music on the go</a><div class="nav_tag">Cloud Player for your phone, tablet, or car</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1001422531" class="nav_a nav_item">Play your music at home</a><div class="nav_tag">Cloud Player for your PC, Mac, Roku, Sonos, or Samsung devices</div></li></ul></div>
-<div id="nav_subcats_2" data-nav-promo-id="cloud-drive"  class="nav_browse_subcat"><ul class="nav_browse_ul nav_browse_cat_ul"><li class="nav_pop_li nav_browse_cat_head">Amazon Cloud Drive</li><li class="nav_first nav_taglined nav_subcat_link nav_pop_li"><a href="/clouddrive" class="nav_a nav_item" target="_blank">Your Cloud Drive</a><div class="nav_tag">5 GB of free storage</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000796781" class="nav_a nav_item">Get the Desktop App</a><div class="nav_tag">For Windows and Mac</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1001206201" class="nav_a nav_item">Cloud Drive Photos for iOS</a><div class="nav_tag">Get the app for your iPhone and iPad</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000848741" class="nav_a nav_item">Cloud Drive Photos for Android</a><div class="nav_tag">Get the app for your phone or tablet</div></li><li class="nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000796931" class="nav_a nav_item">Learn More About Cloud Drive</a></li></ul></div>
+<div id="nav_subcats_2" data-nav-promo-id="cloud-drive"  class="nav_browse_subcat"><ul class="nav_browse_ul nav_browse_cat_ul"><li class="nav_pop_li nav_browse_cat_head">Amazon Cloud Drive</li><li class="nav_first nav_taglined nav_subcat_link nav_pop_li"><a href="/clouddrive" class="nav_a nav_item" target="_blank">Your Cloud Drive</a><div class="nav_tag">5 GB of free storage</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000796781" class="nav_a nav_item">Cloud Drive for PC and Mac</a><div class="nav_tag">Get the app for your computer</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1001206201" class="nav_a nav_item">Cloud Drive Photos for iOS</a><div class="nav_tag">Get the app for your iPhone and iPad</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000848741" class="nav_a nav_item">Cloud Drive Photos for Android</a><div class="nav_tag">Get the app for your phone or tablet</div></li><li class="nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000796931" class="nav_a nav_item">Learn More About Cloud Drive</a></li></ul></div>
 <div id="nav_subcats_3" data-nav-promo-id="kindle-reader"  class="nav_browse_subcat nav_super_cat"><ul class="nav_browse_ul nav_browse_cat_ul"><li class="nav_first nav_pop_li nav_browse_cat_head"> Kindle E-readers</li><li class="nav_first nav_taglined nav_subcat_link nav_pop_li"><a href="/dp/B007HCCNJU" class="nav_a nav_item">Kindle</a><div class="nav_tag">Small, light, perfect for reading</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/dp/B00AWH595M" class="nav_a nav_item">Kindle Paperwhite</a><div class="nav_tag">The best device for reading, period.</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/dp/B00BTI6HBS" class="nav_a nav_item">Kindle Paperwhite 3G</a><div class="nav_tag">With free 3G wireless</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/b?ie=UTF8&amp;node=5916440011" class="nav_a nav_item">Kindle E-reader Accessories</a><div class="nav_tag">Covers, chargers, sleeves and more</div></li><li class="nav_pop_li nav_browse_cat_head nav_divider_before">Kindle Store</li><li class="nav_first nav_subcat_link nav_pop_li"><a href="/Kindle-eBooks/b?ie=UTF8&amp;node=1286228011" class="nav_a nav_item">Kindle Books</a></li><li class="nav_subcat_link nav_pop_li"><a href="/gp/digital/fiona/redirect/newsstand/home/" class="nav_a nav_item">Newsstand</a></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/redirect.html?ie=UTF8&amp;location=%2Fkindlelendinglibrary" class="nav_a nav_item">Kindle Owners' Lending Library</a><div class="nav_tag">With Prime, Kindle owners read for free</div></li></ul>
 <ul class="nav_browse_ul nav_browse_cat2_ul">
 <li class="nav_pop_li nav_browse_cat_head">Apps & Resources</li><li class="nav_first nav_taglined nav_subcat_link nav_pop_li"><a href="/gp/feature.html?ie=UTF8&amp;docId=1000493771" class="nav_a nav_item">Free Kindle Reading Apps</a><div class="nav_tag">For PC, iPad, iPhone, Android, and more</div></li><li class="nav_taglined nav_subcat_link nav_pop_li"><a href="https://www.amazon.com:443/gp/redirect.html?location=https://read.amazon.com/&amp;token=34AD60CFC4DCD7A97D4E2F4A4A7C4149FBEEF236" class="nav_a nav_item">Kindle Cloud Reader</a><div class="nav_tag">Read your Kindle books in a browser</div></li><li class="nav_subcat_link nav_pop_li"><a href="/gp/digital/fiona/manage" class="nav_a nav_item">Manage Your Kindle</a></li></ul></div>
@@ -9551,8 +9587,8 @@ text-decoration:none !important;
 
 <div class="navFooterLine navFooterLinkLine navFooterPadItemLine"><ul><li class="nav_first"><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=508088" class="nav_a">Conditions of Use</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=468496" class="nav_a">Privacy Notice</a></li><li><a href="/interestbasedads" class="nav_a">Interest-Based Ads</a></li><li class="nav_last">© 1996-2013, Amazon.com, Inc. or its affiliates</li></ul></div>
 </div>
-<!-- whfh-lQDvEwJcBCDZb2kUKi6iNbpvTif+jEdHCNJvPz9M6c8Q8Fw6A/tA0J8TBLHYazf+ rid-0Y3K0F4JF5ZR4SP28J48 -->
-<div id="sis_pixel_r2" style="height:1px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=0101a1823ca3d5d46ce03d4502edf28f095b20f780c29eddcddebefb2933fa9c1e98&old_oo=0&cb=1387131989974" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
+<!-- whfh-KIe6wbyP5LqH/6/3Xn2IwB7uKdUpEdr37kuvKx/LWVDETbyQrztc6q98jPGW6W+R rid-0377EZVT8VTMZ88KZQZ0 -->
+<div id="sis_pixel_r2" style="height:1px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=0101a1823ca3d5d46ce03d4502edf28f095b20f780c29eddcddebefb2933fa9c1e98&old_oo=0&cb=1387173157958" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
 
 
 

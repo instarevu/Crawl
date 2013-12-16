@@ -609,7 +609,7 @@ window.$Nav && $Nav.declare('config.ajaxProximity', [141,7,60,150]);
 
 </script>
 
-<!-- navp-R5tkKR6v/6VsmfKbjPMsiEzKOswMBPU/TwHoDK1WDvfkXQOeAL9txxT3J0jfiC2BSnVwCVEB3LM= rid-0G6BHE2S5Q4S7YMSDBYJ (Sun Dec 15 10:26:48 2013) -->
+<!-- navp-PgJ2uChGAXAaK8eT0zLuyMlCqZBxqjjM/cC8ccuVVG8a+MEtXLCXKDo/OVBpemfy4PleSrwtRr8= rid-1NV0DB908TVM76G402W8 (Sun Dec 15 21:52:58 2013) -->
 
   
 
@@ -822,7 +822,7 @@ window.$Nav && $Nav.declare('config.subnavFlyoutUrl',
 window.$Nav && $Nav.declare('config.readyOnATF', false);
 
 window.$Nav && $Nav.declare('config.dynamicMenuArgs',
-  {"rid":"0G6BHE2S5Q4S7YMSDBYJ","isPrime":0,"primeMenuWidth":310});
+  {"rid":"1NV0DB908TVM76G402W8","isPrime":0,"primeMenuWidth":310});
 
 window.$Nav && $Nav.declare('config.signOutText',
   null);
@@ -1201,7 +1201,7 @@ Carpet Cleaners                </a>
     <form method="post" id="addToCart" action="/gp/product/handle-buy-box/ref=dp_start-bbf_1_glance" class="a-content">
         <input type="hidden" id="session-id" name="session-id" value="000-0000000-0000000"> 
         <input type="hidden" id="ASIN" name="ASIN" value="B00009R66F"> 
-        <input type="hidden" id="offerListingID" name="offerListingID" value="rxxAdUOhFAUXeKYn1C8gsTOaAbVuX8cbXOFkbPxrec%2BU6yJBsmEKJ%2FrVyyLa%2FtZDQHhbrnZ56A5plrAYyiNKflhHp%2BKy9gQdK1WFiJdNYYc%3D"> 
+        <input type="hidden" id="offerListingID" name="offerListingID" value="szhkl5DvgAdjxFkHoW2PiQbepGEo%2BbKHuFT4k5D39SYvx8XtXs4MpXnDncO%2B2W%2Bcstw4FqoEJbIHCP6d%2FUa6mR2CiI%2FTXSjG0J27cXyLLRE%3D"> 
         <input type="hidden" id="isMerchantExclusive" name="isMerchantExclusive" value="0"> 
         <input type="hidden" id="merchantID" name="merchantID" value="ATVPDKIKX0DER"> 
         <input type="hidden" id="isAddon" name="isAddon" value="0">
@@ -1922,7 +1922,7 @@ Carpet Cleaners                </a>
                             <li data-me="A367YBEX25WJNQ" class="a-spacing-small mbcLi1"><span class="a-list-item">
                                 
                                 
-                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_1?ie=UTF8&amp;nodeID=1055398&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=rNexdnvoow9p%252FFnccMVkDULpbfnT3XzynJL2Pu05hp56BMau%252BtYc3ZcpsAFeMXjxqyupo1xX2J0TLHn4CaZ6yuYhmk4QqwXOOFYG1mm5Bm8Pl%252FgmNMyyGqenbjSbXWp5PYIvwWUY6qbePU5JD3Dk7QOb66VwwK9P&amp;storeID=home-garden&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
+                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_1?ie=UTF8&amp;nodeID=1055398&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=%252BQWDa5Uc0Ct4GoPrY8oJEApH%252BrGLc3AJiNk2gE575fhHjyZ%252BtY7CaF9%252B%252B3Y29hlFqM3j8GToFF4s1yx2mt%252FUyGuyizP9SklmNQscrlIG4HOnDk9GISqqpseXCT95omteKTQSzqzLh3tLMQZaEbDyhEUPJKaqX7zI&amp;storeID=home-garden&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
                                 
                                 
                                 <div class="a-section a-spacing-none">
@@ -1948,7 +1948,7 @@ Carpet Cleaners                </a>
                             <li data-me="AP9TLT2LX6QXY" class="a-spacing-small mbcLi2"><span class="a-list-item">
                                 
                                 
-                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_2?ie=UTF8&amp;nodeID=2232465011&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=BWS9yMMJ7GPZLAxm1i%252FfsMgliSc9otMrNpzrR1SBWVz3iCxOhnkflI8U2kxWx0mdo9NlzcqoGHfDTj949hFa9BaWn7xG5M4843qVRO3jXVLGMRZ0vmhfsjKN4A4jqjglA048dXAscF5z46mfLKbF8FVqVugCGmLy&amp;storeID=home-garden&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
+                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_2?ie=UTF8&amp;nodeID=2232465011&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=%252FDLye5R4DYzsc9BXoTziYyEN8zqC8edPsmllPpfj48UKpHo1hIGRxmM9YkUUHhZK3kek46Ff78YzhCpC36%252Ff3IM9TtAgEYENlAUzLQ2bsTHTq%252F4X3ZAjGlycSMlHrb9BEkgw0OAaRk3T1aC%252FQ7V65UbE%252BNv8U%252BD%252B&amp;storeID=home-garden&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
                                 
                                 
                                 <div class="a-section a-spacing-none">
@@ -1974,7 +1974,7 @@ Carpet Cleaners                </a>
                             <li data-me="ATP9EMYO8FSA4" class="a-spacing-small mbcLi3"><span class="a-list-item">
                                 
                                 
-                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_3?ie=UTF8&amp;nodeID=1055398&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=EqW4GneR7ULVorCp9lrCH%252FvpI2oKKu1o4oIitXiIVYNGZri6hEZWSNvi4eahnZZcfiTAkSHxhTXudUndudAySQal%252BrFGFaTGW2DGIS%252BwK7%252Frr781RXBRu3vmipVcsJG6XFSEp7sLOxWWNRKqDYQ3YQ%253D%253D&amp;storeID=home-garden&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
+                                <span class="a-button a-button-primary a-button-small a-float-right"><span class="a-button-inner"><a href="/gp/item-dispatch/ref=dp_ebb_3?ie=UTF8&amp;nodeID=1055398&amp;registryID.1=&amp;signInToHUC=0&amp;submit.addToCart=addToCart&amp;offeringID.1=BH9hvJyvu2bfKciCkV0vDT0h3vgpxit7YlZ8m2XbeJy%252FpOTsYxkuivi5pKA7%252FNJThLzVO5lNKE5ecvJOHsWk4XUqcfgNWQMSJVYMQ9scs9Y4X7vg1rK2UA%252FErYjwf08YxhJtr6g%252FLSP3Ckns1Rg4gA%253D%253D&amp;storeID=home-garden&amp;itemCount=1&amp;registryItemID.1=&amp;session-id=000-0000000-0000000" class="a-button-text">Add to Cart</a></span></span>
                                 
                                 
                                 <div class="a-section a-spacing-none">
@@ -2055,13 +2055,13 @@ P.when('A','jQuery').execute(function(A,$)  {
 
 
 
-<div id="tell-a-friend" data-close="Close" data-dest="/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_OrFRsb06H2547MDY?ie=UTF8&amp;redirectLocation=dp%2FB00009R66F%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_OrFRsb06H2547MDY&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00009R66F&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F" data-title="Share this item via Email" class="a-section a-text-center">
+<div id="tell-a-friend" data-close="Close" data-dest="/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_6uPRsb1VD98V7G0W?ie=UTF8&amp;redirectLocation=dp%2FB00009R66F%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_6uPRsb1VD98V7G0W&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00009R66F&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F" data-title="Share this item via Email" class="a-section a-text-center">
     
    
     
-    <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;cache&quot;:&quot;false&quot;,&quot;width&quot;:&quot;480&quot;,&quot;name&quot;:&quot;swf&quot;,&quot;url&quot;:&quot;/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_OrFRsb06H2547MDY?ie=UTF8&amp;redirectLocation=dp%2FB00009R66F%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_OrFRsb06H2547MDY&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00009R66F&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F&amp;isDPX=1&quot;,&quot;header&quot;:&quot;Share this item via Email&quot;}">
-      <a id="swfText" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_OrFRsb06H2547MDY?ie=UTF8&amp;itemInfo=B00009R66F&amp;placementID=dp_OrFRsb06H2547MDY&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F">Share</a><span class="a-letter-space"></span>
-      <a id="swfImage" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_OrFRsb06H2547MDY?ie=UTF8&amp;itemInfo=B00009R66F&amp;placementID=dp_OrFRsb06H2547MDY&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F"><i class="a-icon a-icon-share-email"></i></a><span class="a-letter-space"></span>
+    <span class="a-declarative" data-action="a-modal" data-a-modal="{&quot;cache&quot;:&quot;false&quot;,&quot;width&quot;:&quot;480&quot;,&quot;name&quot;:&quot;swf&quot;,&quot;url&quot;:&quot;/gp/pdp/taf/dpPop.html/ref=cm_sw_p_view_dp_6uPRsb1VD98V7G0W?ie=UTF8&amp;redirectLocation=dp%2FB00009R66F%2F%23_swftext_Swf&amp;isEmail=0&amp;placementID=dp_6uPRsb1VD98V7G0W&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;id=B00009R66F&amp;ra=taf&amp;tt=sh&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;forceSprites=1&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F&amp;isDPX=1&quot;,&quot;header&quot;:&quot;Share this item via Email&quot;}">
+      <a id="swfText" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_6uPRsb1VD98V7G0W?ie=UTF8&amp;itemInfo=B00009R66F&amp;placementID=dp_6uPRsb1VD98V7G0W&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F">Share</a><span class="a-letter-space"></span>
+      <a id="swfImage" class="a-link-normal email" title="Share via e-mail" href="/gp/pdp/taf/ref=cm_sw_l_view_dp_6uPRsb1VD98V7G0W?ie=UTF8&amp;itemInfo=B00009R66F&amp;placementID=dp_6uPRsb1VD98V7G0W&amp;parentASIN=B00009R66F&amp;contentName=item&amp;contentType=asin&amp;isDynamicSWF=0&amp;contentID=B00009R66F&amp;emailTemplate=%2Fgp%2Fpdp%2Fcommon%2Femail%2Fshare-product&amp;type=SH&amp;viaAccount=amazon&amp;relatedAccounts=amazondeals%2Camazonmp3&amp;referer=http%253A%252F%252Fwww.amazon.com%252Fgp%252Fproduct%252FB00009R66F%252Fref%253D&amp;contentURI=%2Fdp%2FB00009R66F"><i class="a-icon a-icon-share-email"></i></a><span class="a-letter-space"></span>
     </span>
    
     
@@ -2071,21 +2071,21 @@ P.when('A','jQuery').execute(function(A,$)  {
         
             
             
-            <a data-height="400" class="a-link-normal" title="Share on Facebook" href="/gp/redirect.html/ref=cm_sw_cl_fa_dp_OrFRsb06H2547MDY?_encoding=UTF8&amp;location=http%3A%2F%2Fwww.facebook.com%2Fshare.php%3Fu%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_fa_dp_OrFRsb06H2547MDY&amp;token=6BD0FB927CC51E76FF446584B1040F70EA7E88E1"><i class="a-icon a-icon-share-facebook"></i></a><span class="a-letter-space"></span>
+            <a data-height="400" class="a-link-normal" title="Share on Facebook" href="/gp/redirect.html/ref=cm_sw_cl_fa_dp_6uPRsb1VD98V7G0W?_encoding=UTF8&amp;location=http%3A%2F%2Fwww.facebook.com%2Fshare.php%3Fu%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_fa_dp_6uPRsb1VD98V7G0W&amp;token=6BD0FB927CC51E76FF446584B1040F70EA7E88E1"><i class="a-icon a-icon-share-facebook"></i></a><span class="a-letter-space"></span>
         
     
         
         
             
             
-            <a data-height="400" class="a-link-normal" title="Share on Twitter" href="/gp/redirect.html/ref=cm_sw_cl_tw_dp_OrFRsb06H2547MDY?_encoding=UTF8&amp;location=http%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Foriginal_referer%3Dhttp%25253A%25252F%25252Fwww.amazon.com%25252Fgp%25252Fproduct%25252FB00009R66F%25252Fref%25253Dcm_sw_r_tw_dp_OrFRsb06H2547MDY%26text%3DHoover%2520SteamVac%2520Carpet%2520Washer%2520with%2520Clean%2520Surge%252C%2520F5914900%2520Hoover%26related%3Damazondeals%252Camazonmp3%26url%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_tw_dp_OrFRsb06H2547MDY%26via%3Damazon&amp;token=7A1A4AE8F6CE0BD277D8295E58702D283F329C0F"><i class="a-icon a-icon-share-twitter"></i></a><span class="a-letter-space"></span>
+            <a data-height="400" class="a-link-normal" title="Share on Twitter" href="/gp/redirect.html/ref=cm_sw_cl_tw_dp_6uPRsb1VD98V7G0W?_encoding=UTF8&amp;location=http%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Foriginal_referer%3Dhttp%25253A%25252F%25252Fwww.amazon.com%25252Fgp%25252Fproduct%25252FB00009R66F%25252Fref%25253Dcm_sw_r_tw_dp_6uPRsb1VD98V7G0W%26text%3DHoover%2520SteamVac%2520Carpet%2520Washer%2520with%2520Clean%2520Surge%252C%2520F5914900%2520Hoover%26related%3Damazondeals%252Camazonmp3%26url%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_tw_dp_6uPRsb1VD98V7G0W%26via%3Damazon&amp;token=7A1A4AE8F6CE0BD277D8295E58702D283F329C0F"><i class="a-icon a-icon-share-twitter"></i></a><span class="a-letter-space"></span>
         
     
         
         
             
             
-            <a data-height="570" class="a-link-normal" title="Pin it on Pinterest" href="/gp/redirect.html/ref=cm_sw_cl_pi_dp_OrFRsb06H2547MDY?_encoding=UTF8&amp;location=http%3A%2F%2Fpinterest.com%2Fpin%2Fcreate%2Fbutton%3Furl%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_pi_dp_OrFRsb06H2547MDY%26title%3DHoover%2520SteamVac%2520Carpet%2520Washer%2520with%2520Clean%2520Surge%252C%2520F5914900%2520Hoover%26description%3DHoover%2520SteamVac%2520Carpet%2520Washer%2520with%2520Clean%2520Surge%252C%2520F5914900%2520Hoover%252Chttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_pi_dp_OrFRsb06H2547MDY%26media%3Dhttp%253A%252F%252Fecx.images-amazon.com%252Fimages%252FI%252F314jAQisWDL.jpg&amp;token=9F58B366258E1A8B5259E9BEF3482E02341F42D3"><i class="a-icon a-icon-share-pinterest"></i></a><span class="a-letter-space"></span>
+            <a data-height="570" class="a-link-normal" title="Pin it on Pinterest" href="/gp/redirect.html/ref=cm_sw_cl_pi_dp_6uPRsb1VD98V7G0W?_encoding=UTF8&amp;location=http%3A%2F%2Fpinterest.com%2Fpin%2Fcreate%2Fbutton%3Furl%3Dhttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_pi_dp_6uPRsb1VD98V7G0W%26title%3DHoover%2520SteamVac%2520Carpet%2520Washer%2520with%2520Clean%2520Surge%252C%2520F5914900%2520Hoover%26description%3DHoover%2520SteamVac%2520Carpet%2520Washer%2520with%2520Clean%2520Surge%252C%2520F5914900%2520Hoover%252Chttp%253A%252F%252Fwww.amazon.com%252Fdp%252FB00009R66F%252Fref%253Dcm_sw_r_pi_dp_6uPRsb1VD98V7G0W%26media%3Dhttp%253A%252F%252Fecx.images-amazon.com%252Fimages%252FI%252F314jAQisWDL.jpg&amp;token=9F58B366258E1A8B5259E9BEF3482E02341F42D3"><i class="a-icon a-icon-share-pinterest"></i></a><span class="a-letter-space"></span>
         
     
 </div>
@@ -2770,7 +2770,7 @@ P.when('A').register("ImageBlockATF", function(A){
             
         
 
-        <a href="/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" >4,219 customer reviews</a>
+        <a href="/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" >4,223 customer reviews</a>
 
 
     
@@ -2843,7 +2843,7 @@ amznJQ.available("popover", function() {
   <span id="AskPopover" data-asin="B00009R66F"  popover-error-string="Unable to load. Please try again soon." popover-title="Ask the owners and get answers in email"> 
     <a id="AskPopover" class="a-link-normal" href="#Ask">
       <span class="a-size-base">
-        311 answered questions
+        313 answered questions
       </span>
     </a>
   </span>
@@ -3330,7 +3330,7 @@ function FT_getTime()
 </script>
 
     <script type="text/javascript">
-     FT_getCountdown(94692);
+     FT_getCountdown(53522);
     </script>
 
 <style type="text/css">
@@ -3789,7 +3789,7 @@ function FT_getTime()
         
 
         
-            <span class="olp-padding-right"><a href="/gp/offer-listing/B00009R66F/ref=dp_olp_used?ie=UTF8&amp;condition=used">5&nbsp;used</a>&nbsp;from&nbsp;<span class='a-color-price'>$106.02</span></span>
+            <span class="olp-padding-right"><a href="/gp/offer-listing/B00009R66F/ref=dp_olp_used?ie=UTF8&amp;condition=used">4&nbsp;used</a>&nbsp;from&nbsp;<span class='a-color-price'>$100.13</span></span>
         
 
         
@@ -3934,303 +3934,6 @@ function FT_getTime()
         
         
     
-        
-        
-        
-        
-
-
-
-
-<div id="ecorebates" class="feature" data-feature-name="ecorebates">
-
-    
-        
-        
-        
-        
-        	
-        		
-
-
-<style type="text/css">
-
-.ecorebatesInfoTextClass {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.ecorebatesTextInputClass {
-   padding: 0.6em 0.4em 0.4em 0.3em !important;
-}
-
-.ecorebatesContentClass {
-   float:right
-}
-
-.ecorebatesTitleBlockWrapClass {
-   display: inline-block;
-   white-space: normal;
-   word-wrap: break-word;
-}
-
-.ecorebatesImageWidthConstantClass {
-   display: inline-block;
-   white-space: nowrap;
-}
-
-.ecorebatesDisplayNoneClass {
-   display: none;
-}
-
-.ecorebatesBoxHeightIE {
-   height: 7em;
-}
-
-/* Added to make the Scroll bar appear in Chrome/Safari on Mac */
-.ecorebatesScrollContentClass::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.ecorebatesScrollContentClass::-webkit-scrollbar:vertical {
-    width: 11px;
-}
-
-.ecorebatesScrollContentClass::-webkit-scrollbar:horizontal {
-    height: 11px;
-}
-
-.ecorebatesScrollContentClass::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 1.5px #686868;
-    background-color: rgba(0, 0, 0, .5);
-}
-
-</style>
-
-
-<!-- Lightbox Content which will be same for every zip code, fetched from RPA -->
-
-<div class="ecorebatesDisplayNoneClass" id = "ecorebatesRpaContent">
-  <div class="a-row">
-    <div class="a-column a-span10 ecorebatesContentClass">
-    <div class="ecorebatesImageWidthConstantClass">
-      <img src="http://ecx.images-amazon.com/images/I/314jAQisWDL._SY300_.jpg" alt = "Image Not Available" height="85em">
-      <div class="ecorebatesTitleBlockWrapClass">
-          
-             <span class="a-size-base a-color-link">Hoover</span> <br>
-          
-          
-          
-             <span class="a-size-medium">Hoover SteamVac Carpet Washer with Clean Surge, F5914900</span> <br>
-          
-          
-          <table class="a-lineitem"> 
-             
-                
-                
-                <tr>
-                    <td class="a-color-secondary a-size-base a-text-right a-nowrap">
-                        List Price:
-                    </td>
-                    <td class="a-span12 a-color-secondary a-size-base a-text-strike">
-                        $179.99
-                    </td>
-                </tr>
-             
-             
-             
-                
-                
-                <tr>
-                    <td class="a-color-secondary a-size-base a-text-right a-nowrap">
-                        Price:
-                    </td>
-                    <td class="a-span12">
-                        <span class="a-size-medium a-color-price">$138.98</span>
-                    </td>
-                </tr>
-              
-          </table>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class="a-popover-preload" id="a-popover-rebateInformation">
- <div id="rebateContent">
-  Rebates
- </div>
-</div>
-
-<span class="a-declarative" data-action="a-modal" data-a-modal="{}" id="ecorebatesLightBox">
-  <div id="ecorebatesContentTrigger">  
-  </div>
-</span>
-
-
-
-<script type="text/javascript">
-P.when('A', 'jQuery').execute(function(A) {
-    
-    var $ = A.$;
-    /*caching the JQuery selectors*/
-    var zipCodeTextInput = $("#zipCodeTextInput") ;
-    var ecoRebatesBox = $("#ecoRebatesBox") ;
-    var rebateContent = $("#rebateContent") ;
-    var ecorebatesResponseDiv = $('#ecorebatesResponseDiv') ;
-    var ecorebatesSecondaryMessageDiv = $('#ecorebatesSecondaryMessageDiv') ;
-    
-    A.on("a:popover:ecorebatesLightBox:show", function(params) {
-       params.popover.updatePosition();
-    });
-        
-    if (navigator.userAgent.indexOf("MSIE 10") > -1){
-       zipCodeTextInput.addClass("ecorebatesTextInputClass");
-       ecoRebatesBox.addClass("ecorebatesBoxHeightIE");
-       zipCodeTextInput.keypress(function(e) {
-           if(e.which == 13) { // Checks for the enter key
-               e.preventDefault(); // Stops IE from triggering the button to be clicked
-           }
-       });
-    }
-
-    else if (navigator.userAgent.indexOf("MSIE 8") > -1 || navigator.userAgent.indexOf("MSIE 9") > -1) {
-       ecoRebatesBox.addClass("ecorebatesBoxHeightIE");
-         zipCodeTextInput.keypress(function(e) {
-         if(e.which == 13) { // Checks for the enter key
-              e.preventDefault(); // Stops IE from triggering the button to be clicked
-           }
-       });
-    }
-   
-    $(window).resize(function() {
-       rebateContent.css("width", $(window).width() * 0.80);
-    });
-     
-    A.declarative('ecorebates-action','click', function(event){
-
-    var zipCode = zipCodeTextInput.val();
-    zipCode = jQuery.trim(zipCode);
-    if(!zipCode){
-        ecorebatesResponseDiv.html("Empty ZIP code ");
-        ecorebatesSecondaryMessageDiv.html("Please enter a valid ZIP code");
-        return;    
-    }
-    
-    var zipCodeRegex = /^\d{5}$/;
-    if (zipCodeRegex.test(zipCode) == false) {
-        $('#ecorebatesResponseDiv').html("Invalid ZIP code ");
-        $('#ecorebatesSecondaryMessageDiv').html("Please enter a valid ZIP code");
-       return;
-    }
-    
-    var params = {
-              brandName: "",
-              partNumber: "",
-              zipCode: zipCode, 
-              asin   : "",         
-     }; 
-    /*Make the AJAX handler out here*/
-    A.ajax('/gp/product/ajax-handlers/ecorebates-ajax-handler.html', {
-            method:'get',
-        params:params,
-        success: function(rebates){
-            if(rebates) {
-               var rebateData = getRebatesTable(rebates);
-             
-               rebateContent.css("width", $(window).width() * 0.80);
-               var headerText = "Rebates found in " + rebates.zipCode + " - "+ rebates.city + " " + rebates.state;
-               var lightBoxHeader = '<div id="ecorebatesHeaderDiv">' + headerText  + '</div>';
-               var popoverActionParam = {"name": "rebateInformation", "header" : lightBoxHeader}; 
-               $("#ecorebatesLightBox").attr("data-a-modal", JSON.stringify(popoverActionParam));
-                
-               rebateContent.html($("#ecorebatesRpaContent").html() + rebateData);
-               $("#ecorebatesHeaderDiv").html(headerText);
-               // This delay is necessary so that this modal code does not interfere with other modal code on the page
-               // Known AUI modal issue.
-               $("#ecorebatesContentTrigger").click();
-               ecorebatesResponseDiv.html("There may be a rebate for this item in your area ");
-               ecorebatesSecondaryMessageDiv.html("");
-           }
-        },
-        error: function(){
-            /*Error case. Show that rebates can't be fetched at this time to the user*/
-            ecorebatesResponseDiv.html("Sorry, Unable To Retrieve Rebates");
-            ecorebatesSecondaryMessageDiv.html("Please Retry after sometime");
-        } 
-    });
-    });
-});
-
-// Takes the rebates JSON as input and returns a AUI table 
-function getRebatesTable(rebates)
-{
-        var table = '<br><table class="a-bordered">';
-        table += '<tr>';
-        table += '<th></th>';
-        table += '<th class="a-text-center">Amount</th>';
-        table += '<th>Valid Dates</th>';
-        table += '<th class="a-text-left">Details</th>';
-        table += '<th>Program</th>';
-        table += '</tr>';
-
-        var rebatesArray = rebates.productRebateDetails;
-        var claimLink;
-        for ( var i = 0; i < rebatesArray.length; i++)
-        {
-            claimLink = "<a href = " + rebatesArray[i].claimFormURL + " target = _blank>Get Form</a>";
-            var validDates = rebatesArray[i].validDates;
-            var impDetails = rebatesArray[i].importantDetails;
-            var details = '<dl class="a-vertical">';
-            var dates = '<ul class="a-list-link a-vertical">';
-            for ( var j = 0; j < impDetails.length; j++)
-            {
-                details += '<li><span class="a-list-item">' + impDetails[j]
-                        + '</span></li>';
-            }
-            for ( var j = 0; j < validDates.length; j++)
-            {
-                dates += '<li><span class="a-list-item">'
-                        + validDates[j] + '</span></li>';
-            }
-            dates += '</ul>';
-            details += '</dl>';
-
-            table += '<tr>';
-            table += '<td class="a-span1">' + claimLink
-                    + '</td>';
-                    
-            table += '<td class="a-span1 a-text-center">'
-                    + rebatesArray[i].amountLabel + '</td>';
-            table += '<td class="a-span3">' + dates
-                    + '</td>';
-            table += '<td class="a-span3 a-text-left">'
-                    + details + '</td>';
-            table += '<td class="a-span2">'
-                    + rebatesArray[i].name + '</td>';
-            table += '</tr>';
-        }
-
-        table += '</table>';
-        return table;
-}
-</script>
-
-        	
-        
-        
-        
-        
-    
-
-</div>
-
-
-        
-        
-    
 </div>
 
 <div id="hqpWrapper" class="centerColAlign">
@@ -4264,7 +3967,7 @@ function getRebatesTable(rebates)
     
         <hr class="a-spacing-medium a-divider-normal">
     
-    <div class="unified_widget rcmBody"><div class="prodImage"><a href="/gp/feature.html/ref=amb_link_382093942_1?ie=UTF8&docId=1001430671&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=0G6BHE2S5Q4S7YMSDBYJ&pf_rd_t=201&pf_rd_p=1660097722&pf_rd_i=B00009R66F"><img src="http://g-ecx.images-amazon.com/images/G/01/Home-Holiday-FC/300x120-hoover-HQP._V368515339_.jpg" width="300" align="left" alt="Hoover Floormate Deluxe" height="120" border="0" /></a></div><div class="h_rule"></div></div>
+    <div class="unified_widget rcmBody"><div class="prodImage"><a href="/gp/feature.html/ref=amb_link_382093942_1?ie=UTF8&docId=1001430671&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=hero-quick-promo&pf_rd_r=1NV0DB908TVM76G402W8&pf_rd_t=201&pf_rd_p=1660097722&pf_rd_i=B00009R66F"><img src="http://g-ecx.images-amazon.com/images/G/01/Home-Holiday-FC/300x120-hoover-HQP._V368515339_.jpg" width="300" align="left" alt="Hoover Floormate Deluxe" height="120" border="0" /></a></div><div class="h_rule"></div></div>
     
     <div style="clear:left"></div>
     <div id="heroQuickPromoDiv" name="heroQuickPromoDiv" class="a-hidden">
@@ -4597,7 +4300,7 @@ function getRebatesTable(rebates)
         <ul id="fbt_item_details" tabindex="-1">              
             <li class="fbt_item">
                 <label>
-                    <input name="offeringID.1" value="vLAzhpmgxnmIP%2F%2BA7ihG5NCNsyvySm%2BwoUt7%2B981Mt6m%2FKebi8XvanZWkg11F3HksjaFbg2f3O2SLwiXgswxst%2FlEmeGE%2B%2FiO%2BMKQaUJnm0%3D" type="checkbox" id="fbt_x_check" style="display: none;" class="check" checked="checked">
+                    <input name="offeringID.1" value="FRh6oVQD%2F4Tforttfh7084ET0nqociHRnWAd8tx7VbVX7eFCCl%2Fo3jds4HMb9hv%2FBrLs3dL%2Bv%2FSTZ9PseowrwRTFiBenRzhM5tcrNG9mRGU%3D" type="checkbox" id="fbt_x_check" style="display: none;" class="check" checked="checked">
                     <span id="fbt_x_title"><strong>This item: </strong>
 
 
@@ -4609,7 +4312,7 @@ Hoover SteamVac Carpet Washer with Clean Surge, F5914900
             </li>
 
             <li class="fbt_item">
-                <input name="offeringID.2" value="8xdqHOf9SIYTKk0tj57Ifht8NW0zQTfSNeGWc1kLIXhgnQgR9SpJLKLFSj0v3RP4PPv1gYEMAxFBXtJy4JXCHFtFCg16YjJC06MrEaaGN2lc5A0nUr1HFw%3D%3D" type=checkbox id="fbt_y_check" style="display: none;" class="check" checked="checked" title="
+                <input name="offeringID.2" value="W%2BWVrLYEfn6xWdC6gtEjCH5okIgArbYxCskiCKKruL9k9mzs0sKtwNkTEYKE1fI0kb2Xfd7BVyFL32JPixQOyrWF0vdVlCQPRpwiEgR3S2OEQR4jGS8PRA%3D%3D" type=checkbox id="fbt_y_check" style="display: none;" class="check" checked="checked" title="
 
 
 Hoover Platinum Collection Professional-Strength Carpet-and-Upholstery Detergent, 50 Ounces, AH30030">
@@ -4624,7 +4327,7 @@ Hoover Platinum Collection Professional-Strength Carpet-and-Upholstery Detergent
                 <div id="yInfoWrapper" class="bxgySellerLoading" id="B0020MLARSsellerInfo" style="display:none"></div>
             </li>
             <li class="fbt_item">
-                <input name="offeringID.3" value="rnrUiGzUwHRhl2pMvrHaeEv4VG0li0djK3QdidBCQHZhk16uglOo5kaDyHGKEy33pVYdAELPE9PUH9%2BbLlbkohYjTCJnqbCMJByxTZBSKheVtJGcl9OrJQ%3D%3D" type=checkbox id="fbt_z_check" style="display: none;" class="check" checked="checked" title="
+                <input name="offeringID.3" value="hHX06nhMYrJ0pX0kJVq3zUN5bu1WI%2BLjz5a7UXdZVKdMajnPp5IwDH3Z%2BJ%2Fy4gHnatMXiHvO3Er%2F%2FON%2FhAehNkpp4LrykTS9fWabDIKRXpEb1CTVMv2VVA%3D%3D" type=checkbox id="fbt_z_check" style="display: none;" class="check" checked="checked" title="
 
 
 Hoover Platinum Collection Pet Plus Carpet-and-Upholstery Detergent, 50 Ounces, AH30035">
@@ -4646,7 +4349,7 @@ Hoover Platinum Collection Pet Plus Carpet-and-Upholstery Detergent, 50 Ounces, 
     
 </div>
 
-<div id="fbt_item_data" style="display:none;">{"currencyCode":"USD","itemData":[{"priceBreaksMAP":null,"buyingPrice":138.98,"ASIN":"B00009R66F","isPreorder":0},{"priceBreaksMAP":null,"buyingPrice":13.99,"ASIN":"B0020MLARS","isPreorder":0},{"priceBreaksMAP":null,"buyingPrice":16.28,"ASIN":"B001U3WKFY","isPreorder":0}],"shippingId":"B00009R66F::vLAzhpmgxnmIP%2F%2BA7ihG5NCNsyvySm%2BwoUt7%2B981Mt6m%2FKebi8XvanZWkg11F3HksjaFbg2f3O2SLwiXgswxst%2FlEmeGE%2B%2FiO%2BMKQaUJnm0%3D,B0020MLARS::8xdqHOf9SIYTKk0tj57Ifht8NW0zQTfSNeGWc1kLIXhgnQgR9SpJLKLFSj0v3RP4PPv1gYEMAxFBXtJy4JXCHFtFCg16YjJC06MrEaaGN2lc5A0nUr1HFw%3D%3D,B001U3WKFY::rnrUiGzUwHRhl2pMvrHaeEv4VG0li0djK3QdidBCQHZhk16uglOo5kaDyHGKEy33pVYdAELPE9PUH9%2BbLlbkohYjTCJnqbCMJByxTZBSKheVtJGcl9OrJQ%3D%3D","sprites":{"addToWishlist":["wl_one","wl_two","wl_three"],"addToCart":["s_addToCart","s_addBothToCart","s_add3ToCart"],"preorder":["s_preorderThis","s_preorderBoth","s_preorderAll3"]},"shippingDetails":{"xz":"same","yz":"same","xy":"same","xyz":"same"},"tags":["x","y","z"],"strings":{"addToWishlist":["add to wishlist","Add both to Wish List","Add all three to Wish List"],"addToCart":["Add to Cart","Add both to Cart","Add all three to Cart"],"showDetailsDefault":"Show availability and shipping details","shippingError":"An error occurred, please try again","hideDetailsDefault":"Hide availability and shipping details","priceLabel":["Price:","Price for both:","Price for all three:"],"preorder":["Pre-order this item","Pre-order both items","Pre-order all three items"]}}</div>
+<div id="fbt_item_data" style="display:none;">{"currencyCode":"USD","itemData":[{"priceBreaksMAP":null,"buyingPrice":138.98,"ASIN":"B00009R66F","isPreorder":0},{"priceBreaksMAP":null,"buyingPrice":13.99,"ASIN":"B0020MLARS","isPreorder":0},{"priceBreaksMAP":null,"buyingPrice":16.28,"ASIN":"B001U3WKFY","isPreorder":0}],"shippingId":"B00009R66F::FRh6oVQD%2F4Tforttfh7084ET0nqociHRnWAd8tx7VbVX7eFCCl%2Fo3jds4HMb9hv%2FBrLs3dL%2Bv%2FSTZ9PseowrwRTFiBenRzhM5tcrNG9mRGU%3D,B0020MLARS::W%2BWVrLYEfn6xWdC6gtEjCH5okIgArbYxCskiCKKruL9k9mzs0sKtwNkTEYKE1fI0kb2Xfd7BVyFL32JPixQOyrWF0vdVlCQPRpwiEgR3S2OEQR4jGS8PRA%3D%3D,B001U3WKFY::hHX06nhMYrJ0pX0kJVq3zUN5bu1WI%2BLjz5a7UXdZVKdMajnPp5IwDH3Z%2BJ%2Fy4gHnatMXiHvO3Er%2F%2FON%2FhAehNkpp4LrykTS9fWabDIKRXpEb1CTVMv2VVA%3D%3D","sprites":{"addToWishlist":["wl_one","wl_two","wl_three"],"addToCart":["s_addToCart","s_addBothToCart","s_add3ToCart"],"preorder":["s_preorderThis","s_preorderBoth","s_preorderAll3"]},"shippingDetails":{"xz":"same","yz":"same","xy":"same","xyz":"same"},"tags":["x","y","z"],"strings":{"addToWishlist":["add to wishlist","Add both to Wish List","Add all three to Wish List"],"addToCart":["Add to Cart","Add both to Cart","Add all three to Cart"],"showDetailsDefault":"Show availability and shipping details","shippingError":"An error occurred, please try again","hideDetailsDefault":"Hide availability and shipping details","priceLabel":["Price:","Price for both:","Price for all three:"],"preorder":["Pre-order this item","Pre-order both items","Pre-order all three items"]}}</div>
 
 
 
@@ -5093,7 +4796,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 <a href="/Hoover-SteamVac-Nozzle-Clean-Tool/dp/B005O5XM1U"  class="sim-img-title" > <div class="product-image">
-                       <img src="http://ecx.images-amazon.com/images/I/31EmlNQ8RZL._SL500_SS100_.jpg" width="100" alt="" height="100" border="0" />
+                       <img src="http://ecx.images-amazon.com/images/I/21sbdqM74VL._SL500_SS100_.jpg" width="100" alt="" height="100" border="0" />
                     </div>
                     Hoover SteamVac Nozzle Clean Out Tool </a>
 
@@ -5102,7 +4805,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
         <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B005O5XM1U"><a href="http://www.amazon.com/Hoover-SteamVac-Nozzle-Clean-Tool/product-reviews/B005O5XM1U"><span class="auiTestSprite s_star_4_0 " title="4.0 out of 5 stars" ><span>4.0 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Hoover-SteamVac-Nozzle-Clean-Tool/product-reviews/B005O5XM1U">4</a>)</span></span>
     </div>
     <div class="pricetext">
-        <span class="price" style="margin-right:5px">$10.05</span><i class="a-icon a-icon-prime a-icon-small"><span class="a-icon-alt">Prime</span></i>
+        <span class="price" style="margin-right:5px">$8.99</span>
     </div>
   </div>
 </li>
@@ -5152,7 +4855,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
         <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B001709224"><a href="http://www.amazon.com/Hoover-SteamVac-Upholstery-Tool-38613040/product-reviews/B001709224"><span class="auiTestSprite s_star_4_5 " title="4.4 out of 5 stars" ><span>4.4 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Hoover-SteamVac-Upholstery-Tool-38613040/product-reviews/B001709224">5</a>)</span></span>
     </div>
     <div class="pricetext">
-        <span class="price" style="margin-right:5px">$12.32</span><i class="a-icon a-icon-prime a-icon-small"><span class="a-icon-alt">Prime</span></i>
+        <span class="price" style="margin-right:5px">$11.25</span>
     </div>
   </div>
 </li>
@@ -5279,7 +4982,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
-<div style="display:none;" class="p13n-session"  data-marketplaceId="ATVPDKIKX0DER" data-mkt="US" data-pageId="B00009R66F" data-requestId="0G6BHE2S5Q4S7YMSDBYJ" data-session="000-0000000-0000000"></div>
+<div style="display:none;" class="p13n-session"  data-marketplaceId="ATVPDKIKX0DER" data-mkt="US" data-pageId="B00009R66F" data-requestId="1NV0DB908TVM76G402W8" data-session="000-0000000-0000000"></div>
 
 
 
@@ -5610,7 +5313,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 </style>
 
-<a class="iss-banner-ad " href="/gp/cobrandcard/marketing-popup.html/ref=cobrand_ch_t1_huc_m?pr=con321&amp;inc=30gc&amp;ts=78jlslfvkxtgevrxs2mglesfn9j5xiz&amp;dasin=B00009R66F&amp;plattr=CB30DP&amp;ad=CGC3&amp;place=detailpage&amp;imp=A153JY7BEQAS6N" target="_blank" onclick="amz_js_PopWin('/gp/cobrandcard/marketing-popup.html/ref=cobrand_ch_t1_huc_m?pr=con321&amp;inc=30gc&amp;ts=78jlslfvkxtgevrxs2mglesfn9j5xiz&amp;dasin=B00009R66F&amp;plattr=CB30DP&amp;ad=CGC3&amp;place=detailpage&amp;imp=A153JY7BEQAS6N', '_blank', 'width=925,height=600,resizable=yes,scrollbars=yes,toolbar=yes,status=yes'); return false;">
+<a class="iss-banner-ad " href="/gp/cobrandcard/marketing-popup.html/ref=cobrand_ch_t1_huc_m?pr=con321&amp;inc=30gc&amp;ts=860ge22fvf7r20aubzdsusgi9nexl8v&amp;dasin=B00009R66F&amp;plattr=CB30DP&amp;ad=CGC3&amp;place=detailpage&amp;imp=A1N0QQN7DUQOOW" target="_blank" onclick="amz_js_PopWin('/gp/cobrandcard/marketing-popup.html/ref=cobrand_ch_t1_huc_m?pr=con321&amp;inc=30gc&amp;ts=860ge22fvf7r20aubzdsusgi9nexl8v&amp;dasin=B00009R66F&amp;plattr=CB30DP&amp;ad=CGC3&amp;place=detailpage&amp;imp=A1N0QQN7DUQOOW', '_blank', 'width=925,height=600,resizable=yes,scrollbars=yes,toolbar=yes,status=yes'); return false;">
     <div class="iss-banner-ad-content ">
         <div class="iss-ad-row">
 
@@ -5842,7 +5545,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 <div id="buy_used_and_save_message">
 	<b>Buy Used and Save:</b>
-	Buy a Used "Hoover SteamVac Carpet Washer with Clean Surge, F5..." and save 41% off the $179.99 list price. Buy with confidence as the condition of this item and its timely delivery are guaranteed under the "Amazon A-to-z Guarantee".
+	Buy a Used "Hoover SteamVac Carpet Washer with Clean Surge, F5..." and save 44% off the $179.99 list price. Buy with confidence as the condition of this item and its timely delivery are guaranteed under the "Amazon A-to-z Guarantee".
 	<a href="/gp/offer-listing/?ie=UTF8&ASIN=B00009R66F&condition=used&me=&ref=dp-buas-used">See all Used offers.</a>
 </div>
 </li><li><div class="amabot_widget"><b>Six-Month Financing:</b> 
@@ -6140,7 +5843,7 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 </script>
 <span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary acr-popover" name="B00009R66F" ref="dp_db_cm_cr_acr_pop_" >
              <a style="cursor:pointer;text-decoration:none" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" name="reviewHistoPop_B00009R66F__star__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" ><span class="swSprite s_star_4_5 " title="4.3 out of 5 stars" ><span>4.3 out of 5 stars</span></span>&nbsp;</a>&nbsp;<span class="histogramButton"
-          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" name="reviewHistoPop_B00009R66F__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ><span>See all reviews</span></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" >4,219 customer reviews</a>)</span></li>
+          style="margin-left:-3px"><a style="text-decoration:none" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" name="reviewHistoPop_B00009R66F__button__" onmouseover="return acrPopoverHover(this,1);" onmouseout="return acrPopoverHover(this,0);" style="cursor:pointer" ><span class="swSprite s_chevron " ><span>See all reviews</span></span>&nbsp;</a></span></span>(<a href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F" >4,223 customer reviews</a>)</span></li>
 
 
 
@@ -6192,7 +5895,7 @@ For a limited time, purchase $149 or more using the <a href="/gp/redirect.html?i
 
 
 
-#148 in Home &amp; Kitchen (<a href="http://www.amazon.com/gp/bestsellers/home-garden">See Top 100 in Home &amp; Kitchen</a>)
+#189 in Home &amp; Kitchen (<a href="http://www.amazon.com/gp/bestsellers/home-garden">See Top 100 in Home &amp; Kitchen</a>)
   
 
 
@@ -6820,7 +6523,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
     <div class="rating-price">
-        <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B000FFM00S"><a href="http://www.amazon.com/Hoover-MaxExtract-All-Terrain-Cleaner-F7452900PC/product-reviews/B000FFM00S"><span class="auiTestSprite s_star_4_0 " title="3.9 out of 5 stars" ><span>3.9 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Hoover-MaxExtract-All-Terrain-Cleaner-F7452900PC/product-reviews/B000FFM00S">732</a>)</span></span>
+        <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B000FFM00S"><a href="http://www.amazon.com/Hoover-MaxExtract-All-Terrain-Cleaner-F7452900PC/product-reviews/B000FFM00S"><span class="auiTestSprite s_star_4_0 " title="3.9 out of 5 stars" ><span>3.9 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Hoover-MaxExtract-All-Terrain-Cleaner-F7452900PC/product-reviews/B000FFM00S">733</a>)</span></span>
     </div>
     <div class="pricetext">
         <span class="price" style="margin-right:5px">$215.00</span><i class="a-icon a-icon-prime a-icon-small"><span class="a-icon-alt">Prime</span></i>
@@ -6873,7 +6576,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
         <span class="rating-stars"><span class="crAvgStars" style="white-space:no-wrap;"><span class="asinReviewsSummary" name="B009ZJ2M7G"><a href="http://www.amazon.com/Hoover-Deluxe-Carpet-Washer-FH50150/product-reviews/B009ZJ2M7G"><span class="auiTestSprite s_star_4_5 " title="4.3 out of 5 stars" ><span>4.3 out of 5 stars</span></span></a>&nbsp;</span>(<a href="http://www.amazon.com/Hoover-Deluxe-Carpet-Washer-FH50150/product-reviews/B009ZJ2M7G">102</a>)</span></span>
     </div>
     <div class="pricetext">
-        <span class="price" style="margin-right:5px">$278.14</span>
+        <span class="price" style="margin-right:5px">$179.99</span><i class="a-icon a-icon-prime a-icon-small"><span class="a-icon-alt">Prime</span></i>
     </div>
   </div>
 </li>
@@ -7000,7 +6703,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
-<div style="display:none;" class="p13n-session"  data-marketplaceId="ATVPDKIKX0DER" data-mkt="US" data-pageId="B00009R66F" data-requestId="0G6BHE2S5Q4S7YMSDBYJ" data-session="000-0000000-0000000"></div>
+<div style="display:none;" class="p13n-session"  data-marketplaceId="ATVPDKIKX0DER" data-mkt="US" data-pageId="B00009R66F" data-requestId="1NV0DB908TVM76G402W8" data-session="000-0000000-0000000"></div>
 
 
 
@@ -7232,6 +6935,81 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
@@ -7276,7 +7054,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 <div id="summaryStars" class="a-row">  
   <a class="a-link-normal a-text-normal" title="4.3 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
     <i class="a-icon a-icon-star-medium a-star-medium-4-5"></i>
-    (4,219)
+    (4,223)
   </a>  
 </div>
 <div id="avgRating" class="a-row a-spacing-small a-color-secondary"> 
@@ -7340,10 +7118,10 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
       <a class="a-link-normal" title="62% of reviews have 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">5 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="62% of reviews have 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 61.7681915145769%;"></div></div></a>
+      <a class="a-link-normal" title="62% of reviews have 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 61.7570447549136%;"></div></div></a>
     </td>
     <td class="a-nowrap">
-      <span class="a-letter-space"></span><span>2,606</span>
+      <span class="a-letter-space"></span><span>2,608</span>
     </td>
   </tr>
   <tr class="a-histogram-row">
@@ -7352,10 +7130,10 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
       <a class="a-link-normal" title="22% of reviews have 4 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">4 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="22% of reviews have 4 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 22.0431381844039%;"></div></div></a>
+      <a class="a-link-normal" title="22% of reviews have 4 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 22.045938905991%;"></div></div></a>
     </td>
     <td class="a-nowrap">
-      <span class="a-letter-space"></span><span>930</span>
+      <span class="a-letter-space"></span><span>931</span>
     </td>
   </tr>
   <tr class="a-histogram-row">
@@ -7364,7 +7142,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
       <a class="a-link-normal" title="5% of reviews have 3 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">3 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="5% of reviews have 3 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 5.14339890969424%;"></div></div></a>
+      <a class="a-link-normal" title="5% of reviews have 3 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 5.13852711342647%;"></div></div></a>
     </td>
     <td class="a-nowrap">
       <span class="a-letter-space"></span><span>217</span>
@@ -7376,7 +7154,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
       <a class="a-link-normal" title="3% of reviews have 2 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">2 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="3% of reviews have 2 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 3.27091727897606%;"></div></div></a>
+      <a class="a-link-normal" title="3% of reviews have 2 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 3.26781908595785%;"></div></div></a>
     </td>
     <td class="a-nowrap">
       <span class="a-letter-space"></span><span>138</span>
@@ -7388,10 +7166,10 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
       <a class="a-link-normal" title="8% of reviews have 1 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">1 star</a><span class="a-letter-space"></span>      
     </td>
     <td class="a-span10">
-      <a class="a-link-normal" title="8% of reviews have 1 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 7.7743541123489%;"></div></div></a>
+      <a class="a-link-normal" title="8% of reviews have 1 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><div class="a-meter"><div class="a-meter-bar" style="width: 7.79067013971111%;"></div></div></a>
     </td>
     <td class="a-nowrap">
-      <span class="a-letter-space"></span><span>328</span>
+      <span class="a-letter-space"></span><span>329</span>
     </td>
   </tr>
 </table>
@@ -7405,7 +7183,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
-      <a class="a-link-emphasis a-text-normal a-nowrap" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">See all 4,219 customer reviews</a> 
+      <a class="a-link-emphasis a-text-normal a-nowrap" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">See all 4,223 customer reviews</a> 
     
     
     </div> 
@@ -7914,7 +7692,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
   <div class="a-row a-spacing-large">
     <a class="a-link-emphasis a-text-bold" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
-      See all 4,219 customer reviews (newest first)
+      See all 4,223 customer reviews (newest first)
     </a>
   </div>
     <span class="a-button a-button-width-normal"><span class="a-button-inner"><a href="http://www.amazon.com/review/create-review" title="Write a customer review" class="a-button-text">
@@ -7932,7 +7710,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
     <div id="revMRLContainer" class="a-column a-span4 a-span-last">
       <div id="ADPlaceholder" class="a-section">
-        <script type='text/javascript'>var paCusRevAllURL = "http://product-ads-portal.amazon.com/gp/synd/?asin=B00009R66F&pAsin=&gl=201&sq=&sa=&se=&noo=&pt=Detail&spt=Glance&sn=customer-reviews-top&pRID=0G6BHE2S5Q4S7YMSDBYJ&ts=1387132008&h=E1A69507C20D5891CEB13B2B225BC1E2B4029F20";</script>
+        <script type='text/javascript'>var paCusRevAllURL = "http://product-ads-portal.amazon.com/gp/synd/?asin=B00009R66F&pAsin=&gl=201&sq=&sa=&se=&noo=&pt=Detail&spt=Glance&sn=customer-reviews-top&pRID=1NV0DB908TVM76G402W8&ts=1387173178&h=C06811FBCFCBCC3A226C7B83FC8D3174E42029B1";</script>
       </div>
       
 
@@ -7985,7 +7763,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
   
     <div class="a-section a-spacing-none a-padding-none">
       <a class="a-link-normal" href="/gp/customer-media/product-gallery/B00009R66F">
-        See all 65 customer images
+        See all 66 customer images
       </a>
     </div>
 </div>
@@ -8002,6 +7780,107 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
   
 
 
+<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="1.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-1"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by K. Scot Macdonald" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Works fine, then Leaks like a Waterfall - JUNK DO NOT BUY</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by K. Scot Macdonald" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
+
+
+
+  <p class="a-last">
+    <span class="a-color-base">
+      Worked for a few months, then water started leaking out of the water reservoir like a waterfall. The rubber gaskets do nothing, but allow the water to run out.
+    </span> 
+    
+    <span class="a-text-underline">
+      <span class="a-letter-space"></span>Read more
+    </span> 
+  </p> 
+
+
+
+
+
+
+
+
+
+<span class="a-size-small a-color-success">
+  Published 2 hours ago by K. Scot Macdonald
+</span>
+</a></div>
+<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="5.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by HCharles" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Please read the directions</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by HCharles" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
+
+
+
+  <p class="a-last">
+    <span class="a-color-base">
+      This steamvac works so well that I couldn't wait to use it again. I can't stress enough, however, how important it is to read the manual and understand this machine.
+    </span> 
+    
+    <span class="a-text-underline">
+      <span class="a-letter-space"></span>Read more
+    </span> 
+  </p> 
+
+
+
+
+
+
+
+
+
+<span class="a-size-small a-color-success">
+  Published 6 hours ago by HCharles
+</span>
+</a></div>
+<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Robert" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Good unit, cleans as well as my older model of the same style.</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Robert" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
+
+
+
+  <p class="a-last">
+    <span class="a-color-base">
+      We got this to replace an older model of the same type as it was starting to make loud noises and the upholstery hose was damaged.
+    </span> 
+    
+    <span class="a-text-underline">
+      <span class="a-letter-space"></span>Read more
+    </span> 
+  </p> 
+
+
+
+
+
+
+
+
+
+<span class="a-size-small a-color-success">
+  Published 8 hours ago by Robert
+</span>
+</a></div>
+<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="5.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Whatev" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Thumbs up</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Whatev" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
+
+
+
+  <p class="a-last">
+    <span class="a-color-base">
+      So easy to use, and it works well.  And it's affordable.  Works as well as the Rug Doctor i used to rent, which was messier.
+    </span> 
+    
+  </p> 
+
+
+
+
+
+
+
+
+
+<span class="a-size-small a-color-success">
+  Published 9 hours ago by Whatev
+</span>
+</a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="1.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-1"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Joel Zuerlein" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Doesn't work!!!</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Joel Zuerlein" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
 
 
@@ -8025,7 +7904,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 <span class="a-size-small a-color-success">
-  Published 2 hours ago by Joel Zuerlein
+  Published 13 hours ago by Joel Zuerlein
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="5.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Melissa Zbell" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">love this machine & definately worth the price!</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Melissa Zbell" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
@@ -8051,7 +7930,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 <span class="a-size-small a-color-success">
-  Published 3 hours ago by Melissa Zbell
+  Published 14 hours ago by Melissa Zbell
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="5.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Judy Igarashi" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">cleans your carpets and chairs easily.</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Judy Igarashi" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
@@ -8074,7 +7953,7 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 <span class="a-size-small a-color-success">
-  Published 5 hours ago by Judy Igarashi
+  Published 17 hours ago by Judy Igarashi
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="5.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Amanda" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Fantastic cleaner says the mother of five kids</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Amanda" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
@@ -8099,8 +7978,8 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
-<span class="a-size-small a-color-success">
-  Published 14 hours ago by Amanda
+<span class="a-size-small a-color-secondary">
+  Published 1 day ago by Amanda
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="1.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-1"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Jean E Zurbrigen" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Shoddy product</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Jean E Zurbrigen" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
@@ -8125,8 +8004,8 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 
 
-<span class="a-size-small a-color-success">
-  Published 22 hours ago by Jean E Zurbrigen
+<span class="a-size-small a-color-secondary">
+  Published 1 day ago by Jean E Zurbrigen
 </span>
 </a></div>
 <div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="2.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-2"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by AG" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Good customer service makes up for bad customer service?</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by AG" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
@@ -8153,110 +8032,6 @@ Page <span class="page-number"></span>  of  <span class="num-pages"></span>
 
 <span class="a-size-small a-color-secondary">
   Published 1 day ago by AG
-</span>
-</a></div>
-<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by lost reader" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Great cleaning power</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by lost reader" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
-
-
-
-  <p class="a-last">
-    <span class="a-color-base">
-      I love that it cleans really well but it is very heavy and awkward to use (probably what makes it so effective); however, at 5', 100 lbs.
-    </span> 
-    
-    <span class="a-text-underline">
-      <span class="a-letter-space"></span>Read more
-    </span> 
-  </p> 
-
-
-
-
-
-
-
-
-
-<span class="a-size-small a-color-secondary">
-  Published 1 day ago by lost reader
-</span>
-</a></div>
-<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="1.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-1"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Lynn A Swatek" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Lost faith in Hoover</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Lynn A Swatek" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
-
-
-
-  <p class="a-last">
-    <span class="a-color-base">
-      We we're diehard Hoover customers.  But their products just don't hold up.  Bought this unit to replace three year old model that brushes stopped spinning on.
-    </span> 
-    
-    <span class="a-text-underline">
-      <span class="a-letter-space"></span>Read more
-    </span> 
-  </p> 
-
-
-
-
-
-
-
-
-
-<span class="a-size-small a-color-secondary">
-  Published 1 day ago by Lynn A Swatek
-</span>
-</a></div>
-<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="4.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-4"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by Florence Kwok" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">Good Value, Great Product</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by Florence Kwok" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
-
-
-
-  <p class="a-last">
-    <span class="a-color-base">
-      It does a good job, just that the unit is a bit heavy for older people.  Did a couple of tries before getting it right.  We can do one room at a time without stress.
-    </span> 
-    
-    <span class="a-text-underline">
-      <span class="a-letter-space"></span>Read more
-    </span> 
-  </p> 
-
-
-
-
-
-
-
-
-
-<span class="a-size-small a-color-secondary">
-  Published 2 days ago by Florence Kwok
-</span>
-</a></div>
-<div class="a-row a-spacing-base"><div class="a-icon-row a-spacing-none"><a class="a-link-normal a-text-normal" title="5.0 out of 5 stars" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><i class="a-icon a-icon-star a-star-5"></i></a><span class="a-letter-space"></span><a class="a-link-normal a-text-normal a-color-base" title="Read the full review by bill" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F"><span class="a-size-base a-text-bold">excellent cleaning -- extremely fast drying</span></a></div><a class="a-link-normal a-text-normal" title="Read the full review by bill" href="http://www.amazon.com/Hoover-SteamVac-Carpet-Washer-F5914900/product-reviews/B00009R66F">
-
-
-
-  <p class="a-last">
-    <span class="a-color-base">
-      does an excellent job.  we first received one which didn't work correctly, but the replace has a new one here in two days which works perfectly.
-    </span> 
-    
-    <span class="a-text-underline">
-      <span class="a-letter-space"></span>Read more
-    </span> 
-  </p> 
-
-
-
-
-
-
-
-
-
-<span class="a-size-small a-color-secondary">
-  Published 2 days ago by bill
 </span>
 </a></div>
 
@@ -9972,8 +9747,8 @@ text-decoration:none !important;
 
 <div class="navFooterLine navFooterLinkLine navFooterPadItemLine"><ul><li class="nav_first"><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=508088" class="nav_a">Conditions of Use</a></li><li><a href="/gp/help/customer/display.html?ie=UTF8&amp;nodeId=468496" class="nav_a">Privacy Notice</a></li><li><a href="/interestbasedads" class="nav_a">Interest-Based Ads</a></li><li class="nav_last">© 1996-2013, Amazon.com, Inc. or its affiliates</li></ul></div>
 </div>
-<!-- whfh-UsWjJIvmoPCx+4o6VZQnP2zCmNUINmQPrcqgjdHmEItRyhdeEBr2C+7vG7vnHv6h rid-0G6BHE2S5Q4S7YMSDBYJ -->
-<div id="sis_pixel_r2" style="height:1px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=0101a1823ca3d5d46ce03d4502edf28f095b20f780c29eddcddebefb2933fa9c1e98&old_oo=0&cb=1387132008799" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
+<!-- whfh-eQxX4/6btCP/IgEAVwy4R6mwCDKAnEA4cS9Dhm4mcvKlRmrDy0ZFBamrG3j3Ez6o rid-1NV0DB908TVM76G402W8 -->
+<div id="sis_pixel_r2" style="height:1px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=0101a1823ca3d5d46ce03d4502edf28f095b20f780c29eddcddebefb2933fa9c1e98&old_oo=0&cb=1387173178605" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>')},300)});</script>
 
 
 

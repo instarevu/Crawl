@@ -20,22 +20,21 @@ public abstract class AbstractParser {
 
     public Map<String, String> parseProductAttributes(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
-        Map<String, String> responseMap = new LinkedHashMap<String, String>();
+        Map<String, String> response = new LinkedHashMap<String, String>();
 
         for(DataElement dataElement : dataElements){
-            if(responseMap.get(dataElement.getField()) == null){
+            if(response.get(dataElement.getField()) == null){
                 Elements elements = doc.select(dataElement.getQuery().getElementQuery());
                 String value = ValueMiner.mine(elements, dataElement.getQuery(), dataElement.getMinerType());
                 if(!(value == null || value.equalsIgnoreCase(""))){
-                    value = finalizeValue(dataElement.getField(), value);
-                    responseMap.put(dataElement.getField(), value);
+                    finalizeAndAddValue(response, dataElement.getField(), value);
                 }
             }
         }
-        return responseMap;
+        return response;
     }
 
-    abstract String finalizeValue(String field, String extractedValue);
+    abstract String finalizeAndAddValue(Map<String, String> response, String field, String extractedValue);
 
     public List<DataElement> getDataElements(){
         return dataElements;

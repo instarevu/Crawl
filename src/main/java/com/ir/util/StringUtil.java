@@ -1,9 +1,9 @@
 package com.ir.util;
 
-import org.apache.commons.collections.MapUtils;
+import com.google.common.collect.ImmutableList;
+import com.ir.crawl.parse.field.AmazonFields;
+import org.apache.commons.lang.StringEscapeUtils;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.List;
 import java.util.Map;
 
@@ -12,11 +12,34 @@ public class StringUtil {
     private StringUtil(){}
 
 
-    private static final String NULL_STRING = "";
+    private static final String CHAR_EMPTY = "";
 
-    public static String deleteListofTokens(String input, List<String> deleteTokens){
+    private static final String CHAR_WHITESPACE = "";
+
+    public static String deleteListOfTokens(String input, List<String> deleteTokens){
         for(String token : deleteTokens){
-            input = input.replaceAll(token, NULL_STRING);
+            input = input.replaceAll(token, CHAR_EMPTY);
+        }
+        return input.trim();
+    }
+
+    private static final List<String> HTML_CLEANUP_TOKENS = ImmutableList.of(
+            ",", "\\$");
+    // Rogue Char --> �
+    public static String cleanHTMLText(String input){
+        input = deleteListOfTokens(input, HTML_CLEANUP_TOKENS);
+        input = StringEscapeUtils.escapeHtml(input).replaceAll("&nbsp;", " ");
+        return StringEscapeUtils.unescapeHtml(input);
+    }
+
+    public static String dedupeString(String input, boolean removeWhiteSpace){
+        input = input.trim();
+        if(removeWhiteSpace){
+            input = input.replaceAll(CHAR_WHITESPACE, CHAR_EMPTY);
+        }
+        int length = input.length();
+        if(input.substring(0, length/2).equalsIgnoreCase(input.substring(length/2+1, length))){
+            input = input.substring(0, length/2);
         }
         return input;
     }
