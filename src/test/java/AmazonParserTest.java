@@ -1,13 +1,11 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import com.ir.crawl.parse.DataElement;
-import com.ir.crawl.parse.field.AmazonFields;
+import com.ir.config.retailer.amazon.AmazonFieldNames;
+import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AmazonParser;
 import com.ir.util.StringUtil;
-import org.apache.commons.collections.MapUtils;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import util.LogUtil;
@@ -42,20 +40,18 @@ public class AmazonParserTest {
     @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
     public void testProduct(String name, String fileName) throws IOException {
         String data = Files.toString(new File(TEST_DATA_LOCATION+fileName), Charsets.UTF_8);
-        Map<String, String> response = PARSER.parseProductAttributes(data);
-        Reporter.log(StringUtil.prettifyMapForDebug(response));
+        Map<Field, Object> dataMap = PARSER.parseAll(data);
+        Reporter.log(StringUtil.prettifyMapForDebug(dataMap));
 
-        for(DataElement dataElement : PARSER.getDataElements()){
-            if(dataElement.isRequired()){
-                if(response.get(dataElement.getField()) == null){
-                    Assert.fail("Failed to parse " + name + " item.");
-                }
+        for(Field field : PARSER.getFields()){
+            if(!field.validate(dataMap)){
+                    Assert.fail("Validation failed for field: " + name + " !");
             }
         }
-        if(response.get(AmazonFields.VARIANT_SPECS) != null){
-            if(response.get(AmazonFields.VARIANT_IDS) == null)
-                Assert.fail("Failed: Variant not captured for " + name + " item.");
-        }
+//        if(response.get(AmazonFieldNames.VARIANT_SPECS) != null){
+//            if(response.get(AmazonFieldNames.VARIANT_IDS) == null)
+//                Assert.fail("Failed: Variant not captured for " + name + " item.");
+//        }
         LogUtil.afterTestMarker();;
     }
 

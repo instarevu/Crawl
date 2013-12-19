@@ -1,7 +1,9 @@
-package com.ir.crawl.parse.field;
+package com.ir.config.retailer.amazon;
 
 
-public class AmazonFields extends AbstractFields {
+import com.ir.crawl.parse.field.FieldNames;
+
+public class AmazonFieldNames extends FieldNames {
 
     public static final String VARIANT_SPECS = "variantSpecs";
 

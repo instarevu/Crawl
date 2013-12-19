@@ -1,7 +1,7 @@
 package com.ir.crawl.parse.field;
 
 
-public abstract class AbstractFields {
+public abstract class FieldNames {
 
     public static final String ID = "id";
 

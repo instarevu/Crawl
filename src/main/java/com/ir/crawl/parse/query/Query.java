@@ -1,10 +1,12 @@
 package com.ir.crawl.parse.query;
 
 
+import org.jsoup.nodes.Document;
+
 public interface Query {
 
-    public String getElementQuery();
+    public String getQuery();
 
-    public String getNestedQuery();
+    public String mineForValue(Document doc);
 
 }

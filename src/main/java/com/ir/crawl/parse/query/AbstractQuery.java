@@ -1,26 +1,19 @@
 package com.ir.crawl.parse.query;
 
+import org.jsoup.nodes.Document;
+
 public abstract class AbstractQuery implements Query {
 
-    public String elementQuery = null;
+    public String query = null;
 
-    public String nestedQuery = null;
-
-    AbstractQuery(String elementQuery){
-        this.elementQuery = elementQuery;
+    AbstractQuery(String query){
+        this.query = query;
     }
 
-    AbstractQuery(String query, String nestedQuery){
-        this.elementQuery = query;
-        this.nestedQuery = nestedQuery;
-    }
+    public abstract String mineForValue(Document document);
 
-    public String getElementQuery(){
-        return  elementQuery;
-    }
-
-    public String getNestedQuery(){
-        return  nestedQuery;
+    public String getQuery(){
+        return  query;
     }
 
 }

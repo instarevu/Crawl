@@ -1,7 +1,6 @@
 package com.ir.util;
 
 import com.google.common.collect.ImmutableList;
-import com.ir.crawl.parse.field.AmazonFields;
 import org.apache.commons.lang.StringEscapeUtils;
 
 import java.util.List;
@@ -23,11 +22,11 @@ public class StringUtil {
         return input.trim();
     }
 
-    private static final List<String> HTML_CLEANUP_TOKENS = ImmutableList.of(
+    private static final List<String> HTML_CLEANUP_PRICE_TOKENS = ImmutableList.of(
             ",", "\\$");
     // Rogue Char --> �
-    public static String cleanHTMLText(String input){
-        input = deleteListOfTokens(input, HTML_CLEANUP_TOKENS);
+    public static String purgeSpecialChars(String input){
+        //input = deleteListOfTokens(input, HTML_CLEANUP_PRICE_TOKENS);
         input = StringEscapeUtils.escapeHtml(input).replaceAll("&nbsp;", " ");
         return StringEscapeUtils.unescapeHtml(input);
     }

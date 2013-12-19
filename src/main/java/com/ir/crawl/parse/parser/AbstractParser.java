@@ -1,43 +1,52 @@
 package com.ir.crawl.parse.parser;
 
 
-import com.ir.crawl.parse.DataElement;
-import com.ir.crawl.parse.mine.ValueMiner;
+import com.ir.crawl.parse.field.Field;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public abstract class AbstractParser {
+public abstract class AbstractParser implements Parser {
 
     String baseURI = "";
 
-    List<DataElement> dataElements = null;
+    Set<Field> fields = null;
 
-    public Map<String, String> parseProductAttributes(String htmlData) {
+    AbstractParser(String baseURI, Set<Field> fields){
+        this.baseURI = baseURI;
+        this.fields = fields;
+    }
+
+    public Map<Field, Object> parseAll(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
-        Map<String, String> response = new LinkedHashMap<String, String>();
+        Map<Field, Object> response = new LinkedHashMap<Field, Object>();
 
-        for(DataElement dataElement : dataElements){
-            if(response.get(dataElement.getField()) == null){
-                Elements elements = doc.select(dataElement.getQuery().getElementQuery());
-                String value = ValueMiner.mine(elements, dataElement.getQuery(), dataElement.getMinerType());
-                if(!(value == null || value.equalsIgnoreCase(""))){
-                    finalizeAndAddValue(response, dataElement.getField(), value);
-                }
-            }
+        for(Field f : fields){
+            f.extract(this, response, doc);
         }
+        //Indexer.addDoc(response);
         return response;
     }
 
-    abstract String finalizeAndAddValue(Map<String, String> response, String field, String extractedValue);
+    public abstract boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);
 
-    public List<DataElement> getDataElements(){
-        return dataElements;
+    public Set<Field> getFields(){
+        return fields;
+    }
+
+
+    static Map<String, Field> fieldNameMap = null;
+
+    Field getFieldByName(String fieldName){
+        if(fieldNameMap == null){
+            fieldNameMap = new HashMap<String, Field>(fields.size());
+            for(Field f : fields) {
+                fieldNameMap.put(f.getName(), f);
+            }
+        }
+        return fieldNameMap.get(fieldName);
+
     }
 
 }
