@@ -5,6 +5,7 @@ import org.apache.commons.lang.StringEscapeUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class StringUtil {
 
@@ -15,7 +16,7 @@ public class StringUtil {
 
     private static final String CHAR_WHITESPACE = "";
 
-    public static String deleteListOfTokens(String input, List<String> deleteTokens){
+    public static String deleteListOfTokens(String input, Set<String> deleteTokens){
         for(String token : deleteTokens){
             input = input.replaceAll(token, CHAR_EMPTY);
         }

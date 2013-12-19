@@ -15,14 +15,17 @@ public class Field {
 
     private String name =  null;
 
-    private Set<Rule> rules = new LinkedHashSet<Rule>(3);
+    private Set<Rule> rules = null;
 
-    private Set<Query> queries = new LinkedHashSet<Query>(3);
+    private Set<Query> queries = null;
 
-    Field(String fieldName, Set<Query> queries,  Set<Rule> rules){
+    private Set<String> deleteTokens = null;
+
+    Field(String fieldName, Set<Query> queries,  Set<Rule> rules, Set<String> deleteTokens){
         this.name = fieldName;
         this.queries = queries;
         this.rules = rules;
+        this.deleteTokens = deleteTokens;
     }
 
     public boolean validate(Map<Field, Object> dataMap){
@@ -39,6 +42,8 @@ public class Field {
             String data = query.mineForValue(doc);
             if(!(data == null || data.equalsIgnoreCase(""))){
                 data = StringUtil.purgeSpecialChars(data);
+                if(deleteTokens != null)
+                    data = StringUtil.deleteListOfTokens(data, deleteTokens);
                 parser.finalizeAndAddValue(dataMap, this, data);
             }
         }
@@ -51,6 +56,10 @@ public class Field {
 
     public String toString(){
         return name;
+    }
+
+    public static FieldBuilder n(String fieldName){
+        return new FieldBuilder(fieldName);
     }
 
 

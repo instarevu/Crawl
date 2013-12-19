@@ -61,7 +61,7 @@ public class CrawlController extends Configurable {
 		File folder = new File(config.getCrawlStorageFolder());
 		if (!folder.exists()) {
 			if (!folder.mkdirs()) {
-				throw new Exception("Couldn't create this folder: " + folder.getAbsolutePath());
+				throw new Exception("Couldn't c this folder: " + folder.getAbsolutePath());
 			}
 		}
 
@@ -75,7 +75,7 @@ public class CrawlController extends Configurable {
 		File envHome = new File(config.getCrawlStorageFolder() + "/frontier");
 		if (!envHome.exists()) {
 			if (!envHome.mkdir()) {
-				throw new Exception("Couldn't create this folder: " + envHome.getAbsolutePath());
+				throw new Exception("Couldn't c this folder: " + envHome.getAbsolutePath());
 			}
 		}
 		if (!resumable) {

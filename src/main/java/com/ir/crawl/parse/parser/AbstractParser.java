@@ -1,6 +1,7 @@
 package com.ir.crawl.parse.parser;
 
 
+import com.google.gson.JsonParser;
 import com.ir.crawl.parse.field.Field;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,6 +9,8 @@ import org.jsoup.nodes.Document;
 import java.util.*;
 
 public abstract class AbstractParser implements Parser {
+
+    static final JsonParser jsonParser = new JsonParser();
 
     String baseURI = "";
 

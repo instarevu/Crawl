@@ -48,8 +48,8 @@ public class AmazonParserTest {
                     Assert.fail("Validation failed for field: " + name + " !");
             }
         }
-//        if(response.get(AmazonFieldNames.VARIANT_SPECS) != null){
-//            if(response.get(AmazonFieldNames.VARIANT_IDS) == null)
+//        if(response.get(AmazonFieldNames.VRNT_SPEC) != null){
+//            if(response.get(AmazonFieldNames.VRNT_IDS) == null)
 //                Assert.fail("Failed: Variant not captured for " + name + " item.");
 //        }
         LogUtil.afterTestMarker();;
