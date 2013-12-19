@@ -21,11 +21,14 @@ public class Field {
 
     private Set<String> deleteTokens = null;
 
-    Field(String fieldName, Set<Query> queries,  Set<Rule> rules, Set<String> deleteTokens){
+    private Class dataType = String.class;
+
+    Field(String fieldName, Class dataType, Set<Query> queries,  Set<Rule> rules, Set<String> deleteTokens){
         this.name = fieldName;
         this.queries = queries;
         this.rules = rules;
         this.deleteTokens = deleteTokens;
+        this.dataType = dataType;
     }
 
     public boolean validate(Map<Field, Object> dataMap){
@@ -50,6 +53,19 @@ public class Field {
         return validationResult;
     }
 
+    public boolean convertDataType(Map<Field, Object> dataMap){
+        if(this.dataType != String.class && dataMap.get(this) != null){
+            Object current = dataMap.get(this);
+            if(dataType == Integer.class){
+                dataMap.put(this, Integer.parseInt((String)current));
+            } else if(dataType == Float.class) {
+                dataMap.put(this, Float.parseFloat((String)current));
+            }
+
+        }
+        return true;
+    }
+
     public String getName(){
         return name;
     }
@@ -59,8 +75,11 @@ public class Field {
     }
 
     public static FieldBuilder n(String fieldName){
-        return new FieldBuilder(fieldName);
+        return new FieldBuilder(fieldName, String.class);
     }
 
+    public static FieldBuilder n(String fieldName, Class dataType){
+        return new FieldBuilder(fieldName, dataType);
+    }
 
 }

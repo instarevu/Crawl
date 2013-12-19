@@ -23,13 +23,17 @@ public abstract class AbstractParser implements Parser {
 
     public Map<Field, Object> parseAll(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
-        Map<Field, Object> response = new LinkedHashMap<Field, Object>();
+        Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
 
         for(Field f : fields){
-            f.extract(this, response, doc);
+            f.extract(this, dataMap, doc);
         }
-        //Indexer.addDoc(response);
-        return response;
+        // Purposefully done in seperate loop
+        for(Field f : fields){
+            f.convertDataType(dataMap);
+        }
+        //Indexer.addDoc(dataMap);
+        return dataMap;
     }
 
     public abstract boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);

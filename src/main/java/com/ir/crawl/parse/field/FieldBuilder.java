@@ -20,9 +20,12 @@ public class FieldBuilder {
 
     private Set<String> deleteTokens = null;
 
-    public FieldBuilder(String fieldName){
+    private Class dataType = String.class;
+
+    public FieldBuilder(String fieldName, Class dataType){
         if(fieldName == null) throw new IllegalArgumentException("Field Name cannot be null");
         this.fieldName = fieldName;
+        this.dataType = dataType;
     }
 
     public FieldBuilder addQ(Query query){
@@ -55,7 +58,7 @@ public class FieldBuilder {
     }
 
     public Field c(){
-        return new Field(fieldName, queries, rules, deleteTokens);
+        return new Field(fieldName, dataType, queries, rules, deleteTokens);
     }
 
 
