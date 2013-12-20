@@ -14,26 +14,37 @@ public abstract class AbstractParser implements Parser {
 
     String baseURI = "";
 
-    Set<Field> fields = null;
+    Set<Field> decisionFields = null;
 
-    AbstractParser(String baseURI, Set<Field> fields){
-        this.baseURI = baseURI;
-        this.fields = fields;
-    }
+    Set<Field> fields = null;
 
     public Map<Field, Object> parseAll(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
         Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
 
+        isValidForProcessing(doc, dataMap);
+
         for(Field f : fields){
             f.extract(this, dataMap, doc);
         }
-        // Purposefully done in seperate loop
+        // Purposefully done in separate loop
         for(Field f : fields){
             f.convertDataType(dataMap);
         }
         //Indexer.addDoc(dataMap);
         return dataMap;
+    }
+
+    public boolean isValidForProcessing(Document doc, Map<Field, Object> dataMap){
+        for(Field f : decisionFields){
+            f.extract(this, dataMap, doc);
+        }
+
+        for(Field f : decisionFields){
+            if(!f.isValid(this, dataMap));
+                return false;
+        }
+        return true;
     }
 
     public abstract boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);
@@ -45,7 +56,7 @@ public abstract class AbstractParser implements Parser {
 
     static Map<String, Field> fieldNameMap = null;
 
-    Field getFieldByName(String fieldName){
+    public Field getFieldByName(String fieldName){
         if(fieldNameMap == null){
             fieldNameMap = new HashMap<String, Field>(fields.size());
             for(Field f : fields) {

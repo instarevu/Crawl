@@ -8,7 +8,9 @@ import com.google.gson.JsonObject;
 import com.ir.config.retailer.amazon.AmazonFieldNames;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.query.RawStringQuery;
+import com.ir.crawl.parse.validation.DependencyRule;
 import com.ir.crawl.parse.validation.NotNullRule;
+import com.ir.crawl.parse.validation.ValueContainsRule;
 import com.ir.util.StringUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -23,39 +25,49 @@ import static com.ir.config.retailer.amazon.AmazonFieldNames.*;
 
 public class AmazonParser extends AbstractParser {
 
-    private static Set<Field> fields = ImmutableSet.of(
-            Field.n(ID).addQ("input[id=ASIN]", "value").addV(new NotNullRule()).c(),
-            Field.n(TITLE).addQ("h1[id=title]").addV(new NotNullRule()).c(),
-            Field.n(BRAND).addQ("div[id=mbc]", "data-brand").addQ("a[id=brand]").addV(new NotNullRule()).c(),
-            Field.n(PRC_OFFER, Float.class).addQ("span[id=priceblock_ourprice]").del("\\$", ",").c(),
-            Field.n(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").del("\\$", ",").c(),
-            Field.n(PRC_MIN, Float.class).c(),
-            Field.n(PRC_MAX, Float.class).c(),
-            Field.n(IDF_MODEL).addQ("li:contains(Item model number)").addQ("td:contains(Item model number) ~ td").del("Item model number:").c(),
-            Field.n(IDF_UPC).addQ("li:contains(UPC)").addQ("td:contains(UPC) ~ td").del("UPC:").c(),
-            Field.n(IDF_ISBN10).addQ("li:contains(ISBN-10)").del("ISBN-10:").c(),
-            Field.n(IDF_ISBN13).addQ("li:contains(ISBN-13)").del("ISBN-13:").c(),
-            Field.n(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").c(),
-            Field.n(RANK_L2).c(),
-            Field.n(RANK_L3).c(),
-            Field.n(RTNG_AVG, Float.class).addQ("#avgRating").c(),
-            Field.n(RTNG_TOTAL, Integer.class).addQ("#summaryStars").del(",").c(),
-            Field.n(VRNT_SPEC).addQ("div[class=disclaim]").del("<div class=\"disclaim\">", "<strong>", "</strong>", "&nbsp;", "</div>", "(\\r|\\n)").c(),
-            Field.n(VRNT_IDS).addQ(new RawStringQuery("script[data-a-state*=twisterData]")).c(),
-            Field.n(URL).addQ("link[rel=canonical]", "href").addV(new NotNullRule()).c(),
-            Field.n(URL_IMG).addQ("img[id=landingImage]", "src").addV(new NotNullRule()).c()
-    );
 
     public AmazonParser(){
-        super("http://www.amazon.com/", fields);
+        baseURI = "http://www.amazon.com/";
+        decisionFields = ImmutableSet.of(
+                Field.n(MERCHANT).addQ("#merchant-info").addV(new ValueContainsRule("amazon.com")).c()
+        );
+        fields = ImmutableSet.of(
+                Field.n(ID).addQ("input[id=ASIN]", "value").addV(new NotNullRule()).c(),
+                Field.n(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addV(new NotNullRule()).c(),
+                Field.n(BRAND).addQ("#brand").addQ("#mbc", "data-brand").addQ("h1[class*=parseasinTitle]").addV(new NotNullRule()).c(),
+                Field.n(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").addQ("#listPriceValue").del("\\$", ",").c(),
+                Field.n(PRC_ACTUAL, Float.class).addQ("#priceblock_ourprice").del("\\$", ",").c(),
+                Field.n(PRC_MIN, Float.class).c(),
+                Field.n(PRC_MAX, Float.class).c(),
+                Field.n(PRC_SALE, Float.class).addQ("#priceblock_saleprice").del("\\$", ",").c(),
+                Field.n(IDF_MODEL).addQ("li:contains(Item model number)").addQ("td:contains(Item model number) ~ td").del("Item model number:").c(),
+                Field.n(IDF_UPC).addQ("li:contains(UPC)").addQ("td:contains(UPC) ~ td").del("UPC:").c(),
+                Field.n(IDF_ISBN10).addQ("li:contains(ISBN-10)").del("ISBN-10:").c(),
+                Field.n(IDF_ISBN13).addQ("li:contains(ISBN-13)").del("ISBN-13:").c(),
+                Field.n(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").addV(new NotNullRule()).c(),
+                Field.n(RANK_L2).addV(new DependencyRule(RANK_L1)).c(),
+                Field.n(RANK_L3).addV(new DependencyRule(RANK_L2)).c(),
+                Field.n(RTNG_AVG, Float.class).addQ("#avgRating").c(),
+                Field.n(RTNG_TOTAL, Integer.class).addQ("#summaryStars").del(",").c(),
+                Field.n(VRNT_SPEC).addQ("div[class=disclaim]").del("<div class=\"disclaim\">", "<strong>", "</strong>", "&nbsp;", "</div>", "(\\r|\\n)").addV(new DependencyRule(VRNT_IDS)).c(),
+                Field.n(VRNT_IDS).addQ(new RawStringQuery("script[data-a-state*=twisterData]")).c(),
+                Field.n(URL).addQ("link[rel=canonical]", "href").addV(new NotNullRule()).c(),
+                Field.n(URL_IMG).addQ("#landingImage", "src").addQ("#main-image", "src").addQ("#prodImage", "src").addV(new NotNullRule()).c()
+        );
     }
 
     public boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String input){
         // PRICE
         String fieldName = field.getName();
         if(fieldName.equalsIgnoreCase(AmazonFieldNames.PRC_LIST)){
-            input = StringUtil.dedupeString(input, false);
-        } else if(fieldName.equalsIgnoreCase(AmazonFieldNames.PRC_OFFER)){
+            if(input.trim().contains(" ")){
+                String prices[] = input.split(" ");
+                input = prices[0].trim();
+                dataMap.put(getFieldByName(PRC_ACTUAL), prices[1].trim());
+            } else {
+                input = StringUtil.dedupeString(input, false);
+            }
+        } else if(fieldName.equalsIgnoreCase(AmazonFieldNames.PRC_ACTUAL)){
             if(input.contains("-")){
                 String prices[] = input.split("-");
                 dataMap.put(getFieldByName(PRC_MIN), prices[0].trim());
@@ -103,8 +115,19 @@ public class AmazonParser extends AbstractParser {
         for (File f : file.listFiles()){
             String data = Files.toString(f, Charsets.UTF_8);
             Document doc = Jsoup.parse(data, "http://www.amazon.com/");
-            System.out.println(f.getName() + "2: " + doc.select("li:contains(Item model number)").text());
-            System.out.println();
+
+            // if List has multiple price '-' assign smallest to actual, if actual is null. List can be null.
+            System.out.println(f.getName().substring(0, 20) + "     LIST-1: " + doc.select("td[class*=a-text-strike]").text());
+            System.out.println(f.getName().substring(0, 20) + "     LIST-2: " + doc.select("#listPriceValue").text());
+            //System.out.println(f.getName().substring(0, 20) + "     ACTL-1: " + doc.select("#priceblock_ourprice").text());
+            //System.out.println(f.getName().substring(0, 20) + "     ACTL-2: " + doc.select("#actualPriceValue").text());
+            //System.out.println(f.getName().substring(0, 20) + "     SALE-1: " + doc.select("#priceblock_saleprice").text());
+            //System.out.println(f.getName().substring(0, 20) + "     2: " + doc.select("#main-image").attr("src"));
+            //System.out.println(f.getName().substring(0, 20) + "     3: " + doc.select("#prodImage").attr("src"));
+            //System.out.println(f.getName().substring(0, 20) + "     2: " + doc.select("h1[class*=parseasinTitle]").text());
+            //System.out.println(f.getName().substring(0, 20) + "     3: " + doc.select("#mbc").attr("data-brand"));
+            System.out.println("---------------------------------------------------------------------------");
+            //System.out.println();
         }
 
     }

@@ -5,39 +5,33 @@ baseUri=/dp/
 
 #ID
 declare -a ID
-ID[1]=B00F4MEK6E
-ID[2]=B0013DQY4O
-ID[3]=B007MMA4NW
-ID[4]=B005DLCJX2
-ID[5]=B000LP2MGY
-ID[6]=B004YHKVCM
-ID[7]=B001ASB5XC
-ID[8]=B0053X62GK
-ID[9]=B00009R66F
-ID[10]=B0043H4JXU
-ID[11]=0385537131
-ID[12]=B003VNKNF0
+
+ID[1]='B008D902Q2-Jewelry::Mens Watch'
+ID[2]='B0043OV0DU-Pet_Supplies::Cat Food'
+ID[3]='B003B6NAZ2-Grocery_&_Gourmet_Food::Organic_RedQuinoa'
+ID[4]='B0001WYNKA-Indoor_Plant::Bonsai_Tree'
+ID[5]='B0071NO7I0-Musical_Instrument::Guitar'
+ID[6]='B00D5Q75RC-Electronics::Speaker'
+ID[7]='B00FNPD1VW-Computers::Laptop'
+ID[8]='B00EI7DPOO-Home_&_Kitchen::Sandwich_Maker'
+ID[9]='B00G460MUC-Cell_Phone_Accessory::iPhone_Gold'
+ID[10]='B0019LVFSU-Beauty::Almond_Oil'
+ID[11]='B00AXN3628-Patio_Furniture::Double_Hammock'
+ID[12]='B000KE6E1U-Tools_&_Home_Improvement::Socket_Set'
+ID[13]='B000AUIFCA-Health_&_Personal_Care::OralB_Toothbrush'
+ID[14]='B007OXK1WI-Industrial_&_Scientific::3M_Reclosable_Fastener'
+ID[15]='B003YFHCKY-Office_Products::Toner_Cartridge'
+ID[16]='B00DDMJ0JE-Baby::Luvs_Diaper'
+ID[17]='B0041RPGQ6-Automotive::Seat_Cushion'
+ID[18]='B00AJL9E5C-Shoes::Sorel_Womens_Shoes'
+ID[19]='B003F82I2W-Toys::LegoBlocks'
+ID[20]='B0033Y0VZ4-Appliances::Dishwashers'
 
 
-
-#NAME
-NAME[1]=Notebook
-NAME[2]=Household
-NAME[3]=Jeans
-NAME[4]=Diaper
-NAME[5]=Shoe
-NAME[6]=Laundry
-NAME[7]=Cookware
-NAME[8]=Toy
-NAME[9]=Appliance
-NAME[10]=Sports
-NAME[11]=Book
-NAME[12]=MemoryCard
-
-
-for i in {1..12}
+for i in {1..20}
 do
-	url='http://www.amazon.com/dp/'${ID[$i]}
-	echo 'Downloading for  '${NAME[$i]}' -  '$url
-	wget $url -q -O data/${NAME[$i]}
+    IFS='-' read -ra tokens <<< "${ID[$i]}"
+	url='http://www.amazon.com/dp/'${tokens}
+	echo 'Downloading: '$url
+	wget $url -q -O data/${ID[$i]}
 done

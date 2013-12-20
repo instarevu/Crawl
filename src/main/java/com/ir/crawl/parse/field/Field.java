@@ -3,11 +3,11 @@ package com.ir.crawl.parse.field;
 
 import com.ir.crawl.parse.parser.Parser;
 import com.ir.crawl.parse.query.Query;
+import com.ir.crawl.parse.validation.DependencyRule;
 import com.ir.crawl.parse.validation.Rule;
 import com.ir.util.StringUtil;
 import org.jsoup.nodes.Document;
 
-import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -31,10 +31,28 @@ public class Field {
         this.dataType = dataType;
     }
 
-    public boolean validate(Map<Field, Object> dataMap){
+    public boolean isValid(Parser parser, Map<Field, Object> dataMap){
+        return isValid(parser, dataMap, null);
+    }
+
+    public boolean isValid(Parser parser, Map<Field, Object> dataMap, String originField){
         for(Rule rule : rules){
-            if(!rule.validate(this, dataMap))
-                return false;
+            switch(rule.getRuleType()){
+                case NOT_NULL:
+                    if(!rule.validate(this, dataMap)) {
+                        System.out.println("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        return false;
+                    }
+                    break;
+                case DEPENDENCY:
+                    if(originField == null || !((DependencyRule)rule).getDependentFieldName().equalsIgnoreCase(originField)){
+                        if(!rule.validate(this, parser, dataMap)) {
+                            System.out.println("Validation Failed. Field: \"" + this + "\" for Rule:  \"" + rule + "\"");
+                            return false;
+                        }
+                    }
+                    break;
+            }
         }
         return true;
     }
@@ -57,9 +75,9 @@ public class Field {
         if(this.dataType != String.class && dataMap.get(this) != null){
             Object current = dataMap.get(this);
             if(dataType == Integer.class){
-                dataMap.put(this, Integer.parseInt((String)current));
+                dataMap.put(this, Integer.parseInt((String) current));
             } else if(dataType == Float.class) {
-                dataMap.put(this, Float.parseFloat((String)current));
+                dataMap.put(this, Float.parseFloat((String) current));
             }
 
         }

@@ -15,4 +15,6 @@ public class AmazonFieldNames extends FieldNames {
 
     public static final String RANK_L3 = "rankL3Spec";
 
+    public static final String MERCHANT = "merchant";
+
 }

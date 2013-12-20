@@ -9,7 +9,9 @@ public abstract class FieldNames {
 
     public static final String PRC_LIST = "priceList";
 
-    public static final String PRC_OFFER = "priceOffer";
+    public static final String PRC_ACTUAL = "priceActual";
+
+    public static final String PRC_SALE = "priceSale";
 
     public static final String PRC_MIN = "priceMin";
 
