@@ -27,12 +27,13 @@ public class AmazonParser extends AbstractParser {
 
 
     public AmazonParser(){
+        super();
         baseURI = "http://www.amazon.com/";
         decisionFields = ImmutableSet.of(
-                Field.n(MERCHANT).addQ("#merchant-info").addV(new ValueContainsRule("amazon.com")).c()
+                Field.n(ID).addQ("input[id=ASIN]", "value").addV(new NotNullRule()).c(),
+                Field.n(MERCHANT).addQ("#merchant-info").addV(new ValueContainsRule("sold by amazon.com")).c()
         );
         fields = ImmutableSet.of(
-                Field.n(ID).addQ("input[id=ASIN]", "value").addV(new NotNullRule()).c(),
                 Field.n(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addV(new NotNullRule()).c(),
                 Field.n(BRAND).addQ("#brand").addQ("#mbc", "data-brand").addQ("h1[class*=parseasinTitle]").addV(new NotNullRule()).c(),
                 Field.n(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").addQ("#listPriceValue").del("\\$", ",").c(),
@@ -119,13 +120,6 @@ public class AmazonParser extends AbstractParser {
             // if List has multiple price '-' assign smallest to actual, if actual is null. List can be null.
             System.out.println(f.getName().substring(0, 20) + "     LIST-1: " + doc.select("td[class*=a-text-strike]").text());
             System.out.println(f.getName().substring(0, 20) + "     LIST-2: " + doc.select("#listPriceValue").text());
-            //System.out.println(f.getName().substring(0, 20) + "     ACTL-1: " + doc.select("#priceblock_ourprice").text());
-            //System.out.println(f.getName().substring(0, 20) + "     ACTL-2: " + doc.select("#actualPriceValue").text());
-            //System.out.println(f.getName().substring(0, 20) + "     SALE-1: " + doc.select("#priceblock_saleprice").text());
-            //System.out.println(f.getName().substring(0, 20) + "     2: " + doc.select("#main-image").attr("src"));
-            //System.out.println(f.getName().substring(0, 20) + "     3: " + doc.select("#prodImage").attr("src"));
-            //System.out.println(f.getName().substring(0, 20) + "     2: " + doc.select("h1[class*=parseasinTitle]").text());
-            //System.out.println(f.getName().substring(0, 20) + "     3: " + doc.select("#mbc").attr("data-brand"));
             System.out.println("---------------------------------------------------------------------------");
             //System.out.println();
         }

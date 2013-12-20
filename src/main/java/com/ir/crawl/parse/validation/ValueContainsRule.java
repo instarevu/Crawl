@@ -18,7 +18,7 @@ public class ValueContainsRule extends AbstractRule {
     public boolean validate(Field field, Map<Field, Object> dataMap) {
         if(dataMap.get(field) == null)
             return false;
-        else if(((String)dataMap.get(field)).contains(concatinsText))
+        else if(((String)dataMap.get(field)).toLowerCase().contains(concatinsText))
             return true;
         else
             return false;

@@ -52,6 +52,12 @@ public class Field {
                         }
                     }
                     break;
+                case VALUE_CONTAINS:
+                    if(!rule.validate(this, dataMap)) {
+                        System.out.println("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        return false;
+                    }
+                    break;
             }
         }
         return true;

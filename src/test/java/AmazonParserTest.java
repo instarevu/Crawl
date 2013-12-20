@@ -1,5 +1,6 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
+import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AmazonParser;
 import com.ir.util.StringUtil;
@@ -39,15 +40,18 @@ public class AmazonParserTest {
     @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
     public void testProduct(String id, String category) throws IOException {
         String data = Files.toString(new File(TEST_DATA_LOCATION+id+"-"+category), Charsets.UTF_8);
-        Map<Field, Object> dataMap = amazonParser.parseAll(data);
-        Reporter.log(StringUtil.prettifyMapForDebug(dataMap));
+        ParseResponse parseResponse = amazonParser.parseAll(data);
+        if(parseResponse.isEligibleForProcessing()){
+            Map<Field, Object> dataMap = parseResponse.getDataMap();
+            Reporter.log(StringUtil.prettifyMapForDebug(dataMap));
 
-        for(Field field : amazonParser.getFields()){
-            if(!field.isValid(amazonParser, dataMap)){
-                    Assert.fail("Validation failed for field: " + field + " !");
+            for(Field field : amazonParser.getFields()){
+                if(!field.isValid(amazonParser, dataMap)){
+                        Assert.fail("Validation failed for field: " + field + " !");
+                }
             }
         }
-        LogUtil.afterTestMarker();;
+        LogUtil.afterTestMarker();
     }
 
 }

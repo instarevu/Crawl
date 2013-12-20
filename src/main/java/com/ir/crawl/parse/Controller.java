@@ -16,7 +16,7 @@ public class Controller {
         int numberOfCrawlers = 1;
 
         CrawlConfig config = new CrawlConfig();
-        //config.setMaxPagesToFetch(10);
+        config.setMaxPagesToFetch(-1);
         config.setCrawlStorageFolder(CRAWL_STORAGE_FOLDER);
 
         PageFetcher pageFetcher = new PageFetcher(config);

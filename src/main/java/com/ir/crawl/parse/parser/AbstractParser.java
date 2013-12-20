@@ -2,7 +2,9 @@ package com.ir.crawl.parse.parser;
 
 
 import com.google.gson.JsonParser;
+import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
+import com.ir.index.es.Indexer;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -18,11 +20,12 @@ public abstract class AbstractParser implements Parser {
 
     Set<Field> fields = null;
 
-    public Map<Field, Object> parseAll(String htmlData) {
+    public ParseResponse parseAll(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
         Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
-
-        isValidForProcessing(doc, dataMap);
+        if(!isValidForProcessing(doc, dataMap)){
+            return new ParseResponse(false);
+        }
 
         for(Field f : fields){
             f.extract(this, dataMap, doc);
@@ -31,17 +34,14 @@ public abstract class AbstractParser implements Parser {
         for(Field f : fields){
             f.convertDataType(dataMap);
         }
-        //Indexer.addDoc(dataMap);
-        return dataMap;
+        //Indexer.addDoc((String)dataMap.get(getFieldByName("id")) ,dataMap);
+        return new ParseResponse(true, dataMap);
     }
 
     public boolean isValidForProcessing(Document doc, Map<Field, Object> dataMap){
         for(Field f : decisionFields){
             f.extract(this, dataMap, doc);
-        }
-
-        for(Field f : decisionFields){
-            if(!f.isValid(this, dataMap));
+            if(!f.isValid(this, dataMap))
                 return false;
         }
         return true;
@@ -59,6 +59,9 @@ public abstract class AbstractParser implements Parser {
     public Field getFieldByName(String fieldName){
         if(fieldNameMap == null){
             fieldNameMap = new HashMap<String, Field>(fields.size());
+            for(Field f : decisionFields) {
+                fieldNameMap.put(f.getName(), f);
+            }
             for(Field f : fields) {
                 fieldNameMap.put(f.getName(), f);
             }

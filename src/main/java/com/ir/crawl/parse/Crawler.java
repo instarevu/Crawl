@@ -5,12 +5,14 @@ import com.ir.core.crawllib.crawler.Page;
 import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
+import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AmazonParser;
 import org.apache.log4j.Logger;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 public class Crawler extends WebCrawler {
@@ -42,12 +44,13 @@ public class Crawler extends WebCrawler {
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
             String htmlData = htmlParseData.getHtml();
-            List<WebURL> links = htmlParseData.getOutgoingUrls();
-            Map<Field, Object> dataMap = amazonParser.parseAll(htmlData);
-
-            System.out.println("MAP: " + dataMap);
-            System.out.println("Html length: " + htmlData.length());
-            System.out.println("Number of outgoing links: " + links.size());
+            ParseResponse parseResponse = amazonParser.parseAll(htmlData);
+            //System.out.println("MAP: " + parseResponse);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 package com.ir.index.es;
 
 
+import com.ir.crawl.parse.field.Field;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
@@ -14,9 +15,9 @@ public class Indexer {
             .addTransportAddress(new InetSocketTransportAddress("localhost", 9300));
 
 
-    public static final void addDoc(Map<String, Object> productMap) {
+    public static final void addDoc(String id, Map<Field, Object> productMap) {
         try{
-            IndexResponse indexResponse = client.prepareIndex("products", "Amazon", (String)productMap.get("id"))
+            IndexResponse indexResponse = client.prepareIndex("products", "Amazon", id)
                 .setSource(productMap)
                 .execute()
                 .actionGet();
