@@ -77,6 +77,19 @@ public class Field {
         return validationResult;
     }
 
+    public String extract(Document doc){
+        String data = "";
+        for(Query query : queries){
+            data = query.mineForValue(doc);
+            if(!(data == null || data.equalsIgnoreCase(""))){
+                data = StringUtil.purgeSpecialChars(data);
+                if(deleteTokens != null)
+                    data = StringUtil.deleteListOfTokens(data, deleteTokens);
+            }
+        }
+        return data;
+    }
+
     public boolean convertDataType(Map<Field, Object> dataMap){
         if(this.dataType != String.class && dataMap.get(this) != null){
             Object current = dataMap.get(this);

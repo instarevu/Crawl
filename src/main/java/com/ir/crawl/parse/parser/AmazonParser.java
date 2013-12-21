@@ -6,6 +6,8 @@ import com.google.gson.JsonObject;
 import com.ir.config.retailer.amazon.AmazonFieldNames;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.query.RawStringQuery;
+import com.ir.crawl.parse.validation.item.AtleastOneRule;
+import com.ir.crawl.parse.validation.item.ItemRule;
 import com.ir.util.StringUtil;
 
 import java.util.Map;
@@ -29,9 +31,10 @@ public class AmazonParser extends AbstractParser {
         );
         fields = ImmutableSet.of(
                 field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addNotNullRule().c(),
+                field(BREADCRUMB).addQ("div[class=detailBreadcrumb]").c(),
                 field(MERCHANT).addQ("#merchant-info").addQ("div[class=buying] > b").del(DEL_TOKENS_MERCHANT).c(),
                 field(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").addQ("#listPriceValue").del(DEL_TOKENS_PRICE).c(),
-                field(PRC_ACTUAL, Float.class).addQ("#priceblock_ourprice").del(DEL_TOKENS_PRICE).c(),
+                field(PRC_ACTUAL, Float.class).addQ("#priceblock_ourprice").addQ("#actualPriceValue").del(DEL_TOKENS_PRICE).c(),
                 field(PRC_MIN, Float.class).c(),
                 field(PRC_MAX, Float.class).c(),
                 field(PRC_SALE, Float.class).addQ("#priceblock_saleprice").del(DEL_TOKENS_PRICE).c(),
@@ -39,7 +42,7 @@ public class AmazonParser extends AbstractParser {
                 field(IDF_UPC).addQ("li:contains(UPC)").addQ("td:contains(UPC) ~ td").del("UPC:").c(),
                 field(IDF_ISBN10).addQ("li:contains(ISBN-10)").del("ISBN-10:").c(),
                 field(IDF_ISBN13).addQ("li:contains(ISBN-13)").del("ISBN-13:").c(),
-                field(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").addNotNullRule().c(),
+                field(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").c(),
                 field(RANK_L2).addDependsRule(RANK_L1).c(),
                 field(RANK_L3).addDependsRule(RANK_L2).c(),
                 field(RTNG_AVG, Float.class).addQ("#avgRating").c(),
@@ -48,6 +51,11 @@ public class AmazonParser extends AbstractParser {
                 field(VRNT_IDS).addQ(new RawStringQuery("script[data-a-state*=twisterData]")).c(),
                 field(URL).addQ("link[rel=canonical]", "href").addNotNullRule().c(),
                 field(URL_IMG).addQ("#landingImage", "src").addQ("#main-image", "src").addQ("#prodImage", "src").addNotNullRule().c()
+        );
+        itemRules = ImmutableSet.of(
+                new AtleastOneRule("Missing Category", RANK_L1, BREADCRUMB),
+                new AtleastOneRule("Missing Price", PRC_LIST, PRC_ACTUAL, PRC_MIN, PRC_MAX),
+                (ItemRule)new AtleastOneRule("Missing Identifier", IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
         );
     }
 

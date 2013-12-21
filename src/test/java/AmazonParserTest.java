@@ -39,8 +39,8 @@ public class AmazonParserTest {
 
     @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
     public void testProduct(String count, String id) throws IOException {
-        System.out.println("TESTING:    " + count + " -- " + id);
-        String data = Files.toString(new File(TEST_DATA_LOCATION+id), Charsets.UTF_8);
+        System.out.println("TEST#:  " + count + "   --  " + id);
+        String data = Files.toString(new File(TEST_DATA_LOCATION+id), Charsets.ISO_8859_1);
         ParseResponse parseResponse = amazonParser.parseAll(data);
         if(parseResponse.isEligibleForProcessing()){
             Map<Field, Object> dataMap = parseResponse.getDataMap();
@@ -48,11 +48,14 @@ public class AmazonParserTest {
 
             for(Field field : amazonParser.getFields()){
                 if(!field.isValid(amazonParser, dataMap)){
-                        Assert.fail("Validation failed for field: " + field + " !");
+                    Assert.fail("Validation failed for field: " + field + " !");
                 }
+            }
+
+            if(!amazonParser.isItemValid(dataMap)){
+                Assert.fail("Validation failed on Item Rule !");
             }
         }
         LogUtil.afterTestMarker();
     }
-
 }

@@ -7,6 +7,10 @@ public abstract class FieldNames {
 
     public static final String TITLE = "title";
 
+    public static final String BRAND = "brand";
+
+    public static final String BREADCRUMB = "breadCrumb";
+
     public static final String PRC_LIST = "priceList";
 
     public static final String PRC_ACTUAL = "priceActual";
@@ -16,8 +20,6 @@ public abstract class FieldNames {
     public static final String PRC_MIN = "priceMin";
 
     public static final String PRC_MAX = "priceMax";
-
-    public static final String BRAND = "brand";
 
     public static final String URL = "url";
 

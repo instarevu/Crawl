@@ -7,14 +7,13 @@ import com.google.gson.JsonParser;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.field.FieldBuilder;
+import com.ir.crawl.parse.validation.item.ItemRule;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import java.nio.charset.Charset;
+import java.util.*;
 
 public abstract class AbstractParser implements Parser {
 
@@ -22,11 +21,15 @@ public abstract class AbstractParser implements Parser {
 
     static final JsonParser jsonParser = new JsonParser();
 
+    Charset charSet = Charsets.ISO_8859_1;
+
     String baseURI = "";
 
-    Set<Field> decisionFields = null;
+    Set<Field> decisionFields = new HashSet<Field>(0);
 
-    Set<Field> fields = null;
+    Set<Field> fields = new HashSet<Field>(0);
+
+    Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
 
     public ParseResponse parseAll(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
@@ -42,6 +45,7 @@ public abstract class AbstractParser implements Parser {
         for(Field f : fields){
             f.convertDataType(dataMap);
         }
+
         //Indexer.addDoc((String)dataMap.get(getFieldByName("id")) ,dataMap);
         return new ParseResponse(true, dataMap);
     }
@@ -54,6 +58,15 @@ public abstract class AbstractParser implements Parser {
         }
         return true;
     }
+
+    public boolean isItemValid(Map<Field, Object> dataMap){
+        for(ItemRule itemRule : itemRules){
+            if(!itemRule.validate(this, dataMap))
+                return false;
+        }
+        return true;
+    }
+
 
     FieldBuilder field(String fieldName){
         return new FieldBuilder(fieldName, String.class);
@@ -69,6 +82,7 @@ public abstract class AbstractParser implements Parser {
         return fields;
     }
 
+    public Charset getCharSet(){ return charSet; };
 
     static Map<String, Field> fieldNameMap = null;
 
@@ -91,17 +105,14 @@ public abstract class AbstractParser implements Parser {
         File file = new File("/Users/sathiya/Work/Git/ir/Crawl/src/test/resources/amazon/data");
 
         for (File f : file.listFiles()){
-            String data = Files.toString(f, Charsets.UTF_8);
+            String data = Files.toString(f, Charsets.ISO_8859_1);
             Document doc = Jsoup.parse(data, "http://www.amazon.com/");
 
             // if List has multiple price '-' assign smallest to actual, if actual is null. List can be null.
             //if(doc.select("div[class=buying] > b").size() > 0){
-                System.out.println(f.getName().substring(0, 20) + "     LIST-1: " + doc.select("li[class*=nav-category-button]").text());
-                //System.out.println(f.getName().substring(0, 20) + "     LIST-2: " + doc.select("#mbc").attr("data-brand"));
-                //System.out.println(f.getName().substring(0, 20) + "     LIST-3: " + doc.select("a[href*=brandtextbin]").text());;
+                System.out.println(f.getName() + "     LIST-1: " + doc.select("div[class=detailBreadcrumb]").text());
             //}
-            System.out.println(f.getName().substring(0, 20) + "---------------------------------------------------------------------------");
-            //System.out.println();
+            System.out.println(f.getName() + "---------------------------------------------------------------------------");
         }
 
     }
