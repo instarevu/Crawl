@@ -29,17 +29,18 @@ public class AmazonParserTest {
         File[] files = file.listFiles();
 
         Object[][] data = new Object[files.length][2];
+        System.out.println("FILES LENGTH:    " + files.length);
         for(int i=0; i<files.length; i++){
-            data[i][0]=files[i].getName().split("-")[0];
-            data[i][1]=files[i].getName().split("-")[1];
+            data[i][0]=String.valueOf(i);
+            data[i][1]=files[i].getName();
         }
-
         return data;
     }
 
     @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
-    public void testProduct(String id, String category) throws IOException {
-        String data = Files.toString(new File(TEST_DATA_LOCATION+id+"-"+category), Charsets.UTF_8);
+    public void testProduct(String count, String id) throws IOException {
+        System.out.println("TESTING:    " + count + " -- " + id);
+        String data = Files.toString(new File(TEST_DATA_LOCATION+id), Charsets.UTF_8);
         ParseResponse parseResponse = amazonParser.parseAll(data);
         if(parseResponse.isEligibleForProcessing()){
             Map<Field, Object> dataMap = parseResponse.getDataMap();
