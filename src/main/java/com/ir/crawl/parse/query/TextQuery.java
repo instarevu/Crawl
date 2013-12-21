@@ -12,7 +12,10 @@ public class TextQuery extends AbstractQuery {
 
     public String mineForValue(Document doc){
         Elements elements = doc.select(getQuery());
-        return elements.text();
+        if(elements.size() > 0)
+            return elements.get(0).text();
+        else
+            return elements.text();
     }
 
 

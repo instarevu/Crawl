@@ -5,6 +5,8 @@ import com.ir.crawl.parse.field.FieldNames;
 
 public class AmazonFieldNames extends FieldNames {
 
+    public static final String NAV_CAT = "navCategory";
+
     public static final String VRNT_SPEC = "variantSpecs";
 
     public static final String VRNT_IDS = "variantIds";

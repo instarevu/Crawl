@@ -17,7 +17,7 @@ public class Indexer {
 
     public static final void addDoc(String id, Map<Field, Object> productMap) {
         try{
-            IndexResponse indexResponse = client.prepareIndex("products", "Amazon", id)
+            IndexResponse indexResponse = client.prepareIndex("amazon", "items", id)
                 .setSource(productMap)
                 .execute()
                 .actionGet();

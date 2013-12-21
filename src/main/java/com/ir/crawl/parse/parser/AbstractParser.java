@@ -1,16 +1,24 @@
 package com.ir.crawl.parse.parser;
 
 
+import com.google.common.base.Charsets;
+import com.google.common.io.Files;
 import com.google.gson.JsonParser;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
-import com.ir.index.es.Indexer;
+import com.ir.crawl.parse.field.FieldBuilder;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.util.*;
+import java.io.File;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
 
 public abstract class AbstractParser implements Parser {
+
+    static final String[] DEL_TOKENS_PRICE = {",", "\\$"};
 
     static final JsonParser jsonParser = new JsonParser();
 
@@ -47,6 +55,14 @@ public abstract class AbstractParser implements Parser {
         return true;
     }
 
+    FieldBuilder field(String fieldName){
+        return new FieldBuilder(fieldName, String.class);
+    }
+
+    FieldBuilder field(String fieldName, Class type){
+        return new FieldBuilder(fieldName, type);
+    }
+
     public abstract boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);
 
     public Set<Field> getFields(){
@@ -70,4 +86,23 @@ public abstract class AbstractParser implements Parser {
 
     }
 
+
+    public static void main(String[] args) throws Exception{
+        File file = new File("/Users/sathiya/Work/Git/ir/Crawl/src/test/resources/amazon/data");
+
+        for (File f : file.listFiles()){
+            String data = Files.toString(f, Charsets.UTF_8);
+            Document doc = Jsoup.parse(data, "http://www.amazon.com/");
+
+            // if List has multiple price '-' assign smallest to actual, if actual is null. List can be null.
+            //if(doc.select("div[class=buying] > b").size() > 0){
+                System.out.println(f.getName().substring(0, 20) + "     LIST-1: " + doc.select("li[class*=nav-category-button]").text());
+                //System.out.println(f.getName().substring(0, 20) + "     LIST-2: " + doc.select("#mbc").attr("data-brand"));
+                //System.out.println(f.getName().substring(0, 20) + "     LIST-3: " + doc.select("a[href*=brandtextbin]").text());;
+            //}
+            System.out.println(f.getName().substring(0, 20) + "---------------------------------------------------------------------------");
+            //System.out.println();
+        }
+
+    }
 }

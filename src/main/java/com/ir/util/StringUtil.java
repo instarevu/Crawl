@@ -23,11 +23,8 @@ public class StringUtil {
         return input.trim();
     }
 
-    private static final List<String> HTML_CLEANUP_PRICE_TOKENS = ImmutableList.of(
-            ",", "\\$");
     // Rogue Char --> �
     public static String purgeSpecialChars(String input){
-        //input = deleteListOfTokens(input, HTML_CLEANUP_PRICE_TOKENS);
         input = StringEscapeUtils.escapeHtml(input).replaceAll("&nbsp;", " ");
         return StringEscapeUtils.unescapeHtml(input);
     }
@@ -45,7 +42,7 @@ public class StringUtil {
     }
 
 
-    private static final String MAP_FORMAT = "%-15s: %s \n";
+    private static final String MAP_FORMAT = "%-12s: %s \n";
 
     public static String prettifyMapForDebug(Map<? extends Object, ? extends Object> map){
         StringBuffer prettyString = new StringBuffer("[ \n");

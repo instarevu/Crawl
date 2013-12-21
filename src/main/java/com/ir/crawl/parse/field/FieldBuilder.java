@@ -4,6 +4,8 @@ package com.ir.crawl.parse.field;
 import com.ir.crawl.parse.query.AttrValueQuery;
 import com.ir.crawl.parse.query.Query;
 import com.ir.crawl.parse.query.TextQuery;
+import com.ir.crawl.parse.validation.DependencyRule;
+import com.ir.crawl.parse.validation.NotNullRule;
 import com.ir.crawl.parse.validation.Rule;
 
 import java.util.HashSet;
@@ -54,6 +56,16 @@ public class FieldBuilder {
 
     public FieldBuilder addV(Rule rule){
         rules.add(rule);
+        return this;
+    }
+
+    public FieldBuilder addNotNullRule(){
+        rules.add(new NotNullRule());
+        return this;
+    }
+
+    public FieldBuilder addDependsRule(String dependsField){
+        rules.add(new DependencyRule(dependsField));
         return this;
     }
 
