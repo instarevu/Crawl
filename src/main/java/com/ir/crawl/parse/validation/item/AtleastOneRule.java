@@ -1,6 +1,6 @@
 package com.ir.crawl.parse.validation.item;
 
-
+import com.ir.core.error.Error;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.Parser;
 
@@ -12,9 +12,8 @@ public class AtleastOneRule extends AbstractItemRule {
 
     private Set<String> fields;
 
-    public AtleastOneRule(String description, String... fieldsArray){
-        super(ItemRuleType.ATLEAST_ONE);
-        this.description = description;
+    public AtleastOneRule(Error error, String... fieldsArray){
+        super(error, ItemRuleType.ATLEAST_ONE);
         fields = new HashSet<String>(fieldsArray.length);
         for(String fieldName : fieldsArray){
             fields.add(fieldName);
@@ -27,7 +26,7 @@ public class AtleastOneRule extends AbstractItemRule {
             if(dataMap.get(parser.getFieldByName(fieldName)) != null)
                 return true;
         }
-        System.out.println("Failed on Rule: " + this.getRuleType() + " - " + description);
+        System.out.println("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());
         return false;
     }
 

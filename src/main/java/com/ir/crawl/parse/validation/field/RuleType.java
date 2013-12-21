@@ -1,4 +1,4 @@
-package com.ir.crawl.parse.validation;
+package com.ir.crawl.parse.validation.field;
 
 public enum RuleType {
 

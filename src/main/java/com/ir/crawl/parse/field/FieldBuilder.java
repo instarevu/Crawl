@@ -4,9 +4,9 @@ package com.ir.crawl.parse.field;
 import com.ir.crawl.parse.query.AttrValueQuery;
 import com.ir.crawl.parse.query.Query;
 import com.ir.crawl.parse.query.TextQuery;
-import com.ir.crawl.parse.validation.DependencyRule;
-import com.ir.crawl.parse.validation.NotNullRule;
-import com.ir.crawl.parse.validation.Rule;
+import com.ir.crawl.parse.validation.field.DependencyRule;
+import com.ir.crawl.parse.validation.field.NotNullRule;
+import com.ir.crawl.parse.validation.field.Rule;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

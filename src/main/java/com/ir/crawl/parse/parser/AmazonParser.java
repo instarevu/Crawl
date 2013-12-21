@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.ir.config.retailer.amazon.AmazonFieldNames;
+import com.ir.core.error.ParseError;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
@@ -53,9 +54,9 @@ public class AmazonParser extends AbstractParser {
                 field(URL_IMG).addQ("#landingImage", "src").addQ("#main-image", "src").addQ("#prodImage", "src").addNotNullRule().c()
         );
         itemRules = ImmutableSet.of(
-                new AtleastOneRule("Missing Category", RANK_L1, BREADCRUMB),
-                new AtleastOneRule("Missing Price", PRC_LIST, PRC_ACTUAL, PRC_MIN, PRC_MAX),
-                (ItemRule)new AtleastOneRule("Missing Identifier", IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
+                new AtleastOneRule(ParseError.MISSING_ITEM_CLASSIFIER, RANK_L1, BREADCRUMB),
+                new AtleastOneRule(ParseError.MISSING_PRICE, PRC_LIST, PRC_ACTUAL, PRC_MIN, PRC_MAX),
+                (ItemRule)new AtleastOneRule(ParseError.MISSING_IDNF, IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
         );
     }
 

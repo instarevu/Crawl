@@ -1,4 +1,4 @@
-package com.ir.crawl.parse.validation;
+package com.ir.crawl.parse.validation.field;
 
 
 import com.ir.crawl.parse.field.Field;

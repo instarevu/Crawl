@@ -3,8 +3,8 @@ package com.ir.crawl.parse.field;
 
 import com.ir.crawl.parse.parser.Parser;
 import com.ir.crawl.parse.query.Query;
-import com.ir.crawl.parse.validation.DependencyRule;
-import com.ir.crawl.parse.validation.Rule;
+import com.ir.crawl.parse.validation.field.DependencyRule;
+import com.ir.crawl.parse.validation.field.Rule;
 import com.ir.util.StringUtil;
 import org.jsoup.nodes.Document;
 

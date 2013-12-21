@@ -3,6 +3,8 @@ package com.ir.crawl.parse.field;
 
 public abstract class FieldNames {
 
+    public static final String _ERRORS = "_errors";
+
     public static final String ID = "id";
 
     public static final String TITLE = "title";

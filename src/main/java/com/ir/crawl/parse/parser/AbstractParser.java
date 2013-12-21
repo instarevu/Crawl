@@ -4,9 +4,11 @@ package com.ir.crawl.parse.parser;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.google.gson.JsonParser;
+import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.field.FieldBuilder;
+import com.ir.crawl.parse.field.FieldNames;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -29,11 +31,13 @@ public abstract class AbstractParser implements Parser {
 
     Set<Field> fields = new HashSet<Field>(0);
 
+    final Field errorField = field(FieldNames._ERRORS).c();
+
     Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
 
     public ParseResponse parseAll(String htmlData) {
         Document doc = Jsoup.parse(htmlData, baseURI);
-        Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
+        Map<Field, Object> dataMap = createNewDataMap();
         if(!isValidForProcessing(doc, dataMap)){
             return new ParseResponse(false);
         }
@@ -46,8 +50,14 @@ public abstract class AbstractParser implements Parser {
             f.convertDataType(dataMap);
         }
 
+        findErrors(dataMap);
         //Indexer.addDoc((String)dataMap.get(getFieldByName("id")) ,dataMap);
         return new ParseResponse(true, dataMap);
+    }
+
+    private Map<Field, Object> createNewDataMap(){
+        Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
+        return dataMap;
     }
 
     public boolean isValidForProcessing(Document doc, Map<Field, Object> dataMap){
@@ -59,12 +69,12 @@ public abstract class AbstractParser implements Parser {
         return true;
     }
 
-    public boolean isItemValid(Map<Field, Object> dataMap){
+    public void findErrors(Map<Field, Object> dataMap){
         for(ItemRule itemRule : itemRules){
-            if(!itemRule.validate(this, dataMap))
-                return false;
+            if(!itemRule.validate(this, dataMap)){
+                ErrorUtil.addError(itemRule.getError(), errorField, dataMap);
+            }
         }
-        return true;
     }
 
 
@@ -80,6 +90,10 @@ public abstract class AbstractParser implements Parser {
 
     public Set<Field> getFields(){
         return fields;
+    }
+
+    public Field getErrorField() {
+        return errorField;
     }
 
     public Charset getCharSet(){ return charSet; };

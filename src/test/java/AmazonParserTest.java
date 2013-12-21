@@ -1,5 +1,7 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
+import com.ir.core.error.*;
+import com.ir.core.error.Error;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AmazonParser;
@@ -12,6 +14,7 @@ import util.LogUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 @Test(suiteName = "Amazon", description = "Test for Amazon Product Pages")
@@ -51,11 +54,15 @@ public class AmazonParserTest {
                     Assert.fail("Validation failed for field: " + field + " !");
                 }
             }
-
-            if(!amazonParser.isItemValid(dataMap)){
-                Assert.fail("Validation failed on Item Rule !");
+            List<Error> errors = ErrorUtil.getErrorCodes(amazonParser.getErrorField(), dataMap);
+            if(errors != null){
+                for(Error error : errors){
+                    Assert.fail(error.toString());
+                }
             }
         }
+
+
         LogUtil.afterTestMarker();
     }
 }
