@@ -2,3 +2,5 @@
 .idea
 /data
 *.iml
+src/test/test-data
+*.DS_Store
