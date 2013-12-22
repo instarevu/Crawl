@@ -3,7 +3,7 @@ package com.ir.core.crawllib.crawler;
 
 public class CrawlConfig {
 
-	/**
+	/**c
 	 * The folder which will be used by crawler for storing the intermediate
 	 * crawl data. The content of this folder should not be modified manually.
 	 */

@@ -37,15 +37,14 @@ public abstract class AbstractParser implements Parser {
 
     Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
 
-    public ParseResponse parseAll(String htmlData) {
-        Document doc = Jsoup.parse(htmlData, baseURI);
+    public ParseResponse parseAll(Document htmlDocument) {
         Map<Field, Object> dataMap = createNewDataMap();
-        if(!isValidForProcessing(doc, dataMap)){
+        if(!isValidForProcessing(htmlDocument, dataMap)){
             return new ParseResponse(false);
         }
 
         for(Field f : fields){
-            f.extract(this, dataMap, doc);
+            f.extract(this, dataMap, htmlDocument);
         }
         // Purposefully done in separate loop
         for(Field f : fields){

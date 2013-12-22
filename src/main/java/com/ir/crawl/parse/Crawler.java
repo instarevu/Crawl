@@ -6,18 +6,15 @@ import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
 import com.ir.crawl.parse.bean.ParseResponse;
-import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AmazonParser;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 public class Crawler extends WebCrawler {
 
-    protected static final Logger logger = Logger.getLogger(Crawler.class.getName());
+    protected static final Logger logger = LogManager.getLogger(Crawler.class.getName());
 
     private final static Pattern EXCLUSION_FILTERS = Pattern.compile(".*(\\.(css|js|bmp|gif|jpe?g"
             + "|png|tiff?|mid|mp2|mp3|mp4"
@@ -39,15 +36,14 @@ public class Crawler extends WebCrawler {
     @Override
     public void visit(Page page) {
         String url = page.getWebURL().getURL();
-        logger.info("Visiting URL: " + url);
+        //logger.info("Visiting URL: " + url);
 
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
-            String htmlData = htmlParseData.getHtml();
-            ParseResponse parseResponse = amazonParser.parseAll(htmlData);
-            //System.out.println("MAP: " + parseResponse);
+            ParseResponse parseResponse = amazonParser.parseAll(htmlParseData.getDocument());
+            logger.info("URL: " + url.replaceAll("http://www.amazon.com","") + "    :: " + parseResponse.getDataMap().toString());
             try {
-                Thread.sleep(2000);
+                Thread.sleep(0);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

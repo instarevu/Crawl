@@ -2,14 +2,14 @@ package com.ir.crawl.parse.parser;
 
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
+import org.jsoup.nodes.Document;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public interface Parser {
 
-    public ParseResponse parseAll(String htmlData);
+    public ParseResponse parseAll(Document htmlDocument);
 
     public boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);
 

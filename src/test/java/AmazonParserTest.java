@@ -9,6 +9,8 @@ import com.ir.crawl.parse.parser.Parser;
 import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
@@ -48,7 +50,8 @@ public class AmazonParserTest {
     @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
     public void testProduct(String count, String id) throws IOException {
         String data = Files.toString(new File(TEST_DATA_LOCATION + id), Charsets.ISO_8859_1);
-        ParseResponse parseResponse = parser.parseAll(data);
+        Document htmlDocument = Jsoup.parse(data, "http://www.amazon.com");
+        ParseResponse parseResponse = parser.parseAll(htmlDocument);
         if(parseResponse.isEligibleForProcessing()){
             Map<Field, Object> dataMap = parseResponse.getDataMap();
             Reporter.log(StringUtil.prettifyMapForDebug(dataMap));

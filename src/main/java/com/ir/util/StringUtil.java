@@ -3,6 +3,7 @@ package com.ir.util;
 import com.google.common.collect.ImmutableList;
 import org.apache.commons.lang.StringEscapeUtils;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -41,6 +42,10 @@ public class StringUtil {
         return input;
     }
 
+    public static String convertStreamToString(InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
 
     private static final String MAP_FORMAT = "%-12s: %s \n";
 

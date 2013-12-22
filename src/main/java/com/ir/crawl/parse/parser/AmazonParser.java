@@ -10,6 +10,7 @@ import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import com.ir.util.StringUtil;
+import org.elasticsearch.index.codec.postingsformat.BloomFilter;
 
 import java.util.Map;
 import java.util.Set;

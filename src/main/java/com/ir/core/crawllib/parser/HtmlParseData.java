@@ -4,39 +4,25 @@ package com.ir.core.crawllib.parser;
 
 
 import com.ir.core.crawllib.url.WebURL;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HtmlParseData implements ParseData {
 
-	private String html;
-	private String text;
-	private String title;
+	private Document document;
 
 	private List<WebURL> outgoingUrls;
 
-	public String getHtml() {
-		return html;
+	public Document getDocument() {
+		return document;
 	}
 
-	public void setHtml(String html) {
-		this.html = html;
-	}
-
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	public void setDocument(Document document) {
+		this.document = document;
 	}
 
 	public List<WebURL> getOutgoingUrls() {
@@ -47,9 +33,15 @@ public class HtmlParseData implements ParseData {
 		this.outgoingUrls = outgoingUrls;
 	}
 	
-	@Override
-	public String toString() {
-		return text;
-	}
+
+    public List<String> getHrefs(){
+        //TODO: Add more link tags AREA, LINK, IFRAME, FRAME, EMBED, IMG, BASE, META, BODY
+        Elements linkElements  = document.getElementsByTag("a");
+        List<String> hrefs = new ArrayList<String>(linkElements.size());
+        for(Element e : linkElements){
+            hrefs.add(e.attr("href"));
+        }
+        return hrefs;
+    }
 
 }

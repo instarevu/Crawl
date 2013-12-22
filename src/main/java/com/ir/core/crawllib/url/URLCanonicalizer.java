@@ -1,5 +1,8 @@
 package com.ir.core.crawllib.url;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.net.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,12 +15,16 @@ import java.util.TreeMap;
  */
 public class URLCanonicalizer {
 
+    protected static final Logger logger = LogManager.getLogger(URLCanonicalizer.class.getName());
+
 	public static String getCanonicalURL(String url) {
 		return getCanonicalURL(url, null);
 	}
 
 	public static String getCanonicalURL(String href, String context) {
-
+//        if(href.contains("/dp"))
+//            logger.info("WARN "+ href );
+        //System.out.println("WARN "+context);
 		try {
 			URL canonicalURL = new URL(com.ir.core.crawllib.url.UrlResolver.resolveUrl(context == null ? "" : context, href));
 			
@@ -84,7 +91,6 @@ public class URLCanonicalizer {
 
 			String protocol = canonicalURL.getProtocol().toLowerCase();
 			String pathAndQueryString = normalizePath(path) + queryString;
-
 			URL result = new URL(protocol, host, port, pathAndQueryString);
 			return result.toExternalForm();
 			
