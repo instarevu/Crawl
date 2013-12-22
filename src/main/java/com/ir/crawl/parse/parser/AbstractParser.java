@@ -2,7 +2,6 @@ package com.ir.crawl.parse.parser;
 
 
 import com.google.common.base.Charsets;
-import com.google.common.io.Files;
 import com.google.gson.JsonParser;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
@@ -10,14 +9,17 @@ import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.field.FieldBuilder;
 import com.ir.crawl.parse.field.FieldNames;
 import com.ir.crawl.parse.validation.item.ItemRule;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.File;
 import java.nio.charset.Charset;
 import java.util.*;
 
 public abstract class AbstractParser implements Parser {
+
+    protected static final Logger logger = LogManager.getLogger(AbstractParser.class.getName());
 
     static final String[] DEL_TOKENS_PRICE = {",", "\\$"};
 
@@ -52,6 +54,7 @@ public abstract class AbstractParser implements Parser {
 
         findErrors(dataMap);
         //Indexer.addDoc((String)dataMap.get(getFieldByName("id")) ,dataMap);
+        logger.debug("Completed Parsing: " + dataMap);
         return new ParseResponse(true, dataMap);
     }
 
@@ -111,23 +114,6 @@ public abstract class AbstractParser implements Parser {
             }
         }
         return fieldNameMap.get(fieldName);
-
     }
 
-
-    public static void main(String[] args) throws Exception{
-        File file = new File("/Users/sathiya/Work/Git/ir/Crawl/src/test/resources/amazon/data");
-
-        for (File f : file.listFiles()){
-            String data = Files.toString(f, Charsets.ISO_8859_1);
-            Document doc = Jsoup.parse(data, "http://www.amazon.com/");
-
-            // if List has multiple price '-' assign smallest to actual, if actual is null. List can be null.
-            //if(doc.select("div[class=buying] > b").size() > 0){
-                System.out.println(f.getName() + "     LIST-1: " + doc.select("div[class=detailBreadcrumb]").text());
-            //}
-            System.out.println(f.getName() + "---------------------------------------------------------------------------");
-        }
-
-    }
 }

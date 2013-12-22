@@ -6,12 +6,16 @@ import com.ir.crawl.parse.query.Query;
 import com.ir.crawl.parse.validation.field.DependencyRule;
 import com.ir.crawl.parse.validation.field.Rule;
 import com.ir.util.StringUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.nodes.Document;
 
 import java.util.Map;
 import java.util.Set;
 
 public class Field {
+
+    private static final Logger logger = LogManager.getLogger(Field.class);
 
     private String name =  null;
 
@@ -40,21 +44,21 @@ public class Field {
             switch(rule.getRuleType()){
                 case NOT_NULL:
                     if(!rule.validate(this, dataMap)) {
-                        System.out.println("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
                         return false;
                     }
                     break;
                 case DEPENDENCY:
                     if(originField == null || !((DependencyRule)rule).getDependentFieldName().equalsIgnoreCase(originField)){
                         if(!rule.validate(this, parser, dataMap)) {
-                            System.out.println("Validation Failed. Field: \"" + this + "\" for Rule:  \"" + rule + "\"");
+                            logger.debug("Validation Failed. Field: \"" + this + "\" for Rule:  \"" + rule + "\"");
                             return false;
                         }
                     }
                     break;
                 case VALUE_CONTAINS:
                     if(!rule.validate(this, dataMap)) {
-                        System.out.println("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
                         return false;
                     }
                     break;

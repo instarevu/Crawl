@@ -1,11 +1,14 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import com.ir.core.error.*;
 import com.ir.core.error.Error;
+import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AmazonParser;
+import com.ir.crawl.parse.parser.Parser;
 import com.ir.util.StringUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
@@ -20,7 +23,9 @@ import java.util.Map;
 @Test(suiteName = "Amazon", description = "Test for Amazon Product Pages")
 public class AmazonParserTest {
 
-    private final AmazonParser amazonParser = new AmazonParser();
+    protected static final Logger logger = LogManager.getLogger(AmazonParserTest.class.getName());
+
+    private final Parser parser = new AmazonParser();
 
     private static final String TEST_DATA_LOCATION =  (AmazonParserTest.class.getProtectionDomain().getCodeSource().getLocation()
                                                         + "amazon/data/").replaceAll("file:", "");
@@ -42,19 +47,18 @@ public class AmazonParserTest {
 
     @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
     public void testProduct(String count, String id) throws IOException {
-        System.out.println("TEST#:  " + count + "   --  " + id);
-        String data = Files.toString(new File(TEST_DATA_LOCATION+id), Charsets.ISO_8859_1);
-        ParseResponse parseResponse = amazonParser.parseAll(data);
+        String data = Files.toString(new File(TEST_DATA_LOCATION + id), Charsets.ISO_8859_1);
+        ParseResponse parseResponse = parser.parseAll(data);
         if(parseResponse.isEligibleForProcessing()){
             Map<Field, Object> dataMap = parseResponse.getDataMap();
             Reporter.log(StringUtil.prettifyMapForDebug(dataMap));
 
-            for(Field field : amazonParser.getFields()){
-                if(!field.isValid(amazonParser, dataMap)){
+            for(Field field : parser.getFields()){
+                if(!field.isValid(parser, dataMap)){
                     Assert.fail("Validation failed for field: " + field + " !");
                 }
             }
-            List<Error> errors = ErrorUtil.getErrorCodes(amazonParser.getErrorField(), dataMap);
+            List<Error> errors = ErrorUtil.getErrorCodes(parser.getErrorField(), dataMap);
             if(errors != null){
                 for(Error error : errors){
                     Assert.fail(error.toString());
