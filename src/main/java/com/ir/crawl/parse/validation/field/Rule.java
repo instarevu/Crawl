@@ -1,12 +1,15 @@
 package com.ir.crawl.parse.validation.field;
 
 
+import com.ir.core.error.Error;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.Parser;
 
 import java.util.Map;
 
 public interface Rule {
+
+    public Error getError();
 
     public boolean validate(Field field, Map<Field, Object> dataMap);
 

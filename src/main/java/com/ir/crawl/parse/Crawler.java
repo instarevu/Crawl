@@ -1,12 +1,12 @@
 package com.ir.crawl.parse;
 
 
+import com.ir.config.retailer.amazon.AmazonItemParser;
 import com.ir.core.crawllib.crawler.Page;
 import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
 import com.ir.crawl.parse.bean.ParseResponse;
-import com.ir.crawl.parse.parser.AmazonParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,7 +31,7 @@ public class Crawler extends WebCrawler {
         return shouldVisit;
     }
 
-    private static final AmazonParser amazonParser = new AmazonParser();
+    private static final AmazonItemParser amazonParser = new AmazonItemParser();
 
     @Override
     public void visit(Page page) {
@@ -41,7 +41,7 @@ public class Crawler extends WebCrawler {
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
             ParseResponse parseResponse = amazonParser.parseAll(htmlParseData.getDocument());
-            logger.info("URL: " + url.replaceAll("http://www.amazon.com","") + "    :: " + parseResponse.getDataMap().toString());
+            logger.info("URL: " + url.replaceAll("http://www.amazon.com", "") + "    :: " + parseResponse.getDataMap().toString());
             try {
                 Thread.sleep(0);
             } catch (InterruptedException e) {

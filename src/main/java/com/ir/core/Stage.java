@@ -3,6 +3,6 @@ package com.ir.core;
 
 public enum Stage {
 
-    CRAWL, PARSE, INDEX;
+    CRAWL, DECISION, PARSE, INDEX;
 
 }

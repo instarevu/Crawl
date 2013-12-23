@@ -1,10 +1,10 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
+import com.ir.config.retailer.amazon.AmazonItemParser;
 import com.ir.core.error.Error;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
-import com.ir.crawl.parse.parser.AmazonParser;
 import com.ir.crawl.parse.parser.Parser;
 import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
@@ -27,7 +27,7 @@ public class AmazonParserTest {
 
     protected static final Logger logger = LogManager.getLogger(AmazonParserTest.class.getName());
 
-    private final Parser parser = new AmazonParser();
+    private final Parser parser = new AmazonItemParser();
 
     private static final String TEST_DATA_LOCATION =  (AmazonParserTest.class.getProtectionDomain().getCodeSource().getLocation()
                                                         + "amazon/data/").replaceAll("file:", "");

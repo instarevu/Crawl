@@ -21,26 +21,26 @@ public abstract class AbstractParser implements Parser {
 
     protected static final Logger logger = LogManager.getLogger(AbstractParser.class.getName());
 
-    static final String[] DEL_TOKENS_PRICE = {",", "\\$"};
+    public static final String[] DEL_TOKENS_PRICE = {",", "\\$"};
 
-    static final JsonParser jsonParser = new JsonParser();
+    public static final JsonParser jsonParser = new JsonParser();
 
-    Charset charSet = Charsets.ISO_8859_1;
+    public Charset charSet = Charsets.ISO_8859_1;
 
-    String baseURI = "";
+    public String baseURI = "";
 
-    Set<Field> decisionFields = new HashSet<Field>(0);
+    public Set<Field> decisionFields = new HashSet<Field>(0);
 
-    Set<Field> fields = new HashSet<Field>(0);
+    public Set<Field> fields = new HashSet<Field>(0);
 
-    final Field errorField = field(FieldNames._ERRORS).c();
+    public final Field errorField = field(FieldNames._ERRORS).c();
 
-    Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
+    public Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
 
     public ParseResponse parseAll(Document htmlDocument) {
         Map<Field, Object> dataMap = createNewDataMap();
         if(!isValidForProcessing(htmlDocument, dataMap)){
-            return new ParseResponse(false);
+            return new ParseResponse(false, dataMap);
         }
 
         for(Field f : fields){
@@ -52,21 +52,29 @@ public abstract class AbstractParser implements Parser {
         }
 
         findErrors(dataMap);
-        //Indexer.addDoc((String)dataMap.get(getFieldByName("id")) ,dataMap);
         logger.debug("Completed Parsing: " + dataMap);
         return new ParseResponse(true, dataMap);
     }
 
     private Map<Field, Object> createNewDataMap(){
-        Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
-        return dataMap;
+        return new LinkedHashMap<Field, Object>();
     }
 
     public boolean isValidForProcessing(Document doc, Map<Field, Object> dataMap){
         for(Field f : decisionFields){
             f.extract(this, dataMap, doc);
-            if(!f.isValid(this, dataMap))
+            if(!f.isValid(this, dataMap)){
                 return false;
+            }
+        }
+        for(Field f : decisionFields){
+            if(f.getExclusionRule() != null){
+                boolean exclude = !f.getExclusionRule().validate(this, dataMap);
+                if(exclude){
+                    ErrorUtil.addError(f.getExclusionRule().getError(), errorField, dataMap);
+                    return false;
+                }
+            }
         }
         return true;
     }
@@ -79,12 +87,11 @@ public abstract class AbstractParser implements Parser {
         }
     }
 
-
-    FieldBuilder field(String fieldName){
+    public FieldBuilder field(String fieldName){
         return new FieldBuilder(fieldName, String.class);
     }
 
-    FieldBuilder field(String fieldName, Class type){
+    public FieldBuilder field(String fieldName, Class type){
         return new FieldBuilder(fieldName, type);
     }
 

@@ -1,10 +1,13 @@
 package com.ir.crawl.parse.field;
 
 
+import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.parser.Parser;
 import com.ir.crawl.parse.query.Query;
 import com.ir.crawl.parse.validation.field.DependencyRule;
 import com.ir.crawl.parse.validation.field.Rule;
+import com.ir.crawl.parse.validation.item.ExcludeOnMatchRule;
+import com.ir.crawl.parse.validation.item.ItemRule;
 import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,12 +30,22 @@ public class Field {
 
     private Class dataType = String.class;
 
+    private ItemRule exclusionRule = null;
+
     Field(String fieldName, Class dataType, Set<Query> queries,  Set<Rule> rules, Set<String> deleteTokens){
         this.name = fieldName;
         this.queries = queries;
         this.rules = rules;
         this.deleteTokens = deleteTokens;
         this.dataType = dataType;
+    }
+
+    public void setExclusionRule(ExcludeOnMatchRule excludeOnMatchRule){
+        this.exclusionRule = excludeOnMatchRule;
+    }
+
+    public ItemRule getExclusionRule() {
+        return exclusionRule;
     }
 
     public boolean isValid(Parser parser, Map<Field, Object> dataMap){
@@ -45,6 +58,7 @@ public class Field {
                 case NOT_NULL:
                     if(!rule.validate(this, dataMap)) {
                         logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        ErrorUtil.addError(rule.getError(), this, dataMap);
                         return false;
                     }
                     break;
@@ -52,6 +66,7 @@ public class Field {
                     if(originField == null || !((DependencyRule)rule).getDependentFieldName().equalsIgnoreCase(originField)){
                         if(!rule.validate(this, parser, dataMap)) {
                             logger.debug("Validation Failed. Field: \"" + this + "\" for Rule:  \"" + rule + "\"");
+                            ErrorUtil.addError(rule.getError(), this, dataMap);
                             return false;
                         }
                     }
@@ -59,6 +74,7 @@ public class Field {
                 case VALUE_CONTAINS:
                     if(!rule.validate(this, dataMap)) {
                         logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        ErrorUtil.addError(rule.getError(), this, dataMap);
                         return false;
                     }
                     break;

@@ -23,4 +23,8 @@ public abstract class AbstractError implements Error {
     public Stage getStage() {
         return stage;
     }
+
+    public String toString(){
+        return "[Error:" + this.getCode() + "] - " + getDescription();
+    }
 }

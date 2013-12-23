@@ -1,6 +1,7 @@
 package com.ir.crawl.parse.validation.field;
 
 
+import com.ir.core.error.ParseError;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.Parser;
 
@@ -11,7 +12,7 @@ public class DependencyRule extends AbstractRule {
     private String dependentFieldName;
 
     public DependencyRule(String dependentFieldName){
-        super(RuleType.DEPENDENCY);
+        super(RuleType.DEPENDENCY, ParseError.MISSING_DEPENDENDENCY);
         this.dependentFieldName = dependentFieldName;
     }
 

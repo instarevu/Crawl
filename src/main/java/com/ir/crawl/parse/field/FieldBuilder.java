@@ -1,12 +1,15 @@
 package com.ir.crawl.parse.field;
 
 
+import com.ir.core.error.*;
+import com.ir.core.error.Error;
 import com.ir.crawl.parse.query.AttrValueQuery;
 import com.ir.crawl.parse.query.Query;
 import com.ir.crawl.parse.query.TextQuery;
 import com.ir.crawl.parse.validation.field.DependencyRule;
 import com.ir.crawl.parse.validation.field.NotNullRule;
 import com.ir.crawl.parse.validation.field.Rule;
+import com.ir.crawl.parse.validation.item.ExcludeOnMatchRule;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -23,6 +26,8 @@ public class FieldBuilder {
     private Set<String> deleteTokens = null;
 
     private Class dataType = String.class;
+
+    private String[] exclusionTokens = null;
 
     public FieldBuilder(String fieldName, Class dataType){
         if(fieldName == null) throw new IllegalArgumentException("Field Name cannot be null");
@@ -64,13 +69,28 @@ public class FieldBuilder {
         return this;
     }
 
+    public FieldBuilder addNotNullRule(Error error){
+        rules.add(new NotNullRule(error));
+        return this;
+    }
+
     public FieldBuilder addDependsRule(String dependsField){
         rules.add(new DependencyRule(dependsField));
         return this;
     }
 
+    public FieldBuilder setExclusionRule(String... tokens){
+        exclusionTokens = tokens;
+        return this;
+    }
+
     public Field c(){
-        return new Field(fieldName, dataType, queries, rules, deleteTokens);
+        Field field = new Field(fieldName, dataType, queries, rules, deleteTokens);
+        if(exclusionTokens != null) {
+            ExcludeOnMatchRule exclusionRule = new ExcludeOnMatchRule(DecisionError.CAT_EXCLUSION, field, exclusionTokens);
+            field.setExclusionRule(exclusionRule);
+        }
+        return field;
     }
 
 

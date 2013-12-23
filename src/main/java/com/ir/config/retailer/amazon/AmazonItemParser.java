@@ -1,4 +1,4 @@
-package com.ir.crawl.parse.parser;
+package com.ir.config.retailer.amazon;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.JsonElement;
@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import com.ir.config.retailer.amazon.AmazonFieldNames;
 import com.ir.core.error.ParseError;
 import com.ir.crawl.parse.field.Field;
+import com.ir.crawl.parse.parser.AbstractParser;
 import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
 import com.ir.crawl.parse.validation.item.ItemRule;
@@ -19,19 +20,21 @@ import java.util.TreeSet;
 import static com.ir.config.retailer.amazon.AmazonFieldNames.*;
 
 
-public class AmazonParser extends AbstractParser {
+public class AmazonItemParser extends AbstractParser {
 
-    private static final String[] DEL_TOKENS_MERCHANT = {"Ships from and", "sold by", "Sold by", "Gift-wrap available.","in easy-to-open packaging.","and Fulfilled by Amazon."};
+    private static final String[] DEL_TOKENS_MERCHANT = { "Ships from and", "sold by", "Sold by", "Gift-wrap available.","in easy-to-open packaging.","and Fulfilled by Amazon."};
 
-    public AmazonParser(){
+    private static final String[] EXCLUSION_CATEGORIES = { "Amazon MP3 Store", "Music", "Your Instant Video", "Buy a Kindle","Magazine Subscriptions", "Books", "Video Games", "Appstore for Android", "Movies & TV" };
+
+    public AmazonItemParser(){
         super();
         baseURI = "http://www.amazon.com/";
         decisionFields = ImmutableSet.of(
-                field(ID).addQ("input[id=ASIN]", "value").addNotNullRule().c(),
-                field(NAV_CAT).addQ("li[class*=nav-category-button]").addNotNullRule().c(),
-                field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().c()
+                field(ID).addQ("input[id=ASIN]", "value").addQ("input[name*=ASIN]", "value").addNotNullRule(ParseError.MISSING_ID).c(),
+                field(NAV_CAT).addQ("li[class*=nav-category-button]").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c()
         );
         fields = ImmutableSet.of(
+                field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().c(),
                 field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addNotNullRule().c(),
                 field(BREADCRUMB).addQ("div[class=detailBreadcrumb]").c(),
                 field(MERCHANT).addQ("#merchant-info").addQ("div[class=buying] > b").del(DEL_TOKENS_MERCHANT).c(),
