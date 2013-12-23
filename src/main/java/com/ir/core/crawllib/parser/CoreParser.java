@@ -20,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Parser extends Configurable {
+public class CoreParser extends Configurable {
 
-    protected static final Logger logger = LogManager.getLogger(Parser.class.getName());
+    protected static final Logger logger = LogManager.getLogger(CoreParser.class.getName());
 
-	public Parser(CrawlConfig config) {
+	public CoreParser(CrawlConfig config) {
 		super(config);
 	}
 

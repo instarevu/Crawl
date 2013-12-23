@@ -3,7 +3,6 @@ package com.ir.config.retailer.amazon;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.ir.config.retailer.amazon.AmazonFieldNames;
 import com.ir.core.error.ParseError;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.AbstractParser;
@@ -11,22 +10,21 @@ import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import com.ir.util.StringUtil;
-import org.elasticsearch.index.codec.postingsformat.BloomFilter;
 
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import static com.ir.config.retailer.amazon.AmazonFieldNames.*;
+import static com.ir.config.retailer.amazon.FieldNames.*;
 
 
-public class AmazonItemParser extends AbstractParser {
+public class ItemParser extends AbstractParser {
 
     private static final String[] DEL_TOKENS_MERCHANT = { "Ships from and", "sold by", "Sold by", "Gift-wrap available.","in easy-to-open packaging.","and Fulfilled by Amazon."};
 
     private static final String[] EXCLUSION_CATEGORIES = { "Amazon MP3 Store", "Music", "Your Instant Video", "Buy a Kindle","Magazine Subscriptions", "Books", "Video Games", "Appstore for Android", "Movies & TV" };
 
-    public AmazonItemParser(){
+    public ItemParser(){
         super();
         baseURI = "http://www.amazon.com/";
         decisionFields = ImmutableSet.of(
@@ -67,7 +65,7 @@ public class AmazonItemParser extends AbstractParser {
     public boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String input){
         // PRICE
         String fieldName = field.getName();
-        if(fieldName.equalsIgnoreCase(AmazonFieldNames.PRC_LIST)){
+        if(fieldName.equalsIgnoreCase(PRC_LIST)){
             if(input.trim().contains(" ")){
                 String prices[] = input.split(" ");
                 input = prices[0].trim();
@@ -75,7 +73,7 @@ public class AmazonItemParser extends AbstractParser {
             } else {
                 input = StringUtil.dedupeString(input, false);
             }
-        } else if(fieldName.equalsIgnoreCase(AmazonFieldNames.PRC_ACTUAL)){
+        } else if(fieldName.equalsIgnoreCase(PRC_ACTUAL)){
             if(input.contains("-")){
                 String prices[] = input.split("-");
                 dataMap.put(getFieldByName(PRC_MIN), prices[0].trim());

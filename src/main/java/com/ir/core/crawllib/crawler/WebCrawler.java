@@ -5,16 +5,18 @@ import com.ir.core.crawllib.fetcher.PageFetchResult;
 import com.ir.core.crawllib.fetcher.PageFetcher;
 import com.ir.core.crawllib.frontier.DocIDServer;
 import com.ir.core.crawllib.frontier.Frontier;
+import com.ir.core.crawllib.parser.CoreParser;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.parser.ParseData;
-import com.ir.core.crawllib.parser.Parser;
 import com.ir.core.crawllib.robotstxt.RobotstxtServer;
 import com.ir.core.crawllib.url.WebURL;
+import com.ir.crawl.parse.parser.Parser;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * WebCrawler class in the Runnable class that is executed by each crawler
@@ -24,7 +26,22 @@ public class WebCrawler implements Runnable {
 
 	protected static final Logger logger = Logger.getLogger(WebCrawler.class.getName());
 
-	/**
+    public final static Pattern GENERIC_EXCLUSION_FILTERS = Pattern.compile(".*(\\.(css|js|bmp|gif|jpe?g"
+            + "|png|tiff?|mid|mp2|mp3|mp4"
+            + "|wav|avi|mov|mpeg|ram|m4v|pdf"
+            + "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
+
+
+    public Parser valueParser = null;
+
+    public String baseURI = null;
+
+    public WebCrawler(Parser valueParser, String baseURI){
+        this.valueParser = valueParser;
+        this.baseURI =  baseURI;
+    }
+
+    /**
 	 * The id associated to the crawler thread running this instance
 	 */
 	protected int myId;
@@ -42,10 +59,10 @@ public class WebCrawler implements Runnable {
 	private Thread myThread;
 
 	/**
-	 * The parser that is used by this crawler instance to parse the content of
+	 * The coreParser that is used by this crawler instance to parse the content of
 	 * the fetched pages.
 	 */
-	private Parser parser;
+	private CoreParser coreParser;
 
 	/**
 	 * The fetcher that is used by this crawler instance to fetch the content of
@@ -93,7 +110,7 @@ public class WebCrawler implements Runnable {
 		this.robotstxtServer = crawlController.getRobotstxtServer();
 		this.docIdServer = crawlController.getDocIdServer();
 		this.frontier = crawlController.getFrontier();
-		this.parser = new Parser(crawlController.getConfig());
+		this.coreParser = new CoreParser(crawlController.getConfig());
 		this.myController = crawlController;
 		this.isWaitingForNewURLs = false;
 	}
@@ -167,7 +184,7 @@ public class WebCrawler implements Runnable {
 	}
 
 	/**
-	 * The CrawlController instance that has created this crawler instance will
+	 * The Controller instance that has created this crawler instance will
 	 * call this function just before terminating this crawler thread. Classes
 	 * that extend WebCrawler can override this function to pass their local
 	 * data to their controller. The controller then puts these local data in a
@@ -290,7 +307,7 @@ public class WebCrawler implements Runnable {
 				return;
 			}
 
-			if (!parser.parse(page, curURL.getURL())) {
+			if (!coreParser.parse(page, curURL.getURL())) {
 				onParseError(curURL);
 				return;
 			}

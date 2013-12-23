@@ -1,9 +1,8 @@
 package com.ir.config.retailer.amazon;
 
+import com.ir.crawl.parse.field.GenericFieldNames;
 
-import com.ir.crawl.parse.field.FieldNames;
-
-public class AmazonFieldNames extends FieldNames {
+public class FieldNames extends GenericFieldNames {
 
     public static final String NAV_CAT = "navCategory";
 
@@ -18,5 +17,4 @@ public class AmazonFieldNames extends FieldNames {
     public static final String RANK_L3 = "rankL3Spec";
 
     public static final String MERCHANT = "merchant";
-
 }

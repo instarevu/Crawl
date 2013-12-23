@@ -1,7 +1,7 @@
 package com.ir.crawl.parse.field;
 
 
-public abstract class FieldNames {
+public abstract class GenericFieldNames {
 
     public static final String _ERRORS = "_errors";
 

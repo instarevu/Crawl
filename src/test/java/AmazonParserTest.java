@@ -1,6 +1,6 @@
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import com.ir.config.retailer.amazon.AmazonItemParser;
+import com.ir.config.retailer.amazon.ItemParser;
 import com.ir.core.error.Error;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
@@ -27,7 +27,7 @@ public class AmazonParserTest {
 
     protected static final Logger logger = LogManager.getLogger(AmazonParserTest.class.getName());
 
-    private final Parser parser = new AmazonItemParser();
+    private final Parser parser = new ItemParser();
 
     private static final String TEST_DATA_LOCATION =  (AmazonParserTest.class.getProtectionDomain().getCodeSource().getLocation()
                                                         + "amazon/data/").replaceAll("file:", "");

@@ -7,11 +7,10 @@ import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.field.FieldBuilder;
-import com.ir.crawl.parse.field.FieldNames;
+import com.ir.crawl.parse.field.GenericFieldNames;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.nio.charset.Charset;
@@ -33,7 +32,7 @@ public abstract class AbstractParser implements Parser {
 
     public Set<Field> fields = new HashSet<Field>(0);
 
-    public final Field errorField = field(FieldNames._ERRORS).c();
+    public final Field errorField = field(GenericFieldNames._ERRORS).c();
 
     public Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
 
