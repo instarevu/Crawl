@@ -1,7 +1,9 @@
 package com.ir.config.retailer;
 
 
-public interface Config {
+import java.util.List;
+
+public interface RetailerConfig {
 
     public int getMaxPagesToFetch();
 
@@ -10,4 +12,8 @@ public interface Config {
     public Class getCrawlClass();
 
     public String getCrawlStorageLocation();
+
+    public void addSeed(String seed);
+
+    public List<String> getSeeds();
 }

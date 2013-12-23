@@ -1,9 +1,9 @@
 package com.ir.crawl.crawler;
 
 
-import com.ir.config.retailer.AbstractConfig;
-import com.ir.config.retailer.Config;
-import com.ir.config.retailer.amazon.ItemCrawler;
+import com.ir.config.retailer.AbstractRetailerConfig;
+import com.ir.config.retailer.RetailerConfig;
+import com.ir.config.retailer.amazon.AmazonItemRetailerConfig;
 import com.ir.core.crawllib.crawler.CrawlConfig;
 import com.ir.core.crawllib.crawler.CrawlController;
 import com.ir.core.crawllib.fetcher.PageFetcher;
@@ -13,30 +13,23 @@ import com.ir.core.crawllib.robotstxt.RobotstxtServer;
 public class Controller {
 
     public static void main(String[] args) throws Exception {
-        startCrawlProcess("amazon");
+        startCrawlProcess(AmazonItemRetailerConfig.KEY);
     }
-
 
     public static void startCrawlProcess(String crawlProcessKey) throws Exception {
+        RetailerConfig retailerConfig = AbstractRetailerConfig.getConfigInstance(crawlProcessKey);
+        CrawlConfig crawlConfig = new CrawlConfig();
+        crawlConfig.setCrawlStorageFolder(retailerConfig.getCrawlStorageLocation());
+        crawlConfig.setMaxPagesToFetch(retailerConfig.getMaxPagesToFetch());
 
-        Config config = AbstractConfig.getConfigInstance(crawlProcessKey);
-        CrawlConfig crwalConfig = new CrawlConfig();
-        crwalConfig.setCrawlStorageFolder(config.getCrawlStorageLocation());
-        crwalConfig.setMaxPagesToFetch(config.getMaxPagesToFetch());
+        PageFetcher pageFetcher = new PageFetcher(crawlConfig);
+        RobotstxtServer robotstxtServer = new RobotstxtServer(new RobotstxtConfig(), pageFetcher);
+        CrawlController controller = new CrawlController(crawlConfig, pageFetcher, robotstxtServer);
 
-        PageFetcher pageFetcher = new PageFetcher(crwalConfig);
-        RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
-        RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
-        CrawlController controller = new CrawlController(crwalConfig, pageFetcher, robotstxtServer);
-
-        //Exclude Items
-        controller.addSeed("http://www.amazon.com/Big-Christmas-Box-Various-artists/dp/B00A2KV7XW");
-        controller.addSeed("http://www.amazon.com/dp/B00B8YSQOE");
-        //controller.addSeed("http://www.amazon.com/Hadoop-Practice-Alex-Holmes/dp/1617290238");
-
-        controller.start(ItemCrawler.class, config.getNoOfCrawlers());
-
+        for(String seed : retailerConfig.getSeeds()){
+            controller.addSeed(seed);
+        }
+        controller.start(retailerConfig.getCrawlClass(), retailerConfig.getNoOfCrawlers());
     }
-
 
 }
