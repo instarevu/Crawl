@@ -29,12 +29,12 @@ public class AmazonParserTest {
 
     private final Parser parser = new ItemParser();
 
-    private static final String TEST_DATA_LOCATION =  (AmazonParserTest.class.getProtectionDomain().getCodeSource().getLocation()
-                                                        + "amazon/data/").replaceAll("file:", "");
+    private static final String TEST_DATA_LOCATION =  AmazonParserTest.class.getResource("test-data/amazon/").getPath();
 
     @DataProvider(name = "amazonData")
     public Object[][] amazonTestProducts() throws IOException {
-        Reporter.log("FILE LOCATION: " + TEST_DATA_LOCATION);
+        logger.info("FILE LOCATION: " + TEST_DATA_LOCATION);
+
         File file = new File(TEST_DATA_LOCATION);
         File[] files = file.listFiles();
 

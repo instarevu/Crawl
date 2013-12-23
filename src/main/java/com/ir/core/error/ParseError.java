@@ -13,7 +13,7 @@ public class ParseError extends AbstractError {
 
     public static final ParseError MISSING_ITEM_CLASSIFIER = new ParseError("030010", "Unable to identify item classification.");
 
-    public static final ParseError MISSING_IDNF = new ParseError("030011", "Unable to identify any unique item identifier.");
+    public static final ParseError MISSING_IDNF = new ParseError("030011", "Unable to find any unique item identifiers.");
 
     public static final ParseError MISSING_PRICE = new ParseError("030012", "Unable to identify item price.");
 
