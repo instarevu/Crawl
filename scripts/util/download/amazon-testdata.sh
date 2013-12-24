@@ -8,8 +8,9 @@ items+=(B00407S11Y B000CSI69C B00A39FRII B00746LOQW B000NGMTOG B008KZW13Q B007PB
 items+=(B000JQM1DE B008RR9ZIG B0009F3POY B004OQP3O4 B000H7YCE6 B001706UPG B00005AXIV B001PMJUKI B00005LEN4 B008X099PQ)
 
 dir=../../../src/test/resources/test-data/amazon/
+mkdir -p $dir
 echo 'Removing files under : '$dir
-rm -rf data/*
+rm -rf ${dir}/*
 
 for item in "${items[@]}"
 do
