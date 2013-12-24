@@ -4,17 +4,15 @@ import com.ir.crawl.parse.field.GenericFieldNames;
 
 public class FieldNames extends GenericFieldNames {
 
-    public static final String NAV_CAT = "navCategory";
+    public static final String VRNT_SPEC = "vs";
 
-    public static final String VRNT_SPEC = "variantSpecs";
+    public static final String VRNT_IDS = "vid";
 
-    public static final String VRNT_IDS = "variantIds";
+    public static final String RANK_L1 = "rnk#1";
 
-    public static final String RANK_L1 = "rankL1Spec";
+    public static final String RANK_L2 = "rnk#2";
 
-    public static final String RANK_L2 = "rankL2Spec";
+    public static final String RANK_L3 = "rnk#3";
 
-    public static final String RANK_L3 = "rankL3Spec";
-
-    public static final String MERCHANT = "merchant";
+    public static final String MERCHANT = "by";
 }

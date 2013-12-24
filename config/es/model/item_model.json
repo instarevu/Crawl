@@ -1,5 +1,7 @@
 {
 	"id" : "B00DDMJ0JE",	// NOT ANALYZED
+	"cat" : "Sports & Outdoors"
+	"bc"  :	"Electronics , Camera & Photo , Binoculars & Scopes , Binoculars",
 	"t" : "Luvs With Ultra Leakguards Diapers",
 	"b" : "Luvs",
 	"rnk" : [
@@ -25,8 +27,8 @@
 		}
 	],
 	"rvw" : {
-		"a" : 4.7,
-		"c" : 380
+		"avg" : 4.7,
+		"ctn" : 380
 	},
 	"idnf" : {
 		"m" : "TN450",	 //NOT ANALYZED
@@ -35,8 +37,8 @@
 		"u" : [ 069055838013 , 688581003964 , 069055847459 , 069055842010 ]  //NOT ANALYZED
 	},
 	"vrnt" : {
-		"s" : "Size: 4 | Unit Count: 160",
-		 "id"	: [ "B00DDMILGM", "B00DDMIYSW", "B00DDMJ0JE", "B00DDMJ4PY", "B00DDMJ5N0", "B00DDMJ5VW" ]	//NOT ANALYZED
+		"vs" : "Size: 4 | Unit Count: 160",
+		 "vid"	: [ "B00DDMILGM", "B00DDMIYSW", "B00DDMJ0JE", "B00DDMJ4PY", "B00DDMJ5N0", "B00DDMJ5VW" ]	//NOT ANALYZED
 	},
 	"url" : {
 		"can" : "Luvs-Ultra-Leakguards-Diapers-Count", //NOT ANALYZED

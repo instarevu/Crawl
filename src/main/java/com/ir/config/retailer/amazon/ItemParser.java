@@ -48,8 +48,8 @@ public class ItemParser extends AbstractParser {
                 field(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").c(),
                 field(RANK_L2).addDependsRule(RANK_L1).c(),
                 field(RANK_L3).addDependsRule(RANK_L2).c(),
-                field(RTNG_AVG, Float.class).addQ("#avgRating").c(),
-                field(RTNG_TOTAL, Integer.class).addQ("#summaryStars").del(",").c(),
+                field(REVIEW_AVG, Float.class).addQ("#avgRating").c(),
+                field(REVIEW_COUNT, Integer.class).addQ("#summaryStars").del(",").c(),
                 field(VRNT_SPEC).addQ("div[class=disclaim]").addDependsRule(VRNT_IDS).c(),
                 field(VRNT_IDS).addQ(new RawStringQuery("script[data-a-state*=twisterData]")).c(),
                 field(URL).addQ("link[rel=canonical]", "href").addNotNullRule().c(),
@@ -87,9 +87,9 @@ public class ItemParser extends AbstractParser {
             if(ranks.length > 2)dataMap.put(getFieldByName(RANK_L2), ranks[2]);
             if(ranks.length > 3)dataMap.put(getFieldByName(RANK_L3), ranks[3]);
         // RATING
-        } else if(fieldName.equalsIgnoreCase(RTNG_AVG)){
+        } else if(fieldName.equalsIgnoreCase(REVIEW_AVG)){
             input = input.split(" out")[0];
-        } else if(fieldName.equalsIgnoreCase(RTNG_TOTAL)){
+        } else if(fieldName.equalsIgnoreCase(REVIEW_COUNT)){
             input = input.split("\\(")[1].split("\\)")[0];
         // VARIANT
         } else if(fieldName.equalsIgnoreCase(VRNT_SPEC)){
