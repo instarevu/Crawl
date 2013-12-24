@@ -23,7 +23,7 @@ public class AdHocTestUtil {
     }
 
     private static void testFieldParsing() throws IOException {
-        File file = new File("/Users/sathiya/Work/Git/ir/Crawl/src/test/test-data/amazon");
+        File file = new File("/Users/sathiya/Work/Git/ir/Crawl/src/test/resources/test-data/amazon/");
         for (File f : file.listFiles()){
             String data = Files.toString(f, Charsets.ISO_8859_1);
             Document doc = Jsoup.parse(data, "http://www.amazon.com/");
