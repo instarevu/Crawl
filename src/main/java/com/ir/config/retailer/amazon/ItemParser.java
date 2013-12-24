@@ -58,7 +58,7 @@ public class ItemParser extends AbstractParser {
         itemRules = ImmutableSet.of(
                 new AtleastOneRule(ParseError.MISSING_ITEM_CLASSIFIER, RANK_L1, BREADCRUMB),
                 new AtleastOneRule(ParseError.MISSING_PRICE, PRC_LIST, PRC_ACTUAL, PRC_MIN, PRC_MAX),
-                (ItemRule)new AtleastOneRule(ParseError.MISSING_IDNF, IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
+                (ItemRule)new AtleastOneRule(ParseError.MISSING_IDENTIFIER, IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
         );
     }
 

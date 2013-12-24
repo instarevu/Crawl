@@ -12,7 +12,7 @@ public class DependencyRule extends AbstractRule {
     private String dependentFieldName;
 
     public DependencyRule(String dependentFieldName){
-        super(RuleType.DEPENDENCY, ParseError.MISSING_DEPENDENDENCY);
+        super(RuleType.DEPENDENCY, ParseError.MISSING_DEPENDENCY);
         this.dependentFieldName = dependentFieldName;
     }
 
