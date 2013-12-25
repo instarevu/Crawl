@@ -30,7 +30,7 @@ public class AtleastOneRule extends AbstractItemRule {
             if(dataMap.get(parser.getField(fieldName)) != null)
                 return true;
         }
-        logger.debug("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());
+        logger.error("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());
         return false;
     }
 
