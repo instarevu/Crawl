@@ -10,15 +10,7 @@ import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import com.ir.util.StringUtil;
-import org.elasticsearch.common.joda.time.DateTime;
-import org.elasticsearch.common.joda.time.format.DateTimeFormatter;
-import org.elasticsearch.common.joda.time.format.ISODateTimeFormat;
-import org.elasticsearch.common.xcontent.XContentBuilder;
-import org.elasticsearch.common.xcontent.XContentFactory;
-import sun.net.www.content.audio.x_aiff;
 
-import java.io.IOException;
-import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -72,42 +64,47 @@ public class ItemParser extends AbstractParser {
 
     public boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String input){
         // PRICE
-        String fieldName = field.getName();
-        if(fieldName.equalsIgnoreCase(PRC_LIST)){
+        String name = field.getName();
+        if(name.equalsIgnoreCase(PRC_LIST)){
             if(input.trim().contains(" ")){
                 String prices[] = input.split(" ");
                 input = prices[0].trim();
-                dataMap.put(getFieldByName(PRC_ACTUAL), prices[1].trim());
+                dataMap.put(getField(PRC_ACTUAL), prices[1].trim());
             } else {
                 input = StringUtil.dedupeString(input, false);
             }
-        } else if(fieldName.equalsIgnoreCase(PRC_ACTUAL)){
+        } else if(name.equalsIgnoreCase(PRC_ACTUAL)){
             if(input.contains("-")){
                 String prices[] = input.split("-");
-                dataMap.put(getFieldByName(PRC_MIN), prices[0].trim());
-                dataMap.put(getFieldByName(PRC_MAX), prices[1].trim());
+                dataMap.put(getField(PRC_MIN), prices[0].trim());
+                dataMap.put(getField(PRC_MAX), prices[1].trim());
                 input = null;
             }
+        }else if(name.equalsIgnoreCase(MERCHANT)){
+            if(input.endsWith("."))
+                input = input.substring(0, input.length()-1);
         // RANK
-        } else if(fieldName.equalsIgnoreCase(RANK_L1)){
+        } else if(name.equalsIgnoreCase(RANK_L1)){
             String[] ranks  = input.split("#");
-            dataMap.put(getFieldByName(RANK_L1), ranks[1].split("\\(")[0]);
-            if(ranks.length > 2)dataMap.put(getFieldByName(RANK_L2), ranks[2]);
-            if(ranks.length > 3)dataMap.put(getFieldByName(RANK_L3), ranks[3]);
+            dataMap.put(getField(RANK_L1), ranks[1].split("\\(")[0]);
+            if(ranks.length > 2)dataMap.put(getField(RANK_L2), ranks[2]);
+            if(ranks.length > 3)dataMap.put(getField(RANK_L3), ranks[3]);
         // RATING
-        } else if(fieldName.equalsIgnoreCase(REVIEW_AVG)){
+        } else if(name.equalsIgnoreCase(REVIEW_AVG)){
             input = input.split(" out")[0];
-        } else if(fieldName.equalsIgnoreCase(REVIEW_COUNT)){
+        } else if(name.equalsIgnoreCase(REVIEW_COUNT)){
             input = input.split("\\(")[1].split("\\)")[0];
         // VARIANT
-        } else if(fieldName.equalsIgnoreCase(VRNT_SPEC)){
+        } else if(name.equalsIgnoreCase(VRNT_SPEC)){
             input = StringUtil.dedupeString(input, false);
-        } else if(fieldName.equalsIgnoreCase(VRNT_IDS)){
+        } else if(name.equalsIgnoreCase(VRNT_IDS)){
             Set<String> variantIds = new TreeSet<String>();
             for( Map.Entry<String, JsonElement> e : ((JsonObject) jsonParser.parse(getVariationValues(input))).entrySet()){
                 variantIds.add(e.getKey());
             }
-            input = variantIds.toString();
+            dataMap.put(field, variantIds.toArray(new String[]{}));
+        } else if(name.equals(IDF_UPC)){
+            dataMap.put(field, input.split(" "));
         }
 
         if(dataMap.get(field) == null) dataMap.put(field, input);

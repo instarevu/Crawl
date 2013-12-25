@@ -13,7 +13,7 @@ public interface Parser {
 
     public boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);
 
-    public Field getFieldByName(String fieldName);
+    public Field getField(String fieldName);
 
     public Set<Field> getFields();
 

@@ -18,7 +18,7 @@ public class DependencyRule extends AbstractRule {
 
     @Override
     public boolean validate(Field field, Parser parser, Map<Field, Object> dataMap) {
-        Field dependentField = parser.getFieldByName(dependentFieldName);
+        Field dependentField = parser.getField(dependentFieldName);
         if(dataMap.get(field) != null){
             if(dataMap.get(dependentField) != null && dependentField.isValid(parser, dataMap, field.getName()))
                 return true;

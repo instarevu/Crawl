@@ -57,7 +57,7 @@ public class Field {
             switch(rule.getRuleType()){
                 case NOT_NULL:
                     if(!rule.validate(this, dataMap)) {
-                        logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getField("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
                         ErrorUtil.addError(rule.getError(), this, dataMap);
                         return false;
                     }
@@ -73,7 +73,7 @@ public class Field {
                     break;
                 case VALUE_CONTAINS:
                     if(!rule.validate(this, dataMap)) {
-                        logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getFieldByName("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
+                        logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getField("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
                         ErrorUtil.addError(rule.getError(), this, dataMap);
                         return false;
                     }

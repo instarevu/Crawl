@@ -5,6 +5,8 @@ public abstract class GenericFieldNames {
 
     public static final String _ERRORS = "__e";
 
+    public static final String _TIME = "__t";
+
     public static final String ID = "id";
 
     public static final String NAV_CAT = "cat";

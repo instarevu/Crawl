@@ -1,6 +1,7 @@
 /target
 .idea
-/data
 *.iml
 src/test/resources/test-data/
 *.DS_Store
+var/
+data/

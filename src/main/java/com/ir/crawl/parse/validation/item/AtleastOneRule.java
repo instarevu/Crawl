@@ -27,7 +27,7 @@ public class AtleastOneRule extends AbstractItemRule {
     @Override
     public boolean validate(Parser parser, Map<Field, Object> dataMap) {
         for(String fieldName : fields){
-            if(dataMap.get(parser.getFieldByName(fieldName)) != null)
+            if(dataMap.get(parser.getField(fieldName)) != null)
                 return true;
         }
         logger.debug("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());

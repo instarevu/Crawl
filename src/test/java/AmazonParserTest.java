@@ -37,10 +37,10 @@ public class AmazonParserTest {
 
         File file = new File(TEST_DATA_LOCATION);
         File[] files = file.listFiles();
-
-        Object[][] data = new Object[files.length][2];
-        System.out.println("FILES LENGTH:    " + files.length);
-        for(int i=0; i<files.length; i++){
+        int filesLength = files.length;
+        Object[][] data = new Object[filesLength][2];
+        System.out.println("FILES LENGTH:    " + filesLength);
+        for(int i=0; i<filesLength; i++){
             data[i][0]=String.valueOf(i);
             data[i][1]=files[i].getName();
         }
@@ -68,8 +68,6 @@ public class AmazonParserTest {
                 }
             }
         }
-
-
         LogUtil.afterTestMarker();
     }
 }
