@@ -65,7 +65,7 @@ public class ItemParser extends AbstractParser {
     public boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String input){
         // PRICE
         String name = field.getName();
-        if(name.equalsIgnoreCase(PRC_LIST)){
+        if(name.equals(PRC_LIST)){
             if(input.trim().contains(" ")){
                 String prices[] = input.split(" ");
                 input = prices[0].trim();
@@ -73,31 +73,31 @@ public class ItemParser extends AbstractParser {
             } else {
                 input = StringUtil.dedupeString(input, false);
             }
-        } else if(name.equalsIgnoreCase(PRC_ACTUAL)){
+        } else if(name.equals(PRC_ACTUAL)){
             if(input.contains("-")){
                 String prices[] = input.split("-");
                 dataMap.put(getField(PRC_MIN), prices[0].trim());
                 dataMap.put(getField(PRC_MAX), prices[1].trim());
                 input = null;
             }
-        }else if(name.equalsIgnoreCase(MERCHANT)){
+        }else if(name.equals(MERCHANT)){
             if(input.endsWith("."))
                 input = input.substring(0, input.length()-1);
         // RANK
-        } else if(name.equalsIgnoreCase(RANK_L1)){
+        } else if(name.equals(RANK_L1)){
             String[] ranks  = input.split("#");
             dataMap.put(getField(RANK_L1), ranks[1].split("\\(")[0]);
             if(ranks.length > 2)dataMap.put(getField(RANK_L2), ranks[2]);
             if(ranks.length > 3)dataMap.put(getField(RANK_L3), ranks[3]);
         // RATING
-        } else if(name.equalsIgnoreCase(REVIEW_AVG)){
+        } else if(name.equals(REVIEW_AVG)){
             input = input.split(" out")[0];
-        } else if(name.equalsIgnoreCase(REVIEW_COUNT)){
+        } else if(name.equals(REVIEW_COUNT)){
             input = input.split("\\(")[1].split("\\)")[0];
         // VARIANT
-        } else if(name.equalsIgnoreCase(VRNT_SPEC)){
+        } else if(name.equals(VRNT_SPEC)){
             input = StringUtil.dedupeString(input, false);
-        } else if(name.equalsIgnoreCase(VRNT_IDS)){
+        } else if(name.equals(VRNT_IDS)){
             Set<String> variantIds = new TreeSet<String>();
             for( Map.Entry<String, JsonElement> e : ((JsonObject) jsonParser.parse(getVariationValues(input))).entrySet()){
                 variantIds.add(e.getKey());
@@ -106,9 +106,7 @@ public class ItemParser extends AbstractParser {
         } else if(name.equals(IDF_UPC)){
             dataMap.put(field, input.split(" "));
         }
-
         if(dataMap.get(field) == null) dataMap.put(field, input);
-
         return true;
     }
 
