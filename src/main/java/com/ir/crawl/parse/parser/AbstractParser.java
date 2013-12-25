@@ -11,8 +11,14 @@ import com.ir.crawl.parse.field.GenericFieldNames;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.elasticsearch.common.joda.time.DateTime;
+import org.elasticsearch.common.joda.time.format.DateTimeFormatter;
+import org.elasticsearch.common.joda.time.format.ISODateTimeFormat;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
 import org.jsoup.nodes.Document;
 
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.*;
 
@@ -52,6 +58,12 @@ public abstract class AbstractParser implements Parser {
 
         findErrors(dataMap);
         logger.debug("Completed Parsing: " + dataMap);
+        try {
+            logger.info("JSON: " + transformToJSON(dataMap));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return new ParseResponse(true, dataMap);
     }
 
@@ -84,6 +96,22 @@ public abstract class AbstractParser implements Parser {
                 ErrorUtil.addError(itemRule.getError(), errorField, dataMap);
             }
         }
+    }
+
+
+    public String transformToJSON(Map<Field, Object> dataMap) throws IOException {
+        DateTimeFormatter dateTimeFormatter = ISODateTimeFormat.basicDateTimeNoMillis();
+        dateTimeFormatter.print(new DateTime());
+
+        XContentBuilder jsonBuilder = XContentFactory.jsonBuilder()
+                .startObject();
+        for(Map.Entry<Field, Object> entry : dataMap.entrySet()){
+            jsonBuilder.field(entry.getKey().getName(), entry.getValue());
+        }
+
+        jsonBuilder.endObject();
+
+        return jsonBuilder.prettyPrint().string();
     }
 
     public FieldBuilder field(String fieldName){

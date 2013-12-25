@@ -9,11 +9,9 @@ public class AmazonItemRetailerConfig extends AbstractRetailerConfig {
 
     public AmazonItemRetailerConfig(){
         super(ItemCrawler.class, "http://www.amazon.com", KEY);
+        addSeed("http://www.amazon.com/dp/B00005AXIV");
         //Exclude Items
-        addSeed("http://www.amazon.com/Big-Christmas-Box-Various-artists/dp/B00A2KV7XW");
-        addSeed("http://www.amazon.com/dp/B00B8YSQOE");
-        //addSeed("http://www.amazon.com/Hadoop-Practice-Alex-Holmes/dp/1617290238");
-
+        // addSeed("http://www.amazon.com/Big-Christmas-Box-Various-artists/dp/B00A2KV7XW");
     }
 
 }

@@ -35,10 +35,6 @@ public class PageFetchResult {
 		this.entity = entity;
 	}
 	
-	public Header[] getResponseHeaders() {
-		return responseHeaders;
-	}
-
 	public void setResponseHeaders(Header[] responseHeaders) {
 		this.responseHeaders = responseHeaders;
 	}
@@ -57,6 +53,7 @@ public class PageFetchResult {
 			page.setFetchResponseHeaders(responseHeaders);
 			return true;
 		} catch (Exception e) {
+            e.printStackTrace();
 			logger.info("Exception while fetching content for: " + page.getWebURL().getURL() + " [" + e.getMessage()
 					+ "]");
 		}

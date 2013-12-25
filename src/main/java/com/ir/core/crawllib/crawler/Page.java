@@ -1,6 +1,7 @@
 
 package com.ir.core.crawllib.crawler;
 
+import com.google.common.base.Charsets;
 import com.ir.core.crawllib.parser.ParseData;
 import com.ir.core.crawllib.url.WebURL;
 import org.apache.http.Header;
@@ -25,6 +26,8 @@ public class Page {
      */
     protected byte[] contentData;
 
+    protected String htmlData;
+
     /**
      * The ContentType of this page.
      * For example: "text/html; charset=UTF-8"
@@ -37,21 +40,10 @@ public class Page {
      */
     protected String contentEncoding;
 
-    /**
-     * The charset of the content.
-     * For example: "UTF-8"
-     */
-    protected String contentCharset;
+    protected String contentCharset = "ISO-8859-1";
     
-    /**
-     * Headers which were present in the response of the
-     * fetch request
-     */
     protected Header[] fetchResponseHeaders;
 
-    /**
-     * The parsed data populated by parsers
-     */
     protected ParseData parseData;
 
 	public Page(WebURL url) {
@@ -62,14 +54,6 @@ public class Page {
 		return url;
 	}
 
-	public void setWebURL(WebURL url) {
-		this.url = url;
-	}
-
-    /**
-     * Loads the content of this page from a fetched
-     * HttpEntity.
-     */
 	public void load(HttpEntity entity) throws Exception {
 
 		contentType = null;
@@ -90,23 +74,14 @@ public class Page {
 		}
 
 		contentData = EntityUtils.toByteArray(entity);
+        htmlData = new String(contentData, contentCharset);
 	}
 	
-	/**
-     * Returns headers which were present in the response of the
-     * fetch request
-     */
-	public Header[] getFetchResponseHeaders() {
-		return fetchResponseHeaders;
-	}
-	
+
 	public void setFetchResponseHeaders(Header[] headers) {
 		fetchResponseHeaders = headers;
 	}
 
-    /**
-     * Returns the parsed data generated for this page by parsers
-     */
 	public ParseData getParseData() {
 		return parseData;
 	}
@@ -115,21 +90,14 @@ public class Page {
 		this.parseData = parseData;
 	}
 
-    /**
-     * Returns the content of this page in binary format.
-     */
 	public byte[] getContentData() {
 		return contentData;
 	}
 
-	public void setContentData(byte[] contentData) {
-		this.contentData = contentData;
-	}
+    public String getHtmlData() {
+        return htmlData;
+    }
 
-    /**
-     * Returns the ContentType of this page.
-     * For example: "text/html; charset=UTF-8"
-     */
 	public String getContentType() {
 		return contentType;
 	}
@@ -138,28 +106,8 @@ public class Page {
 		this.contentType = contentType;
 	}
 
-    /**
-     * Returns the encoding of the content.
-     * For example: "gzip"
-     */
-    public String getContentEncoding() {
-        return contentEncoding;
-    }
-
-    public void setContentEncoding(String contentEncoding) {
-        this.contentEncoding = contentEncoding;
-    }
-
-    /**
-     * Returns the charset of the content.
-     * For example: "UTF-8"
-     */
 	public String getContentCharset() {
 		return contentCharset;
-	}
-
-	public void setContentCharset(String contentCharset) {
-		this.contentCharset = contentCharset;
 	}
 
 }

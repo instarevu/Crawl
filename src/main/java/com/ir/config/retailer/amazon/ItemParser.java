@@ -10,7 +10,15 @@ import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
 import com.ir.crawl.parse.validation.item.ItemRule;
 import com.ir.util.StringUtil;
+import org.elasticsearch.common.joda.time.DateTime;
+import org.elasticsearch.common.joda.time.format.DateTimeFormatter;
+import org.elasticsearch.common.joda.time.format.ISODateTimeFormat;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
+import sun.net.www.content.audio.x_aiff;
 
+import java.io.IOException;
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -114,10 +122,5 @@ public class ItemParser extends AbstractParser {
     private static String getVariationValues(String input){
         return input.split(VARIANT_STR_TOKEN_1)[1].split(VARIANT_STR_TOKEN_2)[0];
     }
-
-//    public JSObject transformToJSON(Map<Field, Object> dataMap){
-//
-//    }
-
 
 }

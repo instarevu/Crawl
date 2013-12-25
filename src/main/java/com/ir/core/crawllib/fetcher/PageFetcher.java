@@ -1,26 +1,12 @@
 package com.ir.core.crawllib.fetcher;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Date;
-import java.util.zip.GZIPInputStream;
-
 import com.ir.core.crawllib.crawler.Configurable;
 import com.ir.core.crawllib.crawler.CrawlConfig;
 import com.ir.core.crawllib.url.URLCanonicalizer;
 import com.ir.core.crawllib.url.WebURL;
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
-import org.apache.http.HttpHost;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.HttpStatus;
-import org.apache.http.HttpVersion;
+import org.apache.http.*;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.params.ClientPNames;
 import org.apache.http.client.params.CookiePolicy;
@@ -32,18 +18,20 @@ import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.entity.HttpEntityWrapper;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.PoolingClientConnectionManager;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParamBean;
+import org.apache.http.params.*;
 import org.apache.http.protocol.HttpContext;
 import org.apache.log4j.Logger;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Date;
+import java.util.zip.GZIPInputStream;
 
 public class PageFetcher extends Configurable {
 
 	protected static final Logger logger = Logger.getLogger(PageFetcher.class);
 
+    // TODO: Fix Deprecated API
 	protected PoolingClientConnectionManager connectionManager;
 
 	protected DefaultHttpClient httpClient;
@@ -226,10 +214,6 @@ public class PageFetcher extends Configurable {
 		}
 	}
 	
-	public HttpClient getHttpClient() {
-		return httpClient;
-	}
-
 	private static class GzipDecompressingEntity extends HttpEntityWrapper {
 
 		public GzipDecompressingEntity(final HttpEntity entity) {

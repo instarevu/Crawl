@@ -24,9 +24,11 @@ public class StringUtil {
         return input.trim();
     }
 
-    // Rogue Char --> �
+    // Rogue Char --> � ( due to encoding problem > gets replaced with \uFFFD )
     public static String purgeSpecialChars(String input){
-        input = StringEscapeUtils.escapeHtml(input).replaceAll("&nbsp;", " ");
+        input = StringEscapeUtils.escapeHtml(input).replaceAll("&nbsp;", " ")
+                .replaceAll("\uFFFD", ">")
+                .replaceAll("&#xfffd;", ">");
         return StringEscapeUtils.unescapeHtml(input);
     }
 
@@ -42,12 +44,7 @@ public class StringUtil {
         return input;
     }
 
-    public static String convertStreamToString(InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
-    }
-
-    private static final String MAP_FORMAT = "%-12s: %s \n";
+    private static final String MAP_FORMAT = "%-7s: %s \n";
 
     public static String prettifyMapForDebug(Map<? extends Object, ? extends Object> map){
         StringBuffer prettyString = new StringBuffer("[ \n");

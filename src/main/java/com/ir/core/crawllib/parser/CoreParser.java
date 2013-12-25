@@ -6,16 +6,11 @@ import com.ir.core.crawllib.crawler.CrawlConfig;
 import com.ir.core.crawllib.crawler.Page;
 import com.ir.core.crawllib.url.URLCanonicalizer;
 import com.ir.core.crawllib.url.WebURL;
-import com.ir.core.crawllib.util.Util;
-import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,50 +24,8 @@ public class CoreParser extends Configurable {
 	}
 
 	public boolean parse(Page page, String contextURL) {
-
-		if (Util.hasBinaryContent(page.getContentType())) {
-			if (!config.isIncludeBinaryContentInCrawling()) {
-				return false;
-			}
-
-			page.setParseData(BinaryParseData.getInstance());
-			return true;
-
-		} else if (Util.hasPlainTextContent(page.getContentType())) {
-			try {
-				TextParseData parseData = new TextParseData();
-				if (page.getContentCharset() == null) {
-					parseData.setTextContent(new String(page.getContentData()));
-				} else {
-					parseData.setTextContent(new String(page.getContentData(), page.getContentCharset()));
-				}
-				page.setParseData(parseData);
-				return true;
-			} catch (Exception e) {
-				logger.error(e.getMessage() + ", while parsing: " + page.getWebURL().getURL());
-			}
-			return false;
-		}
-
-		InputStream inputStream = null;
-        Document document = null;
-        try {
-			inputStream = new ByteArrayInputStream(page.getContentData());
-            String data = StringUtil.convertStreamToString(inputStream);
-            document = Jsoup.parse(data, "http://www.amazon.com");
-		} catch (Exception e) {
-			logger.error(e.getMessage() + ", while parsing: " + page.getWebURL().getURL());
-		} finally {
-			try {
-				if (inputStream != null) {
-					inputStream.close();
-				}
-			} catch (IOException e) {
-				logger.error(e.getMessage() + ", while parsing: " + page.getWebURL().getURL());
-			}
-		}
-
-
+        //TODO: Fix context URL to be fetched from crawl config
+        Document document = Jsoup.parse(page.getHtmlData(), "http://www.amazon.com");
 		HtmlParseData parseData = new HtmlParseData();
 		parseData.setDocument(document);
 
@@ -112,7 +65,6 @@ public class CoreParser extends Configurable {
 		parseData.setOutgoingUrls(outgoingUrls);
 		page.setParseData(parseData);
 		return true;
-
 	}
 
 }
