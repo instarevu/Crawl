@@ -6,15 +6,20 @@ import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
 import com.ir.crawl.parse.bean.ParseResponse;
+import com.ir.index.es.Indexer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ItemCrawler extends WebCrawler {
 
     protected static final Logger logger = LogManager.getLogger(ItemCrawler.class.getName());
 
+    private AtomicInteger count = new AtomicInteger();
+
     public ItemCrawler(){
-        super(new ItemParser(),  "http://www.amazon.com/");
+        super(new ItemParser());
     }
 
 
@@ -27,12 +32,15 @@ public class ItemCrawler extends WebCrawler {
     @Override
     public void visit(Page page) {
         String url = page.getWebURL().getURL();
-        //logger.info("Visiting URL: " + url);
-
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
-            ParseResponse parseResponse = valueParser.parseAll(htmlParseData.getDocument());
-            logger.info("URL: " + url.replaceAll(baseURI, "") + "    :: " + parseResponse.getDataMap().toString());
+            ParseResponse parseResponse = parser.parseAll(htmlParseData.getDocument());
+            if(parseResponse.isEligibleForProcessing()){
+                logger.info(parser.getParserLabel() + this.getMyId() + "-" + count.incrementAndGet() + " " + url.replaceAll(baseURI, ""));
+                Indexer.addDoc(parser, parseResponse.getDataMap());
+            } else{
+                logger.info(parser.getParserLabel() + this.getMyId() + "-" +  count.incrementAndGet() + " " + url.replaceAll(baseURI, "") + "   -- Excluded. " + parseResponse.getDataMap().get(parser.getErrorField()));
+             }
             try {
                 Thread.sleep(0);
             } catch (InterruptedException e) {

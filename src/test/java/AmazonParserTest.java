@@ -6,6 +6,7 @@ import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.Parser;
+import com.ir.index.es.Indexer;
 import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -47,11 +48,13 @@ public class AmazonParserTest {
         return data;
     }
 
-    @Test(groups = { "ProductDetails" }, dataProvider = "amazonData")
+    @Test(dataProvider = "amazonData")
     public void testProduct(String count, String id) throws IOException {
         String data = Files.toString(new File(TEST_DATA_LOCATION + id), Charsets.ISO_8859_1);
         Document htmlDocument = Jsoup.parse(data, "http://www.amazon.com");
         ParseResponse parseResponse = parser.parseAll(htmlDocument);
+        if(parseResponse.isEligibleForProcessing())
+            Indexer.addDoc(parser, parseResponse.getDataMap());
         if(parseResponse.isEligibleForProcessing()){
             Map<Field, Object> dataMap = parseResponse.getDataMap();
             Reporter.log(StringUtil.prettifyMapForDebug(dataMap));
@@ -70,4 +73,5 @@ public class AmazonParserTest {
         }
         LogUtil.afterTestMarker();
     }
+
 }

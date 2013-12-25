@@ -9,6 +9,7 @@ import com.ir.crawl.parse.parser.AbstractParser;
 import com.ir.crawl.parse.query.RawStringQuery;
 import com.ir.crawl.parse.validation.item.AtleastOneRule;
 import com.ir.crawl.parse.validation.item.ItemRule;
+import com.ir.index.es.Indexer;
 import com.ir.util.StringUtil;
 
 import java.util.Map;
@@ -22,11 +23,10 @@ public class ItemParser extends AbstractParser {
 
     private static final String[] DEL_TOKENS_MERCHANT = { "Ships from and", "sold by", "Sold by", "Gift-wrap available.","in easy-to-open packaging.","and Fulfilled by Amazon."};
 
-    private static final String[] EXCLUSION_CATEGORIES = { "Amazon MP3 Store", "Music", "Your Instant Video", "Buy a Kindle","Magazine Subscriptions", "Books", "Video Games", "Appstore for Android", "Movies & TV" };
+    private static final String[] EXCLUSION_CATEGORIES = { "Amazon MP3 Store", "Music", "Your Instant Video", "Buy a Kindle","Magazine Subscriptions", "Books", "Video Games", "Appstore for Android", "Movies & TV", "Gift Cards Store" };
 
     public ItemParser(){
-        super();
-        baseURI = "http://www.amazon.com/";
+        super("http://www.amazon.com/", Indexer.INDEX_TYPE_ITEM, "amazon");
         decisionFields = ImmutableSet.of(
                 field(ID).addQ("input[id=ASIN]", "value").addQ("input[name*=ASIN]", "value").addNotNullRule(ParseError.MISSING_ID).c(),
                 field(NAV_CAT).addQ("li[class*=nav-category-button]").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c()

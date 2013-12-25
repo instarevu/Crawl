@@ -1,6 +1,7 @@
 package com.ir.crawl.parse.field;
 
 
+import com.ir.config.retailer.amazon.FieldNames;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.parser.Parser;
 import com.ir.crawl.parse.query.Query;
@@ -58,7 +59,7 @@ public class Field {
                 case NOT_NULL:
                     if(!rule.validate(this, dataMap)) {
                         logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getField("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
-                        ErrorUtil.addError(rule.getError(), this, dataMap);
+                        ErrorUtil.addError(rule.getError(), parser.getErrorField(), dataMap);
                         return false;
                     }
                     break;
@@ -66,7 +67,7 @@ public class Field {
                     if(originField == null || !((DependencyRule)rule).getDependentFieldName().equalsIgnoreCase(originField)){
                         if(!rule.validate(this, parser, dataMap)) {
                             logger.debug("Validation Failed. Field: \"" + this + "\" for Rule:  \"" + rule + "\"");
-                            ErrorUtil.addError(rule.getError(), this, dataMap);
+                            ErrorUtil.addError(rule.getError(), parser.getErrorField(), dataMap);
                             return false;
                         }
                     }
@@ -74,7 +75,7 @@ public class Field {
                 case VALUE_CONTAINS:
                     if(!rule.validate(this, dataMap)) {
                         logger.debug("Validation Failed. ID: \"" + dataMap.get(parser.getField("id")) + "\"  Field: \"" + this + "\" for Rule: \"" + rule + "\"");
-                        ErrorUtil.addError(rule.getError(), this, dataMap);
+                        ErrorUtil.addError(rule.getError(), parser.getErrorField(), dataMap);
                         return false;
                     }
                     break;

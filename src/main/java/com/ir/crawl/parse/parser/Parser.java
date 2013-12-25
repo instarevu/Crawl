@@ -18,4 +18,12 @@ public interface Parser {
     public Set<Field> getFields();
 
     public Field getErrorField();
+
+    public String getDataType();
+
+    public String getRetailer();
+
+    public String getBaseURI();
+
+    public String getParserLabel();
 }

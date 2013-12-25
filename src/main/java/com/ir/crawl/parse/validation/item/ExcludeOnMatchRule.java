@@ -32,7 +32,7 @@ public class ExcludeOnMatchRule extends AbstractItemRule {
         String fieldData = ((String)dataMap.get(field)).toLowerCase();
         for(String token : tokens){
             if(fieldData.contains(token)){
-                logger.error("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());
+                logger.debug("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());
                 return false;
             }
         }

@@ -12,7 +12,7 @@ public abstract class AbstractRetailerConfig implements RetailerConfig {
 
     protected String baseURI = null;
 
-    protected int maxPagesToFetch = 2;
+    protected int maxPagesToFetch = 50;
 
     protected int noOfCrawlers = 1;
 

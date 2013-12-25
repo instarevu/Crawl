@@ -32,13 +32,13 @@ public class WebCrawler implements Runnable {
             + "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
 
 
-    public Parser valueParser = null;
+    public Parser parser = null;
 
     public String baseURI = null;
 
-    public WebCrawler(Parser valueParser, String baseURI){
-        this.valueParser = valueParser;
-        this.baseURI =  baseURI;
+    public WebCrawler(Parser parser){
+        this.parser = parser;
+        this.baseURI =  parser.getBaseURI();
     }
 
     /**

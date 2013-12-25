@@ -11,10 +11,6 @@ public class ParseResponse {
 
     private Map<Field, Object> dataMap = null;
 
-    public ParseResponse(boolean isEligibleForProcessing) {
-        this.isEligibleForProcessing = isEligibleForProcessing;
-    }
-
     public ParseResponse(boolean isEligibleForProcessing, Map<Field, Object> dataMap) {
         this.isEligibleForProcessing = isEligibleForProcessing;
         this.dataMap = dataMap;
