@@ -7,6 +7,7 @@ import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.index.es.Indexer;
+import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +17,7 @@ public class ItemCrawler extends WebCrawler {
 
     protected static final Logger logger = LogManager.getLogger(ItemCrawler.class.getName());
 
-    private AtomicInteger count = new AtomicInteger();
+    private static AtomicInteger count = new AtomicInteger();
 
     public ItemCrawler(){
         super(new ItemParser());
@@ -29,17 +30,20 @@ public class ItemCrawler extends WebCrawler {
     }
 
 
+    private static final String LOG_CRAWL_COMPLETE = "%s [%d-%d] [%4s] %s ";
+
     @Override
     public void visit(Page page) {
         String url = page.getWebURL().getURL();
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
             ParseResponse parseResponse = parser.parseAll(htmlParseData.getDocument());
+            System.out.println(StringUtil.prettifyMapForDebug(parseResponse.getDataMap()));
             if(parseResponse.isEligibleForProcessing()){
-                logger.info(parser.getParserLabel() + this.getMyId() + "-" + count.incrementAndGet() + " " + url.replaceAll(baseURI, ""));
+                logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.DONE, url.replaceAll(baseURI, "")));
                 Indexer.addDoc(parser, parseResponse.getDataMap());
             } else{
-                logger.info(parser.getParserLabel() + this.getMyId() + "-" +  count.incrementAndGet() + " " + url.replaceAll(baseURI, "") + "   -- Excluded. " + parseResponse.getDataMap().get(parser.getErrorField()));
+                logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.EXCL, url.replaceAll(baseURI, "")));
              }
             try {
                 Thread.sleep(0);
@@ -49,4 +53,7 @@ public class ItemCrawler extends WebCrawler {
         }
     }
 
+    public enum INDEX_STATUS {
+        DONE, EXCL, WERR;
+    }
 }

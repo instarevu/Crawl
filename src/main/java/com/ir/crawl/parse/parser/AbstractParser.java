@@ -33,9 +33,7 @@ public abstract class AbstractParser implements Parser {
 
     protected Set<Field> fields = new HashSet<Field>(0);
 
-    protected Set<Field> metaFields = new HashSet<Field>(0);
-
-    protected final Field errorField = field(_ERRORS).c();
+    protected Set<Field> metaFields = new HashSet<Field>(2);
 
     protected Set<ItemRule> itemRules = new HashSet<ItemRule>(0);
 
@@ -63,12 +61,11 @@ public abstract class AbstractParser implements Parser {
         for(Field f : fields){
             f.extract(this, dataMap, htmlDocument);
         }
-        // Purposefully done in separate loop
         for(Field f : fields){
             f.convertDataType(dataMap);
         }
-
         findErrors(dataMap);
+
         return new ParseResponse(true, dataMap);
     }
 
@@ -91,7 +88,7 @@ public abstract class AbstractParser implements Parser {
             if(f.getExclusionRule() != null){
                 boolean exclude = !f.getExclusionRule().validate(this, dataMap);
                 if(exclude){
-                    ErrorUtil.addError(f.getExclusionRule().getError(), errorField, dataMap);
+                    ErrorUtil.addError(f.getExclusionRule().getError(), getErrorField(), dataMap);
                     return false;
                 }
             }
@@ -100,13 +97,15 @@ public abstract class AbstractParser implements Parser {
     }
 
     public void findErrors(Map<Field, Object> dataMap){
+        for(Field field : fields){
+            field.isValid(this, dataMap);
+        }
         for(ItemRule itemRule : itemRules){
             if(!itemRule.validate(this, dataMap)){
-                ErrorUtil.addError(itemRule.getError(), errorField, dataMap);
+                ErrorUtil.addError(itemRule.getError(), getErrorField(), dataMap);
             }
         }
     }
-
 
     public FieldBuilder field(String fieldName){
         return new FieldBuilder(fieldName, String.class);
@@ -116,7 +115,6 @@ public abstract class AbstractParser implements Parser {
         return new FieldBuilder(fieldName, type);
     }
 
-
     public abstract boolean finalizeAndAddValue(Map<Field, Object> dataMap, Field field, String value);
 
     public Set<Field> getFields(){
@@ -124,7 +122,7 @@ public abstract class AbstractParser implements Parser {
     }
 
     public Field getErrorField() {
-        return errorField;
+        return getField(_ERRORS);
     }
 
     public String getDataType() {

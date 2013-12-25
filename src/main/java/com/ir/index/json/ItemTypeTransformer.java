@@ -76,8 +76,8 @@ public class ItemTypeTransformer {
                     url = true;
                 }
                 continue;
-            } else if(name.equals(_ERRORS)){
-                List<Error> errors = ErrorUtil.getErrorCodes(parser.getField(_ERRORS), data);
+            } else if(field.equals(parser.getErrorField())){
+                List<Error> errors = ErrorUtil.getErrorCodes(parser.getErrorField(), data);
                 if(errors != null){
                     String[] errorCodes = new String[errors.size()];
                     int i = 0;
