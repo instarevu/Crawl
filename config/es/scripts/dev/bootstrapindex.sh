@@ -8,7 +8,7 @@ curl -XDELETE ${server}'/amazon/'
 
 
 
-# CREATE INDEX  
+# CREATE INDEX
 echo 'Creating Index Amazon....'
 curl -XPUT ${server}'/amazon'
 
