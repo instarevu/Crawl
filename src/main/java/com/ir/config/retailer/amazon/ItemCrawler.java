@@ -6,13 +6,14 @@ import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
 import com.ir.core.error.DecisionError;
+import com.ir.core.error.Error;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.index.es.Indexer;
-import com.ir.util.StringUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ItemCrawler extends WebCrawler {
@@ -28,11 +29,12 @@ public class ItemCrawler extends WebCrawler {
 
     public boolean shouldVisit(WebURL url) {
         String href = url.getURL().toLowerCase();
-        return( !GENERIC_EXCLUSION_FILTERS.matcher(href).matches() && href.contains("/dp/") && href.startsWith(baseURI) ) ;
+        return( !GENERIC_EXCLUSION_FILTERS.matcher(href).matches() && href.startsWith(baseURI) && href.contains("/dp/") ) ;
     }
 
+    private static final String LOG_STATUS = "%s [%d-%d] [%4s] %s ";
 
-    private static final String LOG_CRAWL_COMPLETE = "%s [%d-%d] [%4s] %s ";
+    private static final String LOG_FAIL_STATUS = "%s [%d-%d] [%4s] %s - %s";
 
     @Override
     public void visit(Page page) {
@@ -40,15 +42,17 @@ public class ItemCrawler extends WebCrawler {
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
             ParseResponse parseResponse = parser.parseAll(htmlParseData.getDocument());
+            String relativeUrl = url.replaceAll(baseURI, "");
             if(parseResponse.isEligibleForProcessing()){
-                logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.DONE, url.replaceAll(baseURI, "")));
+                logger.info(String.format(LOG_STATUS, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.DONE, relativeUrl));
                 Indexer.addDoc(parser, parseResponse.getDataMap());
             } else{
                 if(ErrorUtil.isErrorCodePresent(parser.getErrorField(), parseResponse.getDataMap(), DecisionError.CAT_EXCLUSION)){
-                    logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.EXCL, url.replaceAll(baseURI, "")));
+                    logger.info(String.format(LOG_STATUS, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.EXCL, relativeUrl));
                     Indexer.addExItemTypeDoc(parser, parseResponse.getDataMap());
                 } else {
-                    logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.FATAL, url.replaceAll(baseURI, "")));
+                    List<Error> errors = ErrorUtil.getErrorCodes(parser.getErrorField(), parseResponse.getDataMap());
+                    logger.info(String.format(LOG_FAIL_STATUS, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.FAIL, relativeUrl, ErrorUtil.getErrorDescription(errors)));
                 }
              }
             try {
@@ -60,6 +64,6 @@ public class ItemCrawler extends WebCrawler {
     }
 
     public enum INDEX_STATUS {
-        DONE, EXCL, FATAL;
+        DONE, EXCL, FAIL;
     }
 }

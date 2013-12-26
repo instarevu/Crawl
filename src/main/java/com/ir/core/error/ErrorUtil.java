@@ -48,4 +48,15 @@ public class ErrorUtil {
         return false;
     }
 
+
+    public static String getErrorDescription(List<Error> errors){
+        String _e = " ";
+        if(errors != null){
+            for(Error error : errors){
+                _e += error.toString() + " ";
+            }
+        }
+        return _e;
+    }
+
 }

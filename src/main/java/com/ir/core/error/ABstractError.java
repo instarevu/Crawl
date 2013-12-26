@@ -25,6 +25,6 @@ public abstract class AbstractError implements Error {
     }
 
     public String toString(){
-        return "[Error:" + this.getCode() + "] - " + getDescription();
+        return "[E:" + this.getCode() + " - " + getDescription() + "]";
     }
 }
