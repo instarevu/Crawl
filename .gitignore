@@ -1,7 +1,8 @@
+logs
 /target
 .idea
 *.iml
 src/test/resources/test-data/
-*.DS_Store
+.DS_Store
 var/
 data/
