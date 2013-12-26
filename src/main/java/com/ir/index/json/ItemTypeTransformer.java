@@ -95,6 +95,14 @@ public class ItemTypeTransformer {
         return xb;
     }
 
+    public static XContentBuilder serializeExclItem(Parser parser, Map<Field, Object> dataMap) throws IOException {
+        XContentBuilder xb = XContentFactory.jsonBuilder();
+        xb.startObject();
+        addField(parser, xb, dataMap, _TIME);
+        xb.endObject();
+        return xb;
+    }
+
     private static void addObject(String objectLabel, Parser parser, XContentBuilder xb, Map<Field, Object> dataMap, String... fields)
             throws IOException {
         if(objectLabel != "")

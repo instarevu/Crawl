@@ -5,6 +5,8 @@ import com.ir.core.crawllib.crawler.Page;
 import com.ir.core.crawllib.crawler.WebCrawler;
 import com.ir.core.crawllib.parser.HtmlParseData;
 import com.ir.core.crawllib.url.WebURL;
+import com.ir.core.error.DecisionError;
+import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.bean.ParseResponse;
 import com.ir.index.es.Indexer;
 import com.ir.util.StringUtil;
@@ -38,12 +40,16 @@ public class ItemCrawler extends WebCrawler {
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
             ParseResponse parseResponse = parser.parseAll(htmlParseData.getDocument());
-            System.out.println(StringUtil.prettifyMapForDebug(parseResponse.getDataMap()));
             if(parseResponse.isEligibleForProcessing()){
                 logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.DONE, url.replaceAll(baseURI, "")));
                 Indexer.addDoc(parser, parseResponse.getDataMap());
             } else{
-                logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.EXCL, url.replaceAll(baseURI, "")));
+                if(ErrorUtil.isErrorCodePresent(parser.getErrorField(), parseResponse.getDataMap(), DecisionError.CAT_EXCLUSION)){
+                    logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.EXCL, url.replaceAll(baseURI, "")));
+                    Indexer.addExItemTypeDoc(parser, parseResponse.getDataMap());
+                } else {
+                    logger.info(String.format(LOG_CRAWL_COMPLETE, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.FATAL, url.replaceAll(baseURI, "")));
+                }
              }
             try {
                 Thread.sleep(0);
@@ -54,6 +60,6 @@ public class ItemCrawler extends WebCrawler {
     }
 
     public enum INDEX_STATUS {
-        DONE, EXCL, WERR;
+        DONE, EXCL, FATAL;
     }
 }

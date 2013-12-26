@@ -40,4 +40,12 @@ public class ErrorUtil {
         return errorList;
     }
 
+    public static boolean isErrorCodePresent(Field errorField, Map<Field, Object> dataMap, Error error){
+        List<Error> list = getErrorCodes(errorField, dataMap);
+        if(list != null && list.contains(error)){
+            return true;
+        }
+        return false;
+    }
+
 }
