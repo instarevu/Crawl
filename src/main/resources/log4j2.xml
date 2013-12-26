@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
     <Appenders>
-        <Console name="STDOUT" target="SYSTEM_OUT">
+        <File name="F1" fileName="logs/crawl.log" append="false">
+            <PatternLayout pattern="[%d{dd/mm/yyyy HH:mm:ss}] [%-5p] [%c{1}:%L] - %m%n"/>
+        </File>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
             <PatternLayout pattern="[%d{dd/mm/yyyy HH:mm:ss}] [%-5p] [%c{1}:%L] - %m%n"/>
         </Console>
+        <Async name="ASYNC">
+            <AppenderRef ref="F1"/>
+            <AppenderRef ref="CONSOLE"/>
+        </Async>
     </Appenders>
     <Loggers>
-        <Logger name="org.apache.log4j.xml" level="info"/>
         <Root level="info">
-            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="ASYNC"/>
         </Root>
     </Loggers>
 </Configuration>
