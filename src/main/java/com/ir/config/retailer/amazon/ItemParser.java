@@ -29,10 +29,10 @@ public class ItemParser extends AbstractParser {
         super("http://www.amazon.com/", Indexer.INDEX_TYPE_ITEM, "amazon");
         decisionFields = ImmutableSet.of(
             field(ID).addQ("input[id=ASIN]", "value").addQ("input[name*=ASIN]", "value").addNotNullRule(ParseError.MISSING_ID).c(),
-            field(NAV_CAT).addQ("li[class*=nav-category-button]").addQ("#nav-subnav", "data-category").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c()
+            field(NAV_CAT).addQ("li[class*=nav-category-button]").addQ("#nav-subnav", "data-category").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c(),
+            field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().setExclusionRule("Protection Plan").c()
         );
         fields = ImmutableSet.of(
-            field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().c(),
             field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addQ("a[href*=field-keywords]").addNotNullRule().c(),
             field(BREADCRUMB).addQ("div[class=detailBreadcrumb]").c(),
             field(MERCHANT).addQ("#merchant-info").addQ("div[class=buying] > b").del(DEL_TOKENS_MERCHANT).c(),
