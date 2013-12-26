@@ -5,7 +5,7 @@ import com.ir.core.Stage;
 public class DecisionError extends AbstractError {
 
 
-    public static final DecisionError CAT_EXCLUSION = new DecisionError(Stage.DECISION+"-020001", "Category Excluded.");
+    public static final DecisionError CAT_EXCLUSION = new DecisionError("020001", "Category Excluded.");
 
 
     private DecisionError(String code, String description){
