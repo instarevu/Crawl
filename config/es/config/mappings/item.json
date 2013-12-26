@@ -7,17 +7,17 @@
       "id": { "type": "string", "index": "not_analyzed" },
       "rnk": {
         "properties": {
-          "p": { "type": "integer", "index": "not_analyzed" }
+          "p": { "type": "integer" }
         }
       },
       "prc": {
         "properties": {
           "by": { "type": "string", "index": "not_analyzed" },
-          "l": { "type": "float", "index": "not_analyzed" },
-          "a": { "type": "float", "index": "not_analyzed" },
-          "s": { "type": "float", "index": "not_analyzed" },
-          "min": { "type": "float", "index": "not_analyzed" },
-          "max": { "type": "float", "index": "not_analyzed" },
+          "l": { "type": "float" },
+          "a": { "type": "float" },
+          "s": { "type": "float" },
+          "min": { "type": "float" },
+          "max": { "type": "float" },
           "__t": { "type": "date", "format": "basic_date_time_no_millis" }
         },
         "type": "nested"
@@ -25,7 +25,7 @@
       "rvw": {
         "properties": {
           "cnt": { "type": "integer", "index": "not_analyzed" },
-          "avg": { "type": "float", "index": "not_analyzed" }
+          "avg": { "type": "float" }
         }
       },
       "idnf": {
