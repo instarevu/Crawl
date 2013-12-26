@@ -28,37 +28,37 @@ public class ItemParser extends AbstractParser {
     public ItemParser(){
         super("http://www.amazon.com/", Indexer.INDEX_TYPE_ITEM, "amazon");
         decisionFields = ImmutableSet.of(
-                field(ID).addQ("input[id=ASIN]", "value").addQ("input[name*=ASIN]", "value").addNotNullRule(ParseError.MISSING_ID).c(),
-                field(NAV_CAT).addQ("li[class*=nav-category-button]").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c()
+            field(ID).addQ("input[id=ASIN]", "value").addQ("input[name*=ASIN]", "value").addNotNullRule(ParseError.MISSING_ID).c(),
+            field(NAV_CAT).addQ("li[class*=nav-category-button]").addQ("#nav-subnav", "data-category").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c()
         );
         fields = ImmutableSet.of(
-                field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().c(),
-                field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addNotNullRule().c(),
-                field(BREADCRUMB).addQ("div[class=detailBreadcrumb]").c(),
-                field(MERCHANT).addQ("#merchant-info").addQ("div[class=buying] > b").del(DEL_TOKENS_MERCHANT).c(),
-                field(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").addQ("#listPriceValue").del(DEL_TOKENS_PRICE).c(),
-                field(PRC_ACTUAL, Float.class).addQ("#priceblock_ourprice").addQ("#actualPriceValue").del(DEL_TOKENS_PRICE).c(),
-                field(PRC_MIN, Float.class).c(),
-                field(PRC_MAX, Float.class).c(),
-                field(PRC_SALE, Float.class).addQ("#priceblock_saleprice").del(DEL_TOKENS_PRICE).c(),
-                field(IDF_MODEL).addQ("li:contains(Item model number)").addQ("td:contains(Item model number) ~ td").del("Item model number:").c(),
-                field(IDF_UPC).addQ("li:contains(UPC)").addQ("td:contains(UPC) ~ td").del("UPC:").c(),
-                field(IDF_ISBN10).addQ("li:contains(ISBN-10)").del("ISBN-10:").c(),
-                field(IDF_ISBN13).addQ("li:contains(ISBN-13)").del("ISBN-13:").c(),
-                field(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").c(),
-                field(RANK_L2).addDependsRule(RANK_L1).c(),
-                field(RANK_L3).addDependsRule(RANK_L2).c(),
-                field(REVIEW_AVG, Float.class).addQ("#avgRating").c(),
-                field(REVIEW_COUNT, Integer.class).addQ("#summaryStars").del(",").c(),
-                field(VRNT_SPEC).addQ("div[class=disclaim]").addDependsRule(VRNT_IDS).c(),
-                field(VRNT_IDS).addQ(new RawStringQuery("script[data-a-state*=twisterData]")).c(),
-                field(URL).addQ("link[rel=canonical]", "href").addNotNullRule().c(),
-                field(URL_IMG).addQ("#landingImage", "src").addQ("#main-image", "src").addQ("#prodImage", "src").addNotNullRule().c()
+            field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().c(),
+            field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addQ("a[href*=field-keywords]").addNotNullRule().c(),
+            field(BREADCRUMB).addQ("div[class=detailBreadcrumb]").c(),
+            field(MERCHANT).addQ("#merchant-info").addQ("div[class=buying] > b").del(DEL_TOKENS_MERCHANT).c(),
+            field(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").addQ("#listPriceValue").del(DEL_TOKENS_PRICE).c(),
+            field(PRC_ACTUAL, Float.class).addQ("#priceblock_ourprice").addQ("#actualPriceValue").del(DEL_TOKENS_PRICE).c(),
+            field(PRC_MIN, Float.class).c(),
+            field(PRC_MAX, Float.class).c(),
+            field(PRC_SALE, Float.class).addQ("#priceblock_saleprice").del(DEL_TOKENS_PRICE).c(),
+            field(IDF_MODEL).addQ("li:contains(Item model number)").addQ("td:contains(Item model number) ~ td").del("Item model number:").c(),
+            field(IDF_UPC).addQ("li:contains(UPC)").addQ("td:contains(UPC) ~ td").del("UPC:").c(),
+            field(IDF_ISBN10).addQ("li:contains(ISBN-10)").del("ISBN-10:").c(),
+            field(IDF_ISBN13).addQ("li:contains(ISBN-13)").del("ISBN-13:").c(),
+            field(RANK_L1).addQ("#SalesRank").del("Best Sellers Rank", "Amazon", ":").c(),
+            field(RANK_L2).addDependsRule(RANK_L1).c(),
+            field(RANK_L3).addDependsRule(RANK_L2).c(),
+            field(REVIEW_AVG, Float.class).addQ("#avgRating").c(),
+            field(REVIEW_COUNT, Integer.class).addQ("#summaryStars").del(",").c(),
+            field(VRNT_SPEC).addQ("div[class=disclaim]").addDependsRule(VRNT_IDS).c(),
+            field(VRNT_IDS).addQ(new RawStringQuery("script[data-a-state*=twisterData]")).c(),
+            field(URL).addQ("link[rel=canonical]", "href").addNotNullRule().c(),
+            field(URL_IMG).addQ("#landingImage", "src").addQ("#main-image", "src").addQ("#prodImage", "src").addNotNullRule().c()
         );
         itemRules = ImmutableSet.of(
-                new AtleastOneRule(ParseError.MISSING_ITEM_CLASSIFIER, RANK_L1, BREADCRUMB),
-                new AtleastOneRule(ParseError.MISSING_PRICE, PRC_LIST, PRC_ACTUAL, PRC_MIN, PRC_MAX),
-                (ItemRule)new AtleastOneRule(ParseError.MISSING_IDENTIFIER, IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
+            new AtleastOneRule(ParseError.MISSING_ITEM_CLASSIFIER, RANK_L1, BREADCRUMB),
+            new AtleastOneRule(ParseError.MISSING_PRICE, PRC_LIST, PRC_ACTUAL, PRC_MIN, PRC_MAX),
+            (ItemRule)new AtleastOneRule(ParseError.MISSING_IDENTIFIER, IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13)
         );
     }
 
