@@ -102,24 +102,11 @@ public class CrawlController extends Configurable {
 	 *            the number of concurrent threads that will be contributing in
 	 *            this crawling session.
 	 */
-	public <T extends WebCrawler> void start(final Class<T> _c, final int numberOfCrawlers) {
-		this.start(_c, numberOfCrawlers, true);
+	public <T extends WebCrawler> void start(final Class<T> _c, final int numberOfCrawlers, final String clusterId) {
+		this.start(_c, numberOfCrawlers, true, clusterId);
 	}
 
-	/**
-	 * Start the crawling session and return immediately.
-	 * 
-	 * @param _c
-	 *            the class that implements the logic for crawler threads
-	 * @param numberOfCrawlers
-	 *            the number of concurrent threads that will be contributing in
-	 *            this crawling session.
-	 */
-	public <T extends WebCrawler> void startNonBlocking(final Class<T> _c, final int numberOfCrawlers) {
-		this.start(_c, numberOfCrawlers, false);
-	}
-
-	protected <T extends WebCrawler> void start(final Class<T> _c, final int numberOfCrawlers, boolean isBlocking) {
+	protected <T extends WebCrawler> void start(final Class<T> _c, final int numberOfCrawlers, boolean isBlocking, String clusterId) {
 		try {
 			finished = false;
 			crawlersLocalData.clear();
@@ -130,6 +117,7 @@ public class CrawlController extends Configurable {
 				T crawler = _c.newInstance();
 				Thread thread = new Thread(crawler, "ItemCrawler " + i);
 				crawler.setThread(thread);
+                crawler.setClusterId(clusterId);
 				crawler.init(i, this);
 				thread.start();
 				crawlers.add(crawler);

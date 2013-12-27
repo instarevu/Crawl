@@ -32,14 +32,11 @@ public class WebCrawler implements Runnable {
             + "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
 
 
-    public Parser parser = null;
+    protected Parser parser = null;
 
-    public String baseURI = null;
+    protected String baseURI = null;
 
-    public WebCrawler(Parser parser){
-        this.parser = parser;
-        this.baseURI =  parser.getBaseURI();
-    }
+    protected String clusterId = null;
 
     /**
 	 * The id associated to the crawler thread running this instance
@@ -96,6 +93,11 @@ public class WebCrawler implements Runnable {
 	 */
 	private boolean isWaitingForNewURLs;
 
+    public WebCrawler(Parser parser){
+        this.parser = parser;
+        this.baseURI =  parser.getBaseURI();
+    }
+
 	/**
 	 * Initializes the current instance of the crawler
 	 * 
@@ -115,34 +117,21 @@ public class WebCrawler implements Runnable {
 		this.isWaitingForNewURLs = false;
 	}
 
-	/**
-	 * Get the id of the current crawler instance
-	 * 
-	 * @return the id of the current crawler instance
-	 */
+    public void setClusterId(String clusterId){
+        this.clusterId = clusterId;
+    }
+
 	public int getMyId() {
 		return myId;
 	}
 
-	public CrawlController getMyController() {
-		return myController;
-	}
 
-	/**
-	 * This function is called just before starting the crawl by this crawler
-	 * instance. It can be used for setting up the data structures or
-	 * initializations needed by this crawler instance.
-	 */
 	public void onStart() {
 		// Do nothing by default
 		// Sub-classed can override this to add their custom functionality
 	}
 
-	/**
-	 * This function is called just before the termination of the current
-	 * crawler instance. It can be used for persisting in-memory data or other
-	 * finalization tasks.
-	 */
+
 	public void onBeforeExit() {
 		// Do nothing by default
 		// Sub-classed can override this to add their custom functionality

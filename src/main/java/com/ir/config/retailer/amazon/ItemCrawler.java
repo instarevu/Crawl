@@ -22,10 +22,15 @@ public class ItemCrawler extends WebCrawler {
 
     private static AtomicInteger count = new AtomicInteger();
 
+    private Indexer indexer;
+
     public ItemCrawler(){
         super(new ItemParser());
     }
 
+    public void onStart(){
+        this.indexer = new Indexer(clusterId);
+    }
 
     public boolean shouldVisit(WebURL url) {
         String href = url.getURL().toLowerCase();
@@ -45,11 +50,11 @@ public class ItemCrawler extends WebCrawler {
             String relativeUrl = url.replaceAll(baseURI, "");
             if(parseResponse.isEligibleForProcessing()){
                 logger.info(String.format(LOG_STATUS, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.DONE, relativeUrl));
-                Indexer.addDoc(parser, parseResponse.getDataMap());
+                indexer.addDoc(parser, parseResponse.getDataMap());
             } else{
                 if(ErrorUtil.isErrorCodePresent(parser.getErrorField(), parseResponse.getDataMap(), DecisionError.CAT_EXCLUSION)){
                     logger.info(String.format(LOG_STATUS, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.EXCL, relativeUrl));
-                    Indexer.addExItemTypeDoc(parser, parseResponse.getDataMap());
+                    indexer.addExItemTypeDoc(parser, parseResponse.getDataMap());
                 } else {
                     List<Error> errors = ErrorUtil.getErrorCodes(parser.getErrorField(), parseResponse.getDataMap());
                     logger.info(String.format(LOG_FAIL_STATUS, parser.getParserLabel(), getMyId(), count.incrementAndGet(), INDEX_STATUS.FAIL, relativeUrl, ErrorUtil.getErrorDescription(errors)));

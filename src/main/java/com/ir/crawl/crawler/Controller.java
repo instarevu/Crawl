@@ -13,10 +13,13 @@ import com.ir.core.crawllib.robotstxt.RobotstxtServer;
 public class Controller {
 
     public static void main(String[] args) throws Exception {
-        startCrawlProcess(AmazonItemRetailerConfig.KEY);
+        if(args.length <= 0)
+            throw new IllegalArgumentException("Invalid number of arguments");
+        String clusterId = args[0];
+        startCrawlProcess(AmazonItemRetailerConfig.KEY, clusterId);
     }
 
-    public static void startCrawlProcess(String crawlProcessKey) throws Exception {
+    public static void startCrawlProcess(String clusterId, String crawlProcessKey) throws Exception {
         RetailerConfig retailerConfig = AbstractRetailerConfig.getConfigInstance(crawlProcessKey);
         CrawlConfig crawlConfig = new CrawlConfig();
         crawlConfig.setCrawlStorageFolder(retailerConfig.getCrawlStorageLocation());
@@ -29,7 +32,7 @@ public class Controller {
         for(String seed : retailerConfig.getSeeds()){
             controller.addSeed(seed);
         }
-        controller.start(retailerConfig.getCrawlClass(), retailerConfig.getNoOfCrawlers());
+        controller.start(retailerConfig.getCrawlClass(), retailerConfig.getNoOfCrawlers(), clusterId);
     }
 
 }
