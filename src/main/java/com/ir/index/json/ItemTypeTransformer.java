@@ -126,7 +126,7 @@ public class ItemTypeTransformer {
             throws IOException {
         String rankSpec = (String)dataMap.get(parser.getField(fieldName));
         if(rankSpec != null){
-            String[] tokens = rankSpec.split("in");
+            String[] tokens = rankSpec.split(" in ");
             if(tokens.length > 1){
                 xb.startObject();
                 xb.field("p", Integer.parseInt(tokens[0].trim().replaceAll(",", "")));
