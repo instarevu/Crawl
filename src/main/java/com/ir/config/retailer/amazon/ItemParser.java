@@ -30,10 +30,10 @@ public class ItemParser extends AbstractParser {
         decisionFields = ImmutableSet.of(
             field(ID).addQ("input[id=ASIN]", "value").addQ("input[name*=ASIN]", "value").addNotNullRule(ParseError.MISSING_ID).c(),
             field(NAV_CAT).addQ("li[class*=nav-category-button]").addQ("#nav-subnav", "data-category").addNotNullRule().setExclusionRule(EXCLUSION_CATEGORIES).c(),
-            field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().setExclusionRule("Protection Plan").c()
+            field(TITLE).addQ("h1[id=title]").addQ("#btAsinTitle").addQ("h1[class*=parseasinTitle]").addNotNullRule().setExclusionRule("Protection Plan").c(),
+            field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addQ("a[href*=field-keywords]").addNotNullRule().c()
         );
         fields = ImmutableSet.of(
-            field(BRAND).addQ("#brand").addQ("a[href*=brandtextbin]").addQ("#mbc", "data-brand").addQ("a[href*=field-keywords]").addNotNullRule().c(),
             field(BREADCRUMB).addQ("div[class=detailBreadcrumb]").c(),
             field(MERCHANT).addQ("#merchant-info").addQ("div[class=buying] > b").del(DEL_TOKENS_MERCHANT).c(),
             field(PRC_LIST, Float.class).addQ("td[class*=a-text-strike]").addQ("#listPriceValue").del(DEL_TOKENS_PRICE).c(),

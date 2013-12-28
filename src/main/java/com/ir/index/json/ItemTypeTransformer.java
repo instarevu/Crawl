@@ -98,6 +98,8 @@ public class ItemTypeTransformer {
     public static XContentBuilder serializeExclItem(Parser parser, Map<Field, Object> dataMap) throws IOException {
         XContentBuilder xb = XContentFactory.jsonBuilder();
         xb.startObject();
+        addField(parser, xb, dataMap, BRAND);
+        addField(parser, xb, dataMap, NAV_CAT);
         addField(parser, xb, dataMap, _TIME);
         xb.endObject();
         return xb;
