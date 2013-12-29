@@ -16,6 +16,6 @@ for item in "${items[@]}"
 do
     files=$(ls -l ${dir} | wc -l)
 	url='http://www.amazon.com/dp/'${item}
-	echo echo $(date)'Downloaded: '$files'  |   Downloading: '$url
+	echo echo $(date)' Downloaded: '$files'  |   Downloading: '$url
 	wget $url -q -O ${dir}/${item}
 done
