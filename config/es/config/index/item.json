@@ -1,0 +1,13 @@
+"settings": {
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "brandAnalyzer": {
+            "tokenizer": "keyword",
+            "filter": ["lowercase"],
+            "type": "custom"
+          }
+        }
+      }
+    }
+}
