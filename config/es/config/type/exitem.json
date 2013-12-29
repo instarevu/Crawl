@@ -1,0 +1,13 @@
+{
+  "item": {
+    "_source": {
+      "enabled": true
+    },
+    "properties": {
+      "id": { "type": "string", "index": "not_analyzed" },
+      "brand": { "type": "string", "index": "analyzed", "index_analyzer":"brandAnalyzer", "search_analyzer":"brandAnalyzer" },
+      "cat": { "type": "string", "index": "not_analyzed" },
+      "@t": { "type": "date", "format": "basic_date_time_no_millis" }
+    }
+  }
+}
