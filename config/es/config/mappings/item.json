@@ -5,34 +5,28 @@
     },
     "properties": {
       "id": { "type": "string", "index": "not_analyzed" },
-      "b": { "type": "string", "index": "analyzed", "index_analyzer":"brandAnalyzer", "search_analyzer":"brandAnalyzer" },
-      "rnk_p_1": { "type": "integer" },
-      "rnk_p_2": { "type": "integer" },
-      "rnk_p_3": { "type": "integer" },
-      "price": {
-        "properties": {
-          "by": { "type": "string", "index": "not_analyzed" },
-          "l": { "type": "float" },
-          "a": { "type": "float" },
-          "s": { "type": "float" },
-          "min": { "type": "float" },
-          "max": { "type": "float" },
-          "__t": { "type": "date", "format": "basic_date_time_no_millis" }
-        },
-        "type": "nested"
-      },
+      "brand": { "type": "string", "index": "analyzed", "index_analyzer":"brandAnalyzer", "search_analyzer":"brandAnalyzer" },
+      "rnk_1_p": { "type": "integer" },
+      "rnk_2_p": { "type": "integer" },
+      "rnk_3_p": { "type": "integer" },
+      "prc_by": { "type": "string", "index_analyzer":"brandAnalyzer", "search_analyzer":"brandAnalyzer" },
+      "prc_l": { "type": "float" },
+      "prc_a": { "type": "float" },
+      "prc_s": { "type": "float" },
+      "prc_min": { "type": "float" },
+      "prc_max": { "type": "float" },
       "rvw_cnt": { "type": "integer" },
       "rvw_avg": { "type": "float" },
-      "idnf_m": { "type": "string", "index": "not_analyzed" },
-      "idnf_i10": { "type": "string", "index": "not_analyzed" },
-      "idnf_i13": { "type": "string", "index": "not_analyzed" },
-      "idnf_s": { "type": "string", "index": "not_analyzed" },
-      "idnf_u": { "type": "string", "index": "not_analyzed" },
+      "idf_m": { "type": "string", "index": "not_analyzed" },
+      "idf_i10": { "type": "string", "index": "not_analyzed" },
+      "idf_i13": { "type": "string", "index": "not_analyzed" },
+      "idf_s": { "type": "string", "index": "not_analyzed" },
       "vrnt_id": { "type": "string", "index": "not_analyzed" },
       "vrnt_spec": { "type": "string", "index": "not_analyzed" },
+      "url_can": { "type": "string", "index": "no" },
       "url_img": { "type": "string", "index": "no" },
-      "__e": { "type": "string", "index": "not_analyzed" },
-      "__t": { "type": "date", "format": "basic_date_time_no_millis" }
+      "@e": { "type": "string", "index": "not_analyzed" },
+      "@t": { "type": "date", "format": "basic_date_time_no_millis" }
     }
   }
 }
