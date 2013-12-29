@@ -26,4 +26,6 @@ public interface Parser {
     public String getBaseURI();
 
     public String getParserLabel();
+
+    public void dedupeValues(Map<Field, Object> dataMap);
 }

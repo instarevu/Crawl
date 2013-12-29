@@ -75,7 +75,7 @@ public class WebCrawler implements Runnable {
 	private RobotstxtServer robotstxtServer;
 
 	/**
-	 * The DocIDServer that is used by this crawler instance to map each URL to
+	 * The DocIDServer that is used by this crawler instance to map each URL_CAN to
 	 * a unique docid.
 	 */
 	private DocIDServer docIdServer;
@@ -86,7 +86,7 @@ public class WebCrawler implements Runnable {
 	private Frontier frontier;
 
 	/**
-	 * Is the current crawler instance waiting for new URLs? This field is
+	 * Is the current crawler instance waiting for new URLs? This fb is
 	 * mainly used by the controller to detect whether all of the crawler
 	 * instances are waiting for new URLs and therefore there is no more work
 	 * and crawling can be stopped.

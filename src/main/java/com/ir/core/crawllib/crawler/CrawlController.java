@@ -263,22 +263,22 @@ public class CrawlController extends Configurable {
 	}
 
 	/**
-	 * Adds a new seed URL. A seed URL is a URL that is fetched by the crawler
+	 * Adds a new seed URL_CAN. A seed URL_CAN is a URL_CAN that is fetched by the crawler
 	 * to extract new URLs in it and follow them for crawling.
 	 * 
 	 * @param pageUrl
-	 *            the URL of the seed
+	 *            the URL_CAN of the seed
 	 */
 	public void addSeed(String pageUrl) {
 		addSeed(pageUrl, -1);
 	}
 
 	/**
-	 * Adds a new seed URL. A seed URL is a URL that is fetched by the crawler
+	 * Adds a new seed URL_CAN. A seed URL_CAN is a URL_CAN that is fetched by the crawler
 	 * to extract new URLs in it and follow them for crawling. You can also
-	 * specify a specific document id to be assigned to this seed URL. This
+	 * specify a specific document id to be assigned to this seed URL_CAN. This
 	 * document id needs to be unique. Also, note that if you add three seeds
-	 * with document ids 1,2, and 7. Then the next URL that is found during the
+	 * with document ids 1,2, and 7. Then the next URL_CAN that is found during the
 	 * crawl will get a doc id of 8. Also you need to ensure to add seeds in
 	 * increasing order of document ids.
 	 * 
@@ -287,21 +287,21 @@ public class CrawlController extends Configurable {
 	 * which get the same document ids as the previous crawl.
 	 * 
 	 * @param pageUrl
-	 *            the URL of the seed
+	 *            the URL_CAN of the seed
 	 * @param docId
-	 *            the document id that you want to be assigned to this seed URL.
+	 *            the document id that you want to be assigned to this seed URL_CAN.
 	 * 
 	 */
 	public void addSeed(String pageUrl, int docId) {
 		String canonicalUrl = URLCanonicalizer.getCanonicalURL(pageUrl);
 		if (canonicalUrl == null) {
-			logger.error("Invalid seed URL: " + pageUrl);
+			logger.error("Invalid seed URL_CAN: " + pageUrl);
 			return;
 		}
 		if (docId < 0) {
 			docId = docIdServer.getDocId(canonicalUrl);
 			if (docId > 0) {
-				// This URL is already seen.
+				// This URL_CAN is already seen.
 				return;
 			}
 			docId = docIdServer.getNewDocID(canonicalUrl);
@@ -331,13 +331,13 @@ public class CrawlController extends Configurable {
 	 * is aware of the previously seen Urls and won't re-crawl them.
 	 * 
 	 * Note that if you add three seen Urls with document ids 1,2, and 7. Then
-	 * the next URL that is found during the crawl will get a doc id of 8. Also
+	 * the next URL_CAN that is found during the crawl will get a doc id of 8. Also
 	 * you need to ensure to add seen Urls in increasing order of document ids. 
 	 * 
 	 * @param url
-	 *            the URL of the page
+	 *            the URL_CAN of the page
 	 * @param docId
-	 *            the document id that you want to be assigned to this URL.
+	 *            the document id that you want to be assigned to this URL_CAN.
 	 * 
 	 */
 	public void addSeenUrl(String url, int docId) {

@@ -5,7 +5,6 @@ import com.ir.core.error.Error;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.field.Field;
 import com.ir.crawl.parse.parser.Parser;
-import org.elasticsearch.common.joda.time.DateTime;
 import org.elasticsearch.common.joda.time.format.DateTimeFormatter;
 import org.elasticsearch.common.joda.time.format.ISODateTimeFormat;
 import org.elasticsearch.common.xcontent.XContentBuilder;
@@ -25,7 +24,7 @@ public class ItemTypeTransformer {
 
 
     public static XContentBuilder serialize(Parser parser, Map<Field, Object> data) throws IOException {
-        boolean rank = false, review = false, variant = false, identifier = false, price = false, url = false;
+        boolean rank = false;
         XContentBuilder xb = XContentFactory.jsonBuilder();
         xb.startObject();
         for(Map.Entry<Field, Object> entry : data.entrySet()){
@@ -33,47 +32,10 @@ public class ItemTypeTransformer {
             String name = field.getName();
             if(name.equals(RANK_L1) || name.equals(RANK_L2) || name.equalsIgnoreCase(RANK_L3)){
                 if(!rank){
-                    xb.startArray("rnk");
                     addRankSpec(parser, xb, RANK_L1, data);
                     addRankSpec(parser, xb, RANK_L2, data);
                     addRankSpec(parser, xb, RANK_L3, data);
-                    xb.endArray();
                     rank = true;
-                }
-                continue;
-            } else if(name.equals(PRC_ACTUAL) || name.equals(PRC_LIST) ||
-                    name.equals(PRC_MAX) || name.equals(PRC_MIN) ||
-                    name.equals(PRC_SALE) || name.equals(MERCHANT) ){
-                if(!price){
-                    xb.startArray("prc");
-                    addObject("", parser, xb, data, PRC_ACTUAL, PRC_LIST, PRC_SALE, PRC_MIN, PRC_MAX, MERCHANT, _TIME);
-                    xb.endArray();
-                    price = true;
-                }
-                continue;
-            } else if(name.equals(REVIEW_AVG) || name.equals(REVIEW_COUNT)){
-                if(!review){
-                    addObject("rvw", parser, xb, data, REVIEW_AVG, REVIEW_COUNT);
-                    review = true;
-                }
-                continue;
-            } else if(name.equals(VRNT_IDS) || name.equals(VRNT_SPEC)){
-                if(!variant){
-                    addObject("vrnt", parser, xb, data, VRNT_SPEC, VRNT_IDS);
-                    variant = true;
-                }
-                continue;
-            } else if(name.equals(IDF_MODEL) || name.equals(IDF_UPC) ||
-                    name.equals(IDF_ISBN10) || name.equals(IDF_ISBN13) ){
-                if(!identifier){
-                    addObject("idnf", parser, xb, data, IDF_MODEL, IDF_UPC, IDF_ISBN10, IDF_ISBN13);
-                    identifier = true;
-                }
-                continue;
-            } else if(name.equals(URL) || name.equals(URL_IMG)){
-                if(!url){
-                    addObject("url", parser, xb, data, URL, URL_IMG);
-                    url = true;
                 }
                 continue;
             } else if(field.equals(parser.getErrorField())){
@@ -99,7 +61,7 @@ public class ItemTypeTransformer {
         XContentBuilder xb = XContentFactory.jsonBuilder();
         xb.startObject();
         addField(parser, xb, dataMap, BRAND);
-        addField(parser, xb, dataMap, NAV_CAT);
+        addField(parser, xb, dataMap, CAT);
         addField(parser, xb, dataMap, _TIME);
         xb.endObject();
         return xb;
@@ -130,10 +92,8 @@ public class ItemTypeTransformer {
         if(rankSpec != null){
             String[] tokens = rankSpec.split(" in ");
             if(tokens.length > 1){
-                xb.startObject();
-                xb.field("p", Integer.parseInt(tokens[0].trim().replaceAll(",", "")));
-                xb.field("c", tokens[1].trim());
-                xb.endObject();
+                xb.field(fieldName+"_p", Integer.parseInt(tokens[0].trim().replaceAll(",", "")));
+                xb.field(fieldName+"_c", tokens[1].trim());
             }
         }
     }

@@ -1,7 +1,6 @@
 package com.ir.crawl.parse.field;
 
 
-import com.ir.config.retailer.amazon.FieldNames;
 import com.ir.core.error.ErrorUtil;
 import com.ir.crawl.parse.parser.Parser;
 import com.ir.crawl.parse.query.Query;
@@ -89,7 +88,7 @@ public class Field {
         for(Query query : queries){
             String data = query.mineForValue(doc);
             if(!(data == null || data.equalsIgnoreCase(""))){
-                data = StringUtil.purgeSpecialChars(data);
+                data = StringUtil.purgeSpecialChars(data).trim();
                 if(deleteTokens != null)
                     data = StringUtil.deleteListOfTokens(data, deleteTokens);
                 parser.finalizeAndAddValue(dataMap, this, data);

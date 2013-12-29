@@ -24,7 +24,7 @@ public class CoreParser extends Configurable {
 	}
 
 	public boolean parse(Page page, String contextURL) {
-        //TODO: Fix context URL to be fetched from crawl config
+        //TODO: Fix context URL_CAN to be fetched from crawl config
         Document document = Jsoup.parse(page.getHtmlData(), "http://www.amazon.com");
 		HtmlParseData parseData = new HtmlParseData();
 		parseData.setDocument(document);

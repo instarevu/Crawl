@@ -1,7 +1,7 @@
 package com.ir.crawl.parse.field;
 
 
-import com.ir.core.error.*;
+import com.ir.core.error.DecisionError;
 import com.ir.core.error.Error;
 import com.ir.crawl.parse.query.AttrValueQuery;
 import com.ir.crawl.parse.query.Query;
@@ -11,7 +11,6 @@ import com.ir.crawl.parse.validation.field.NotNullRule;
 import com.ir.crawl.parse.validation.field.Rule;
 import com.ir.crawl.parse.validation.item.ExcludeOnMatchRule;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -35,21 +34,21 @@ public class FieldBuilder {
         this.dataType = dataType;
     }
 
-    public FieldBuilder addQ(Query query){
+    public FieldBuilder q(Query query){
         queries.add(query);
         return this;
     }
 
     public FieldBuilder del(String... tokens){
         if(deleteTokens == null)
-            deleteTokens = new HashSet<String>(5);
+            deleteTokens = new LinkedHashSet<String>(5);
         for(String token : tokens){
-            deleteTokens.add(token);
+            deleteTokens.add("(?i)"+token);
         }
         return this;
     }
 
-    public FieldBuilder addQ(String... queryStr){
+    public FieldBuilder q(String... queryStr){
         if(queryStr.length < 1 || queryStr.length > 2 )
             throw new IllegalArgumentException("Need 1 String minimum, 2 Maximum.");
         if(queryStr.length == 1)
@@ -59,27 +58,22 @@ public class FieldBuilder {
         return this;
     }
 
-    public FieldBuilder addV(Rule rule){
-        rules.add(rule);
-        return this;
-    }
-
-    public FieldBuilder addNotNullRule(){
+    public FieldBuilder notNull(){
         rules.add(new NotNullRule());
         return this;
     }
 
-    public FieldBuilder addNotNullRule(Error error){
+    public FieldBuilder notNull(Error error){
         rules.add(new NotNullRule(error));
         return this;
     }
 
-    public FieldBuilder addDependsRule(String dependsField){
+    public FieldBuilder depends(String dependsField){
         rules.add(new DependencyRule(dependsField));
         return this;
     }
 
-    public FieldBuilder setExclusionRule(String... tokens){
+    public FieldBuilder excludeIf(String... tokens){
         exclusionTokens = tokens;
         return this;
     }

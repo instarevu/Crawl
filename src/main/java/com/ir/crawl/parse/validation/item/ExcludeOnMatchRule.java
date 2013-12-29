@@ -29,7 +29,10 @@ public class ExcludeOnMatchRule extends AbstractItemRule {
 
     @Override
     public boolean validate(Parser parser, Map<Field, Object> dataMap) {
-        String fieldData = ((String)dataMap.get(field)).toLowerCase();
+        String fieldData = ((String)dataMap.get(field));
+        if(fieldData == null)
+            return true;
+        fieldData = fieldData.toLowerCase();
         for(String token : tokens){
             if(fieldData.contains(token)){
                 logger.debug("Failed on Rule: " + this.getRuleType() + " - " + error.getDescription());

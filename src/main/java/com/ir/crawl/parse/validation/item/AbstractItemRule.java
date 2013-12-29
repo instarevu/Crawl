@@ -9,7 +9,7 @@ import java.util.Map;
 
 public abstract class AbstractItemRule implements ItemRule {
 
-    String description = "Atleast one field must be present.";
+    String description = "Atleast one fb must be present.";
 
     ItemRuleType ruleType;
 

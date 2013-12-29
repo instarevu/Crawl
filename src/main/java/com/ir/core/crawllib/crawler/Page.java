@@ -17,7 +17,7 @@ import java.nio.charset.Charset;
 public class Page {
 
     /**
-     * The URL of this page.
+     * The URL_CAN of this page.
      */
     protected WebURL url;
 

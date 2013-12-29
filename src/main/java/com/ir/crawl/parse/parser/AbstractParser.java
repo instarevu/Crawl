@@ -48,8 +48,8 @@ public abstract class AbstractParser implements Parser {
         this.retailer = retailer;
         this.dataType = dataType;
         this.parserLabel = "[" + getRetailer() + "-" + getDataType() + "]";
-        this.metaFields.add(field(_TIME).c());
-        this.metaFields.add(field(_ERRORS).c());
+        this.metaFields.add(fb(_TIME).c());
+        this.metaFields.add(fb(_ERRORS).c());
     }
 
     public ParseResponse parseAll(Document htmlDocument) {
@@ -65,7 +65,7 @@ public abstract class AbstractParser implements Parser {
             f.convertDataType(dataMap);
         }
         findErrors(dataMap);
-
+        dedupeValues(dataMap);
         return new ParseResponse(true, dataMap);
     }
 
@@ -73,7 +73,6 @@ public abstract class AbstractParser implements Parser {
         Map<Field, Object> dataMap = new LinkedHashMap<Field, Object>();
         String now = ItemTypeTransformer.DATE_FORMATTER.print(new DateTime());
         dataMap.put(getField(_TIME), now);
-        dataMap.put(getField(MERCHANT), retailer);
         return dataMap;
     }
 
@@ -107,11 +106,13 @@ public abstract class AbstractParser implements Parser {
         }
     }
 
-    public FieldBuilder field(String fieldName){
+    public abstract void dedupeValues(Map<Field, Object> dataMap);
+
+    public FieldBuilder fb(String fieldName){
         return new FieldBuilder(fieldName, String.class);
     }
 
-    public FieldBuilder field(String fieldName, Class type){
+    public FieldBuilder fb(String fieldName, Class type){
         return new FieldBuilder(fieldName, type);
     }
 

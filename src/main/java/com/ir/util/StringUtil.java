@@ -1,14 +1,11 @@
 package com.ir.util;
 
-import com.google.common.collect.ImmutableList;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
+import com.ir.config.retailer.amazon.FieldNames;
+import com.ir.crawl.parse.field.Field;
+import com.ir.crawl.parse.field.GenericFieldNames;
+import com.sun.tools.javac.jvm.Gen;
 import org.apache.commons.lang.StringEscapeUtils;
 
-import java.io.InputStream;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -16,14 +13,13 @@ public class StringUtil {
 
     private StringUtil(){}
 
-
     private static final String CHAR_EMPTY = "";
 
     private static final String CHAR_WHITESPACE = "";
 
     public static String deleteListOfTokens(String input, Set<String> deleteTokens){
         for(String token : deleteTokens){
-            input = input.replaceAll(token, CHAR_EMPTY);
+            input = input.trim().replaceAll(token, CHAR_EMPTY);
         }
         return input.trim();
     }
@@ -53,7 +49,8 @@ public class StringUtil {
     public static String prettifyMapForDebug(Map<? extends Object, ? extends Object> map){
         StringBuffer prettyString = new StringBuffer("[ \n");
         for(Map.Entry<? extends Object, ? extends Object> o : map.entrySet()){
-            prettyString.append(String.format(MAP_FORMAT, o.getKey(), o.getValue()));
+            Field f = (Field)o.getKey();
+                prettyString.append(String.format(MAP_FORMAT, o.getKey(), o.getValue()));
         }
 
         return prettyString.append(" ]").toString();
