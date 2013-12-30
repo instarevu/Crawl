@@ -31,7 +31,7 @@ public class Indexer {
 
     public Indexer(String clusterId){
         this.clusterId = clusterId;
-        Settings settings = ImmutableSettings.settingsBuilder().put("cluster.name", "crawl").build();
+        Settings settings = ImmutableSettings.settingsBuilder().put("cluster.name", this.clusterId).build();
         client = new TransportClient(settings)
                 .addTransportAddress(new InetSocketTransportAddress("localhost", 9300));
     }
