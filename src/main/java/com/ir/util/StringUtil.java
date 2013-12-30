@@ -50,7 +50,21 @@ public class StringUtil {
         StringBuffer prettyString = new StringBuffer("[ \n");
         for(Map.Entry<? extends Object, ? extends Object> o : map.entrySet()){
             Field f = (Field)o.getKey();
-                prettyString.append(String.format(MAP_FORMAT, o.getKey(), o.getValue()));
+            if( o.getValue() instanceof String []){
+                String value = "";
+                for(String s : (String[])o.getValue()){
+                    value += s + " ";
+                }
+                prettyString.append(String.format(MAP_FORMAT, f, value));
+            } else if( o.getValue() instanceof Set){
+                String value = "";
+                for(Object s : (Set<Object>)o.getValue()){
+                    value += s + " ";
+                }
+                prettyString.append(String.format(MAP_FORMAT, f, value));
+            } else {
+                prettyString.append(String.format(MAP_FORMAT, f, o.getValue()));
+            }
         }
 
         return prettyString.append(" ]").toString();
