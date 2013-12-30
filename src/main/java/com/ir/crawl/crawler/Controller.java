@@ -16,7 +16,7 @@ public class Controller {
         if(args.length <= 0)
             throw new IllegalArgumentException("Invalid number of arguments");
         String clusterId = args[0];
-        startCrawlProcess(AmazonItemRetailerConfig.KEY, clusterId);
+        startCrawlProcess(clusterId, AmazonItemRetailerConfig.KEY);
     }
 
     public static void startCrawlProcess(String clusterId, String crawlProcessKey) throws Exception {
