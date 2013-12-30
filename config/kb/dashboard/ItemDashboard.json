@@ -25,6 +25,7 @@
     },
     "filter": {
       "idQueue": [
+        1,
         2,
         3,
         4,
@@ -39,20 +40,10 @@
           "active": true,
           "alias": "",
           "id": 0
-        },
-        "1": {
-          "type": "terms",
-          "field": "_type",
-          "value": "item",
-          "mandate": "must",
-          "active": true,
-          "alias": "",
-          "id": 1
         }
       },
       "ids": [
-        0,
-        1
+        0
       ]
     }
   },
@@ -70,7 +61,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "__t",
+          "time_field": "@t",
           "queries": {
             "mode": "all",
             "ids": [
@@ -80,7 +71,7 @@
           "value_field": null,
           "auto_int": false,
           "resolution": 100,
-          "interval": "5m",
+          "interval": "10m",
           "intervals": [
             "auto",
             "1s",
@@ -171,7 +162,7 @@
               0
             ]
           },
-          "field": "__e",
+          "field": "@e",
           "exclude": [],
           "missing": true,
           "other": false,
@@ -201,7 +192,7 @@
               0
             ]
           },
-          "field": "b",
+          "field": "brand",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -231,7 +222,7 @@
               0
             ]
           },
-          "field": "rvw.cnt",
+          "field": "rvw_cnt",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -261,7 +252,7 @@
               0
             ]
           },
-          "field": "rvw.avg",
+          "field": "rvw_avg",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -291,7 +282,7 @@
               0
             ]
           },
-          "field": "rnk.p",
+          "field": "rnk_1_p",
           "exclude": [],
           "missing": true,
           "other": true,
@@ -343,7 +334,7 @@
       "notice": false
     },
     {
-      "title": "Options",
+      "title": "Brand",
       "height": "200px",
       "editable": true,
       "collapse": false,
@@ -351,7 +342,7 @@
       "panels": [
         {
           "error": false,
-          "span": 4,
+          "span": 12,
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
@@ -361,11 +352,11 @@
               0
             ]
           },
-          "field": "b",
+          "field": "brand",
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
+          "size": 75,
           "order": "count",
           "style": {
             "font-size": "10pt"
@@ -378,10 +369,20 @@
           "counter_pos": "above",
           "spyable": true,
           "title": "Brand"
-        },
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "Options",
+      "height": "200px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
         {
           "error": false,
-          "span": 4,
+          "span": 12,
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
@@ -391,41 +392,11 @@
               0
             ]
           },
-          "field": "cat",
+          "field": "rvw_avg",
           "exclude": [],
           "missing": false,
           "other": false,
-          "size": 10,
-          "order": "count",
-          "style": {
-            "font-size": "10pt"
-          },
-          "donut": false,
-          "tilt": false,
-          "labels": true,
-          "arrangement": "horizontal",
-          "chart": "bar",
-          "counter_pos": "above",
-          "spyable": true,
-          "title": "Category"
-        },
-        {
-          "error": false,
-          "span": 4,
-          "editable": true,
-          "type": "terms",
-          "loadingEditor": false,
-          "queries": {
-            "mode": "all",
-            "ids": [
-              0
-            ]
-          },
-          "field": "rvw.avg",
-          "exclude": [],
-          "missing": false,
-          "other": false,
-          "size": 25,
+          "size": 75,
           "order": "reverse_term",
           "style": {
             "font-size": "10pt"
@@ -464,9 +435,9 @@
           },
           "size": 25,
           "pages": 10,
-          "offset": 75,
+          "offset": 0,
           "sort": [
-            "rvw.avg",
+            "rvw_avg",
             "desc"
           ],
           "group": "default",
@@ -475,16 +446,15 @@
           },
           "overflow": "min-height",
           "fields": [
-            "b",
+            "brand",
+            "rnk_1_p",
             "t",
-            "vrnt.vs",
-            "rvw.avg",
-            "rvw.cnt",
-            "rnk"
+            "rvw_avg",
+            "rvw_cnt",
+            "c"
           ],
           "highlight": [
-            null,
-            "_id"
+            null
           ],
           "sortable": true,
           "header": false,
